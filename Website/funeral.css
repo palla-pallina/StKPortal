@@ -1,0 +1,272 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #fff;
+  color: #333;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: #bc8031;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+  flex-wrap: wrap;
+}
+
+.services-dropdown {
+  position: relative;
+}
+
+.services-dropdown .dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #bc8031;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: none;
+  min-width: 150px;
+  border-radius: 0 0 8px 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.services-dropdown:hover .dropdown {
+  display: block;
+}
+
+.dropdown li a {
+  display: block;
+  padding: 0.75rem 1rem;
+  color: white;
+  text-decoration: none;
+}
+
+.dropdown li a:hover {
+  background-color: #9c6b2f;
+}
+
+.logo {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 3rem;
+  position: absolute;
+  right: -10%;
+  transform: translateX(-50%);
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+}
+
+.nav-links a.active {
+  color: #9fecd3;
+}
+
+.nav-profile img {
+  height: 40px;
+  margin-left: 1rem;
+  border-radius: 20px;
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  font-size: 1.5rem;
+  color: white;
+  border: none;
+}
+
+.hero {
+  text-align: center;
+  padding: 2rem 0 0 0;
+  padding-top: 6rem;
+}
+
+.hero h1 {
+  font-family: lora;
+  text-align: left;
+  margin-left: 1rem;
+  margin-top: -1rem;
+  font-size: 3.5rem;
+  font-weight: bold;
+}
+
+.hero h2 {
+  color: green;
+  text-align: left;
+  margin-left: 1rem;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.hero-image img {
+  width: 100%;
+  height: auto;
+}
+
+.sacraments {
+  background-color: #bc8031;
+  padding: 0.5rem 1rem;
+  text-align: left;
+  margin-top: 0;
+}
+
+.sacraments h3 {
+  color: white;
+  font-family: lora;
+  font-size: 2.2rem;
+  font-weight: bold;
+}
+
+.sacrament-reservation-wrapper {
+  background-color: #fff;
+  padding: 2rem;
+}
+
+.sacrament-cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  width: 350px;
+  text-align: center;
+}
+
+.card img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+}
+
+
+.card-label {
+  background-color: #f1c995;
+  padding: 0.5rem;
+  font-weight: bold;
+  border-radius: 0 0 20px 20px;
+}
+
+.reservation-form {
+  background-color: #fff;
+  padding: 2rem;
+  margin: 0 auto;
+  border-radius: 20px;
+  box-shadow: 10px 0 30px rgba(0, 0, 0, 0.1), -10px 0 30px rgba(0, 0, 0, 0.1);
+  max-width: 1000px;
+}
+
+.reservation-form h3 {
+  font-family: Arial;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #000; /* Now black as requested */
+}
+
+.reservation-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  margin-top: 0.75rem;
+}
+.reservation-form label {
+  font-weight: bold;
+  display: block;
+  margin-top: 1rem;
+  color: #333;
+}
+
+.reservation-form input,
+.reservation-form select {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  width: 100%;
+  font-size: 1rem;
+}
+
+.reservation-form button {
+  padding: 0.75rem;
+  background-color: #9c6b2f;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 1rem;
+  font-size: 1rem;
+}
+
+.card-link {
+  all: unset;
+  cursor: pointer;
+  display: block;
+}
+
+.card-link:visited,
+.card-link:active,
+.card-link:focus {
+  text-decoration: none;
+  outline: none;
+}
+
+.card-link .card {
+  border: none;
+}
+
+.reservation-form button:hover {
+background: #707070;
+background: linear-gradient(90deg, rgba(112, 112, 112, 1) 0%, rgba(184, 184, 184, 1) 100%, rgba(237, 221, 83, 1) 100%);
+}
+
+.site-footer {
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.95rem;
+  border-top: 1px solid;
+  margin-top: 2rem;
+}
+
+.nav-links a.active {
+  color: #9fecd3;
+}
+
+.nav-links a:hover {
+  color: #9fecd3;
+}
