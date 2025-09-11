@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Santa Krus Parish</title>
+  <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="certicates.css" />
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <img src="santa krus logo.png" alt="Parish Logo" class="logo" />
+    <nav class="navbar">
+      <img src="santa krus logo.png" alt="Parish Logo" class="logo" />
+      <ul class="nav-links">
+  <li><a href="#">Home</a></li>
+  <li><a href="#">History</a></li>
+  <li><a href="#">Events</a></li>
+  <li><a href="#">Give</a></li>
+  <li class="services-dropdown">
+    <a href="#" class="active">Sacraments</a>
+    <ul class="dropdown">
+      <li><a href="services.html">Baptism</a></li>
+      <li><a href="wedding_service.html">Wedding</a></li>
+      <li><a href="funeral.html">Funeral</a></li>
+      <li><a href="certicates.html">Certificates</a></li>
+    </ul>
+  </li>
+  <li><a href="#">Pray</a></li>
+  <li><a href="contact.html">Contact</a></li>
+</ul>
+      <div class="nav-profile">
+        <img src="profile-icon.png" alt="Profile Icon" />
+      </div>
+      <button class="menu-toggle">☰</button>
+    </nav>
+  </header>
+  <main>
+    <section class="hero">
+      <h1>SANTA KRUS PARISH</h1>
+      <h2>DIOCESE OF NOVALICHES</h2>
+      <div class="hero-image">
+        <img src="banner.png" alt="Church Interior" />
+      </div>
+    </section>
+    <section class="sacraments">
+      <h3>Sacraments</h3>
+    </section>
+    <section class="sacrament-reservation-wrapper">
+      <div class="sacrament-cards">
+        <a href="services.html" class="card-link">
+          <div class="card">
+            <img src="baptism.png" alt="Baptism" />
+            <div class="card-label">Baptism</div>
+          </div>
+        </a>
+        <a href="wedding_service.html" class="card-link">
+        <div class="card">
+          <img src="wedding.png" alt="Wedding" />
+          <div class="card-label">Wedding</div>
+        </div>
+        <a href="funeral.html" class="card-link">
+        <div class="card">
+          <img src="funeral.png" alt="Funeral" />
+          <div class="card-label">Funeral</div>
+        </div>
+      </a>
+      </div>
+      <div class="reservation-form">
+  <h3>Claiming of Certificate</h3>
+  <form>
+    <div class="form-row">
+      <div>
+        <label>Certificate Type*</label>
+        <select required>
+          <option value="baptism">Certificates</option>
+          <option value="baptism">Baptism</option>
+          <option value="wedding">Wedding</option>
+          <option value="funeral">Funeral</option>
+        </select>
+      </div>
+      <div>
+        <label>Pick-up Date*</label>
+        <input type="date" required />
+      </div>
+    </div>
+    <label>Name*</label>
+    <div class="form-row">
+      <input type="text" placeholder="First Name" required />
+      <input type="text" placeholder="Middle Name" />
+      <input type="text" placeholder="Last Name" required />
+      <input type="text" placeholder="Suffix" />
+    </div>
+<div class="form-row">
+  <div>
+    <label>Valid ID of the Person Concerned*</label>
+  </div>
+  <div>
+    <label>Upload Valid ID*</label>
+    <input type="file" accept="image/*" required />
+  </div>
+</div>
+<div class="form-row">
+  <div>
+    <label>Receipt (if recent)</label>
+  </div>
+  <div>
+    <label>Upload Receipt Image</label>
+    <input type="file" accept="image/*" />
+  </div>
+</div>
+<label>Are you claiming a certificate for someone else?*</label>
+<div class="form-radio">
+  <label>
+    <input type="radio" name="claiming_for_someone_else" value="yes" onclick="toggleAuthorization(true)" required />
+    <span>Yes</span>
+  </label>
+  <label>
+    <input type="radio" name="claiming_for_someone_else" value="no" onclick="toggleAuthorization(false)" required />
+    <span>No</span>
+  </label>
+</div>
+<div id="authorization-section" style="display: none;">
+  <div class="form-row">
+    <div>
+      <label>Authorization Letter (with signature)*</label>
+    </div>
+    <div>
+      <label>Upload Authorization Letter*</label>
+      <input type="file" accept="image/*" />
+    </div>
+  </div>
+  <div class="instructions">
+    <p><strong>Kindly indicate on the letter:</strong></p>
+    <ul>
+      <li>1. The date of the letter</li>
+      <li>2. The reason why he/she is not able to pick up the certificate personally</li>
+      <li>3. The purpose of the certificate requested</li>
+      <li>4. The full details of the authorized person (relationship to the person concerned)</li>
+    </ul>
+  </div>
+  <div class="form-row">
+    <div>
+      <label>Valid ID of Authorized Person*</label>
+    </div>
+    <div>
+      <label>Upload Authorized Person's ID*</label>
+      <input type="file" accept="image/*" />
+    </div>
+  </div>
+</div>
+    <div class="form-row">
+      <div>
+        <label>Contact Number*</label>
+        <input type="tel" placeholder="Contact Number" required />
+      </div>
+      <div>
+        <label>Email Address*</label>
+        <input type="email" placeholder="Email Address" required />
+      </div>
+    </div>
+<div class="form-button-wrapper">
+  <button type="submit">RESERVE</button>
+</div>
+  </form>
+</div>
+      </main>
+        <footer class="site-footer-simple">
+    <p>&copy; 2025 Santa Krus Parish, Bagumbong Caloocan. All Rights Reserved.</p>
+  </footer>
+  <script>
+  function toggleAuthorization(show) {
+    const section = document.getElementById('authorization-section');
+    section.style.display = show ? 'block' : 'none';
+  }
+</script>
+</body>
+</html>
