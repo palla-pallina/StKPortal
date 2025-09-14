@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Santa Krus Parish</title>
+  <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="donation.css" />
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <img src="santa krus logo.png" alt="Parish Logo" class="logo" />
+      <ul class="nav-links">
+  <li><a href="#">Home</a></li>
+  <li><a href="#">History</a></li>
+  <li><a href="#">Events</a></li>
+  <li><a href="donation.html">Give</a></li>
+  <li class="services-dropdown">
+    <a href="#" class="active">Sacraments</a>
+    <ul class="dropdown">
+      <li><a href="services.html">Baptism</a></li>
+      <li><a href="wedding_service.html">Wedding</a></li>
+      <li><a href="funeral.html">Funeral</a></li>
+      <li><a href="certicates.html">Certificates</a></li>
+    </ul>
+  </li>
+  <li><a href="#">Pray</a></li>
+  <li><a href="contact.html">Contact</a></li>
+</ul>
+      <div class="nav-profile">
+        <img src="profile-icon.png" alt="Profile Icon" />
+      </div>
+      <button class="menu-toggle">☰</button>
+    </nav>
+  </header>
+  <main>
+  <section class="verse-text">
+    <p class="verse-line"><strong>
+      “Each of you should give what you have decided in your heart to give, not reluctantly or under compulsion, for God loves a cheerful giver.”
+    </strong></p>
+    <p class="verse-ref">2 Corinthians 9:7</p>
+  </section>
+
+  <section class="donations">
+    <h3>Donations</h3>
+  </section>
+
+  <div class="donation-flex">
+    <section class="left-image-strip">
+      <img src="donation.png" alt="Inspirational Verse" class="left-image" />
+    </section>
+    <section class="donation-form-section">
+      <form class="donation-form">
+        <label for="donation-cause">Donation Cause</label>
+        <select id="donation-cause" name="donation-cause" required>
+          <option value="" disabled selected>Donation Cause:</option>
+          <option value="parishdonations">Parish Donations</option>
+          <option value="tithes">Tithes</option>
+          <option value="charity">Charity</option>
+        </select>
+
+        <label for="amount">Amount</label>
+        <input type="number" id="amount" name="amount" min="1" placeholder="Amount:" required />
+
+        <div class="payment-method-section">
+          <span>Payment Method</span>
+          <div class="payment-options">
+<label class="payment-option">
+  <input type="radio" name="payment-method" value="metrobank" required />
+  <img src="metrobank.png" alt="Metrobank" class="payment-logo" />
+</label>
+<label class="payment-option">
+  <input type="radio" name="payment-method" value="gcash" required />
+  <img src="gcash.png" alt="GCash" class="payment-logo" />
+</label>
+          </div>
+        </div>
+
+        <button type="submit" class="give-btn">GIVE</button>
+      </form>
+    </section>
+  </div>
+</main>
+  <footer class="site-footer-simple">
+    <p>&copy; 2025 Santa Krus Parish, Bagumbong Caloocan. All Rights Reserved.</p>
+  </footer>
+</body>
+</html>
