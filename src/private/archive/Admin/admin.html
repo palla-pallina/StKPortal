@@ -1,0 +1,236 @@
+<?php include 'db.php'; ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+	<link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+	<link rel="stylesheet" href="admin.css">
+	<title>STK Admin</title>
+</head>
+<body>
+  <section id="sidebar">
+    <a href="#" class="label">
+      <img src="santa krus logo.png" alt="Logo" class="logo" />
+    </a>
+    <ul class="side-menu top">
+      <li><a href="#"><span class="text">Dashboard</span></a></li>
+      <li><a href="#"><span class="text">File Manager</span></a></li>
+      <li><a href="#"><span class="text">Announcement</span></a></li>
+      <li><a href="#"><span class="text">Event</span></a></li>
+      <li><a href="#"><span class="text">Members</span></a></li>
+      <li><a href="#"><span class="text">Certificates</span></a></li>
+      <li><a href="#"><span class="text">Bookings</span></a></li>
+      <li class="active"><a href="#" data-section="dashboard"><span class="text">Donations</span></a></li>
+      <li><a href="#"><span class="text">Prayer Request</span></a></li>
+    </ul>
+    <ul class="side-menu">
+      <li><a href="#" class="logout"><span class="text">Logout</span></a></li>
+    </ul>
+  </section>
+
+  <section id="content">
+    <nav>
+      <i class='bx bx-menu'></i>
+      <div id="datetime"></div>
+      <div class="profile">
+        <span class="greeting">Admin</span>
+        <a href="#" class="profile-link"><i class='bx bx-user'></i></a>
+      </div>
+    </nav>
+
+		<!-- DONATIONS SECTION -->
+			<div class="main-content">
+				<div class="donations-header">
+					<h1>DONATIONS</h1>
+					<div class="donations-controls">
+						<div class="search-box">
+							<input type="text" id="searchDonations" placeholder="Search...">
+							<i class='bx bx-search'></i>
+						</div>
+						<div class="sort-box">
+							<select id="sortDonations">
+								<option value="date_posted DESC">Date (Newest)</option>
+								<option value="date_posted ASC">Date (Oldest)</option>
+								<option value="u.username ASC">Username (A-Z)</option>
+								<option value="u.username DESC">Username (Z-A)</option>
+								<option value="donor_fullname ASC">Name (A-Z)</option>
+								<option value="donor_fullname DESC">Name (Z-A)</option>
+								<option value="donation_amount DESC">Amount (High-Low)</option>
+								<option value="donation_amount ASC">Amount (Low-High)</option>
+							</select>
+							<i class='bx bx-filter-alt'></i>
+						</div>
+                        <button class="add-btn" id="addDonationBtn">
+                            <i class='bx bx-plus'></i>
+                        </button>
+					</div>
+				</div>
+
+				<!-- Donations Modal -->
+				<div id="donationModal" class="modal">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h2>Add New Donation</h2>
+							<span class="close">&times;</span>
+						</div>
+						<form id="donationForm" enctype="multipart/form-data">
+							<div class="form-row">
+								<div class="form-group">
+									<label for="username">Username</label>
+									<input type="text" id="username" name="username">
+								</div>
+								<div class="form-group">
+									<label for="donor_fullname">Full Name *</label>
+									<input type="text" id="donor_fullname" name="donor_fullname" required>
+								</div>
+							</div>
+							<div class="form-row">
+								<div class="form-group">
+									<label for="donor_email">Email</label>
+									<input type="email" id="donor_email" name="donor_email">
+								</div>
+								<div class="form-group">
+									<label for="donor_contact_no">Contact Number</label>
+									<input type="text" id="donor_contact_no" name="donor_contact_no">
+								</div>
+							</div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="donation_categ">Donation Category *</label>
+                                    <select id="donation_categ" name="donation_categ" required>
+                                        <option value="" disabled selected>Select Category</option>
+                                        <option value="Cash">Cash</option>
+                                        <option value="Clothes">Clothes</option>
+                                        <option value="Goods">Goods</option>
+                                        <option value="Specified">Specified</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="donation_type">Donation Type *</label>
+                                    <select id="donation_type" name="donation_type" required>
+                                        <option value="" disabled selected>Select Type</option>
+                                        <option value="Parish Donation">Parish Donation</option>
+                                        <option value="Tithes">Tithes</option>
+                                        <option value="Charity">Charity</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="mode_of_payment">Mode of Payment *</label>
+                                    <select id="mode_of_payment" name="mode_of_payment" required>
+                                        <option value="" disabled selected>Select Payment Method</option>
+                                        <option value="Onsite">Onsite</option>
+                                        <option value="Gcash">GCash</option>
+                                        <option value="Bank Transfer">Bank Transfer</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="donation_amount">Amount (PHP)</label>
+                                    <input type="number" id="donation_amount" name="donation_amount" step="0.01" min="0">
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group form-group--full" id="specifiedGroup" style="display: none;">
+                                    <label for="donation_specified">Specify Donation</label>
+                                    <input type="text" id="donation_specified" name="donation_specified">
+                                </div>
+                            </div>
+							<div class="form-group">
+								<label for="proof_file">Proof of Donation</label>
+								<input type="file" id="proof_file" name="proof_file" accept="image/*,.pdf">
+								<small>Upload image or PDF file</small>
+							</div>
+							<div class="form-actions">
+								<button type="button" class="btn-cancel" onclick="closeDonationModal()">Cancel</button>
+								<button type="submit" class="btn-submit">Add Donation</button>
+							</div>
+						</form>
+					</div>
+                </div>
+
+				<!-- Donations Table -->
+                <div class="donations-filter-bar">
+                    <div class="filter-groups">
+                        <div class="filter-group">
+                            <span class="filter-label">DONATION</span>
+                            <select id="filterDonationCateg" class="filter-select">
+                                <option value="">...</option>
+                                <option value="Cash">Cash</option>
+                                <option value="Clothes">Clothes</option>
+                                <option value="Goods">Goods</option>
+                                <option value="Specified">Specified</option>
+                            </select>
+                        </div>
+                        <div class="filter-group">
+                            <span class="filter-label">TYPE</span>
+                            <select id="filterDonationType" class="filter-select">
+                                <option value="">...</option>
+                                <option value="Parish Donation">Parish Donation</option>
+                                <option value="Tithes">Tithes</option>
+                                <option value="Charity">Charity</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="filter-total">
+                        <span class="total-label">TOTAL</span>
+                        <span class="currency">₱</span><span id="totalAmount">0.00</span>
+                    </div>
+                </div>
+
+				<div class="donations-table-container">
+					<table class="donations-table">
+						<thead>
+							<tr>
+								<th>ID</th>
+                                <th>Name</th>
+                                <th>Username</th>
+								<th>Email</th>
+								<th>Donation</th>
+								<th>Type</th>
+								<th>Mode of Payment</th>
+								<th>Proof</th>
+								<th>Date</th>
+								<th>Amount</th>
+								<th>Confirm</th>
+								<th>Action</th>
+							</tr>
+						</thead>
+						<tbody id="donationsTableBody">
+							<!-- JS will load donations here -->
+						</tbody>
+					</table>
+					<div class="pagination">
+						<div class="pagination-info">
+							<span id="paginationInfo">0 - 0 of 0 Entries</span>
+						</div>
+						<div class="pagination-controls">
+							<button id="prevPage" class="pagination-btn">← Previous</button>
+							<div id="pageNumbers" class="page-numbers"></div>
+							<button id="nextPage" class="pagination-btn">Next →</button>
+						</div>
+					</div>
+				</div>
+			</div>
+
+	</section>
+
+	<script src="admin.js"></script>
+	<script>
+	// Sidebar toggle
+	const menuIcon = document.querySelector('.bx-menu');
+	const sidebar = document.querySelector('#sidebar');
+	menuIcon.addEventListener('click', () => sidebar.classList.toggle('hide'));
+
+	// DateTime updater
+	function updateDateTime() {
+		const now = new Date();
+		document.getElementById('datetime').textContent = now.toLocaleString();
+	}
+	setInterval(updateDateTime, 1000);
+	updateDateTime();
+	</script>
+</body>
+</html>

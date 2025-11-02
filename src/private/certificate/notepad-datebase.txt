@@ -1,0 +1,36 @@
+USE parish_records;
+
+
+CREATE TABLE IF NOT EXISTS baptisms (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  child_first   VARCHAR(100)  NOT NULL,
+  child_last    VARCHAR(100)  NOT NULL,
+  birth_date    DATE          NULL,
+  baptism_date  DATE          NULL,
+  birthplace    VARCHAR(255)  NULL,
+  father_first  VARCHAR(100)  NULL,
+  father_last   VARCHAR(100)  NULL,
+  mother_first  VARCHAR(100)  NULL,
+  mother_last   VARCHAR(100)  NULL,
+  sponsors      JSON          NULL,   -- array of names (optional)
+  notes         TEXT          NULL,
+  ip_addr       VARCHAR(64)   NULL,
+  user_agent    VARCHAR(255)  NULL,
+  created_at    TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+
+CREATE TABLE IF NOT EXISTS weddings (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  groom_first   VARCHAR(100)  NOT NULL,
+  groom_last    VARCHAR(100)  NOT NULL,
+  bride_first   VARCHAR(100)  NOT NULL,
+  bride_last    VARCHAR(100)  NOT NULL,
+  wedding_date  DATE          NULL,
+  wedding_place VARCHAR(255)  NULL,
+  witnesses     JSON          NULL,   -- array of names (optional)
+  notes         TEXT          NULL,
+  ip_addr       VARCHAR(64)   NULL,
+  user_agent    VARCHAR(255)  NULL,
+  created_at    TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
