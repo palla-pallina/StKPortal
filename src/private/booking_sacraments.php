@@ -120,7 +120,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet" />
   <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
-  <title>Reservations</title>
+  <title>Book of Sacraments</title>
   <style>
     :root {
       --poppins: 'Poppins', sans-serif;
@@ -150,104 +150,30 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
       z-index: 2000; transition: .3s ease;
     }
 
-    #sidebar .side-menu li.active {
-        background: var(--grey);
-    }
-
-    #sidebar {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 280px;
-        height: 100%;
-        background: var(--light);
-        z-index: 2000;
-        transition: .3s ease;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        padding: 0;
-    }
-
-    #sidebar.hide {
-        width: 0 !important;
-        overflow: hidden;
-        pointer-events: none;
-    }
-
-    #sidebar .label {
-        height: 150px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding-top: 20px;
-    }
-
-    #sidebar .label .logo {
-        width: 100%;
-        height: 100%;
-        object-fit: contain;
-    }
-
+    #sidebar.hide { width: 0 !important; overflow: hidden; pointer-events: none; }
+    #sidebar .label { height: 150px; display: flex; align-items: center; justify-content: center; padding-top: 20px; }
+    #sidebar .label .logo { width: 100%; height: 100%; object-fit: contain; }
     #sidebar .side-menu { width: 100%; }
     #sidebar .side-menu li { height: 48px; }
     #sidebar .side-menu li a {
       display: flex; align-items: center; justify-content: center;
       height: 100%; font-size: 16px; color: var(--dark); text-decoration: none;
     }
-    #sidebar .side-menu li.active {
-        background: var(--grey);
-    }
 
-    #content {
-        position: relative;
-        width: calc(100% - 280px);
-        left: 280px;
-        transition: .3s ease;
-        min-width: 0;
-    }
-
-    #sidebar.hide ~ #content {
-        width: 100%;
-        left: 0;
-    }
+    #content { position: relative; width: calc(100% - 280px); left: 280px; transition: .3s ease; }
+    #sidebar.hide ~ #content { width: 100%; left: 0; }
 
     #content nav {
-        height: 56px;
-        background-color: #418033;
-        padding: 0 15px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        grid-gap: 16px;
-        position: sticky;
-        top: 0;
-        z-index: 1000;
+      height: 56px; background-color: var(--green);
+      padding: 0 15px; display: flex; align-items: center; justify-content: space-between;
+      position: sticky; top: 0; z-index: 1000;
     }
 
-    #content nav .bx {
-        font-size: 24px;
-        color: var(--dark);
-        cursor: pointer;
-    }
+    #content nav .bx { font-size: 24px; color: var(--dark); cursor: pointer; }
+    #content nav #datetime { color: white; font-size: 14px; font-weight: 500; letter-spacing: 1px; margin-left: 16px; flex-grow: 1; }
+    #content nav .profile { display: flex; align-items: center; gap: 10px; }
+    #content nav .profile .greeting { font-size: 14px; color: var(--light); font-weight: 500; }
 
-      #content nav a {
-        color: var(--dark);
-    }
-
-    #content nav .nav-link {
-        font-size: 16px;
-        transition: .3s ease;
-    }
-
-    #content nav #datetime {
-        color: white;
-        font-size: 14px;
-        font-weight: 500;
-        letter-spacing: 1px;
-        margin-left: 16px;
-        flex-grow: 1;
-    }
     .content-section { padding: 20px; min-height: calc(100vh - 56px); }
     .main-content { background: white; border-radius: 12px; padding: 24px; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); }
 
@@ -273,6 +199,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
       flex: 1; background: var(--light); border-radius: 12px;
       padding: 16px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);
       text-align: center; font-family: var(--poppins);
+    }
+
+    #eventType {
+      padding: 8px;
+      font-size: 14px;
+      border-radius: 8px;
+      width: 150px;
     }
 
     #reservationTable { width: 100%; border-collapse: collapse; margin-top: 12px; border: 1px solid var(--grey); }
@@ -368,60 +301,27 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
       border-radius: 6px;
       cursor: pointer;
     }
-
-    #content nav .profile {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    }
-
-    #content nav .profile .greeting {
-        font-size: 14px;
-        color: var(--light);
-        font-weight: 500;
-    }
-
-    #content nav .profile-link {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 40px;
-        height: 40px;
-        border-radius: 50%;
-        background-color: #ffffff;
-        font-size: 24px;
-        transition: background-color 0.3s ease, transform 0.2s ease;
-    }
-
-    #content nav .profile-link:hover {
-        background-color: #9fecd3;
-        transform: scale(1.05);
-    }
   </style>
 </head>
 <body>
-
-<!-- SIDEBAR -->
-<section id="sidebar" <?php if ($hideSidebar) echo 'class="hide"'; ?>>
-<a href="#" class="label">
-<img src="santa krus logo.png" alt="Logo" class="logo" />
-</a>
-<ul class="side-menu top">
-<li><a href="dashboard.php"><span class="text">Dashboard</span></a></li>
-<li><a href="stk/filemanager.php"><span class="text">File Manager</span></a></li>
-<li><a href="stk/announcement.php"><span class="text">Announcement</span></a></li>
-<li><a href="#"><span class="text">Event</span></a></li> <!-- N/A -->
-<li><a href="stk/members.php"><span class="text">Members</span></a></li>
-<li><a href="certificate/admin.php?page=certificate"><span class="text">Certificates</span></a></li> <!-- N/A -->
-<li class="active"><a href="booking_sacraments.php"><span class="text">Reservations</span></a></li>
-<li><a href="donations.php" data-section="dashboard"><span class="text">Donations</span></a></li>
-<li><a href="prayer_admin.php"><span class="text">Prayer Requests</span></a></li>
-</ul>
-<ul class="side-menu">
-<li><a href="../public/homepage.html" class="logout"><span class="text">Logout</span></a></li>
-</ul>
-</section>
-<!-- SIDEBAR END -->
+  <section id="sidebar">
+    <a href="#" class="label">
+      <img src="santa krus logo.png" alt="Logo" class="logo" />
+    </a>
+    <ul class="side-menu top">
+      <li><a href="#"><span class="text">Dashboard</span></a></li>
+      <li><a href="#"><span class="text">File Manager</span></a></li>
+      <li><a href="#"><span class="text">Announcement</span></a></li>
+      <li><a href="#"><span class="text">Event</span></a></li>
+      <li><a href="#"><span class="text">Members</span></a></li>
+      <li><a href="#"><span class="text">Certificates</span></a></li>
+      <li><a href="#"><span class="text">Bookings</span></a></li>
+      <li><a href="#"><span class="text">Donations</span></a></li>
+    </ul>
+    <ul class="side-menu">
+      <li><a href="#" class="logout"><span class="text">Logout</span></a></li>
+    </ul>
+  </section>
 
   <section id="content">
     <nav>
@@ -492,43 +392,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   </div>
 
 <script>
-
-/*
-  const allSideMenu = document.querySelectorAll('#sidebar .side-menu.top li a');
-
-  allSideMenu.forEach(item => {
-    const li = item.parentElement;
-
-    item.addEventListener('click', function (e) {
-      e.preventDefault();
-      
-      // Remove active class from all menu items
-      allSideMenu.forEach(i => {
-        i.parentElement.classList.remove('active');
-      });
-      
-      // Add active class to clicked item
-      li.classList.add('active');
-    });
-  });
-*/
-  
   const menuIcon = document.querySelector('.bx-menu');
   const sidebar = document.querySelector('#sidebar');
   menuIcon.addEventListener('click', () => sidebar.classList.toggle('hide'));
 
   function updateDateTime() {
-      const now = new Date();
-
-      const optionsDate = { year: 'numeric', month: 'short', day: 'numeric' };
-      const date = now.toLocaleDateString(undefined, optionsDate);
-
-      const optionsTime = { hour: '2-digit', minute: '2-digit' };
-      const time = now.toLocaleTimeString(undefined, optionsTime);
-
-      document.getElementById('datetime').textContent = `${date} | ${time}`;
+    const now = new Date();
+    const options = { hour: '2-digit', minute: '2-digit', hour12: true };
+    const formattedDate = now.toLocaleDateString();
+    const formattedTime = now.toLocaleTimeString([], options);
+    document.getElementById('datetime').textContent = `${formattedDate} | ${formattedTime}`;
   }
-
   setInterval(updateDateTime, 1000);
   updateDateTime();
 
@@ -727,7 +601,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     });
   });
 
-  
   eventTypeSelect.addEventListener('change', () => {
     renderTable(eventTypeSelect.value);
     searchInput.value = '';
