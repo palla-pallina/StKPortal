@@ -12,10 +12,17 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
+session_start();
+
+// Restrict access to admins only
+if (!isset($_SESSION['user_id']) || $_SESSION['user_type'] !== 'Admin') {
+    header("Location: login.php");
+    exit();
+}
+$admin_name = !empty($_SESSION['givenname']) ? $_SESSION['givenname'] : $_SESSION['username'];
+
 $conn->close();
 ?>
-
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -341,23 +348,30 @@ body {
 <li><a href="prayer_admin.php"><span class="text">Prayer Requests</span></a></li>
 </ul>
 <ul class="side-menu">
-<li><a href="../public/homepage.html" class="logout"><span class="text">Logout</span></a></li>
+<li><a href="logout.php" class="logout"><span class="text">Logout</span></a></li>
 </ul>
 </section>
 <!-- SIDEBAR END -->
 
 <section id="content">
+
 <nav>
 <i class='bx bx-menu'></i>
 <div id="datetime"></div>
 <div class="profile">
-<span class="greeting">Admin</span>
+<span class="greeting"><?php echo htmlspecialchars($admin_name); ?></span>
 <a href="#" class="profile-link"><i class='bx bx-user'></i></a>
 </div>
 </nav>
+
 <div class="main-content">
+
 <!-- CONTENT -->
        <!-- File Manager -->
+
+    <span>Welcome, <strong><?php echo htmlspecialchars($admin_name); ?></strong>!</span>
+
+    <br><br>
     <a href="stk/filemanager.php">
       <div class="file-manager">
         <div class="label">
@@ -378,7 +392,7 @@ body {
         <a href="booking_sacraments.php"><div class="dashboard-btn">🗃️<br>BOOKINGS</div></a>
         <a href="donations.php"><div class="dashboard-btn">❤️<br>DONATIONS<br></div></a>
         <a href="prayer_admin.php"><div class="dashboard-btn">🙏<br>PRAYER REQUESTS</div></a>
-        <a href="../public/homepage.html"><div class="dashboard-btn">🚪<br>LOG OUT</div></a>
+        <a href="logout.php"><div class="dashboard-btn">🚪<br>LOG OUT</div></a>
       </div>
     </div>
 </div>
