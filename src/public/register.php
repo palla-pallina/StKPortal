@@ -1,3 +1,72 @@
+<?php
+require_once "connection.php";
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Collect and sanitize form data
+    $givenname   = trim($_POST['givenname']);
+    $middlename  = trim($_POST['middlename']);
+    $lastname    = trim($_POST['lastname']);
+    $suffix      = trim($_POST['suffix']);
+    $birthday    = $_POST['birthday'];
+    $username    = trim($_POST['username']);
+    $email       = trim($_POST['email']);
+    $contact     = trim($_POST['contact']);
+    $password    = $_POST['password'];
+    $confirmPass = $_POST['confirm_password'];
+
+    // Validate passwords match
+    if ($password !== $confirmPass) {
+        echo "<script>alert('Passwords do not match!'); window.history.back();</script>";
+        exit;
+    }
+
+    // Check if username or email already exists
+    $checkQuery = "SELECT * FROM users WHERE username = ? OR email = ?";
+    $stmt = $conn->prepare($checkQuery);
+    $stmt->bind_param("ss", $username, $email);
+    $stmt->execute();
+    $result = $stmt->get_result();
+
+    if ($result->num_rows > 0) {
+        echo "<script>alert('Username or Email already exists!'); window.history.back();</script>";
+        exit;
+    }
+
+    // Hash password
+    $hashedPassword = password_hash($password, PASSWORD_BCRYPT);
+
+    // Combine full name
+    $full_name = trim("$givenname $middlename $lastname $suffix");
+
+    // Insert new user
+    $insertQuery = "INSERT INTO users (user_type, username, password, givenname, middlename, lastname, suffix, full_name, email, contact, birthday)
+                    VALUES ('User', ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+    $stmt = $conn->prepare($insertQuery);
+    $stmt->bind_param("ssssssssss", 
+        $username, 
+        $hashedPassword, 
+        $givenname, 
+        $middlename, 
+        $lastname, 
+        $suffix, 
+        $full_name, 
+        $email, 
+        $contact, 
+        $birthday
+    );
+
+    if ($stmt->execute()) {
+        echo "<script>alert('Registration successful! Redirecting to login...'); window.location.href='login.php';</script>";
+    } else {
+        echo "<script>alert('Error: Unable to register. Please try again later.'); window.history.back();</script>";
+    }
+
+    $stmt->close();
+    $conn->close();
+}
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -39,7 +108,7 @@
   </header>
   <!-- NAVBAR END-->
 
-  <!-- ✅ Register Page Content -->
+  <!-- Register Page Content -->
   <div class="container">
     <!-- Left Section -->
     <div class="left-section">
@@ -53,26 +122,28 @@
     <!-- Right Section -->
     <div class="right-section">
       <h2>Create an account</h2>
-      <form class="register-form">
-        <div class="name-fields">
-          <input type="text" placeholder="Given Name" required>
-          <input type="text" placeholder="Middle Name">
-          <input type="text" placeholder="Last Name" required>
-          <input type="text" placeholder="Suffix">
-        </div>
-        <input type="date" placeholder="Birthday" required>
-        <input type="text" placeholder="Username" required>
-        <input type="email" placeholder="Email Address" required>
-        <input type="text" placeholder="Contact Number" required>
-        <input type="password" placeholder="Password" required>
-        <input type="password" placeholder="Confirm Password" required>
-        <button type="submit" class="signup-btn">SIGN UP</button>
-      </form>
+      
+        <form class="register-form" method="POST" action="register.php">
+          <div class="name-fields">
+            <input type="text" name="givenname" placeholder="Given Name" required>
+            <input type="text" name="middlename" placeholder="Middle Name">
+            <input type="text" name="lastname" placeholder="Last Name" required>
+            <input type="text" name="suffix" placeholder="Suffix">
+          </div>
+          <input type="date" name="birthday" placeholder="Birthday" required>
+          <input type="text" name="username" placeholder="Username" required>
+          <input type="email" name="email" placeholder="Email Address" required>
+          <input type="text" name="contact" placeholder="Contact Number" required>
+          <input type="password" name="password" placeholder="Password" required>
+          <input type="password" name="confirm_password" placeholder="Confirm Password" required>
+          <button type="submit" class="signup-btn">SIGN UP</button>
+        </form>
+
       <p class="login-link">Already have an account? <a href="login.php">Log In</a></p>
     </div>
   </div>
 
-  <!-- ✅ Footer -->
+  <!-- Footer -->
   <footer>
     <p>© 2025 Santa Krus Parish, Bagumbong Caloocan. All Rights Reserved.</p>
   </footer>
