@@ -1,3 +1,51 @@
+<?php
+session_start();
+require_once "connection.php";
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Get form inputs
+    $email = trim($_POST['email']);
+    $password = $_POST['password'];
+
+    // Check if email exists
+    $query = "SELECT * FROM users WHERE email = ?";
+    $stmt = $conn->prepare($query);
+    $stmt->bind_param("s", $email);
+    $stmt->execute();
+    $result = $stmt->get_result();
+
+    if ($result->num_rows === 1) {
+        $user = $result->fetch_assoc();
+
+        // Verify hashed password
+        if (password_verify($password, $user['password'])) {
+            // Start session and store user info
+            $_SESSION['user_id'] = $user['user_id'];
+            $_SESSION['username'] = $user['username'];
+            $_SESSION['user_type'] = $user['user_type'];
+            $_SESSION['full_name'] = $user['full_name'];
+
+            // Redirect based on user type
+            if ($user['user_type'] === 'Admin') {
+                header("Location: ../private/dashboard.php");
+            } else {
+                header("Location: homepage.html");
+            }
+            exit();
+        } else {
+            echo "<script>alert('Incorrect password. Please try again.'); window.history.back();</script>";
+        }
+    } else {
+        echo "<script>alert('No account found with that email.'); window.history.back();</script>";
+    }
+
+    $stmt->close();
+    $conn->close();
+}
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -46,12 +94,12 @@
 </div>
 
         <!-- Login Form -->
-        <form class="login-form">
+        <form class="login-form" method="POST" action="login.php">
           <div class="form-group">
-            <input type="email" placeholder="Email Address" required>
+            <input type="email" name="email" placeholder="Email Address" required>
           </div>
           <div class="form-group">
-            <input type="password" placeholder="Password" required>
+            <input type="password" name="password" placeholder="Password" required>
           </div>
           <button type="submit" class="login-btn">LOG IN</button>
         </form>
