@@ -1,0 +1,262 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #fff;
+  color: #333;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: #bc8031;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+  flex-wrap: wrap;
+}
+
+.services-dropdown {
+  position: relative;
+}
+
+.services-dropdown .dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #bc8031;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: none;
+  min-width: 150px;
+  border-radius: 0 0 8px 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.services-dropdown:hover .dropdown {
+  display: block;
+}
+
+.dropdown li a {
+  display: block;
+  padding: 0.75rem 1rem;
+  color: white;
+  text-decoration: none;
+}
+
+.dropdown li a:hover {
+  background-color: #9c6b2f;
+}
+
+.logo {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 3rem;
+  position: absolute;
+  right: -10%;
+  transform: translateX(-50%);
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+}
+
+.nav-profile img {
+  height: 40px;
+  margin-left: 1rem;
+  border-radius: 20px;
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  font-size: 1.5rem;
+  color: white;
+  border: none;
+}
+
+.nav-links a:hover {
+  color: #9fecd3;
+}
+
+.verse-text {
+  margin-top: 50px;
+  padding: 2rem 1rem;
+  text-align: center;
+  background-color: #fdf6ec;
+  font-family: 'Lora', serif;
+  color: #333;
+}
+
+.verse-line {
+  font-style: italic;
+  font-size: 1.25rem;
+  line-height: 1.6;
+  margin-bottom: 0.5rem;
+}
+
+.verse-ref {
+  font-weight: bold;
+  font-style: italic;
+  color: #2e7d32;
+  font-size: 1.1rem;
+}
+
+.donations {
+  background-color: #bc8031;
+  padding: 0.5rem 1rem;
+  text-align: left;
+}
+
+.donations h3 {
+  text-align: center;
+  color: white;
+  font-family: lora;
+  font-size: 2.2rem;
+}
+
+.left-image-strip {
+  display: flex;
+  justify-content: flex-start;
+  align-items: stretch;
+  width: 100%;
+  margin-top: 0rem;
+}
+
+.left-image {
+  width: 50vw;
+  height: auto;
+  object-fit: cover;
+  margin-left: 0;
+  display: block;
+}
+
+.site-footer-simple {
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.95rem;
+}
+
+.donation-flex {
+  display: flex;
+  align-items: stretch;
+  justify-content: flex-start;
+  width: 100%;
+  margin-top: 0;
+  gap: 0;
+}
+
+.left-image-strip {
+  width: 50vw;
+  min-width: 300px;
+}
+
+.donation-form-section {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fdf6ec;
+  padding: 2rem 1rem;
+}
+
+.donation-form {
+  width: 100%;
+  max-width: 350px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.07);
+  padding: 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.donation-form label {
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+  color: #000000;
+}
+
+.donation-form select,
+.donation-form input[type="number"] {
+  width: 100%;
+  padding: 0.6rem;
+  border: 1px solid #bc8031;
+  border-radius: 6px;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.payment-method-section {
+  margin-top: 0.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.payment-method-section span {
+  font-weight: 600;
+  color: #000000;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.payment-options {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+}
+
+.payment-option {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.payment-logo {
+  width: 150px;
+  height: 65px;
+  padding: 1px;
+}
+
+.give-btn {
+  margin-top: 1.5rem;
+  width: 100%;
+  padding: 0.5rem;
+  background: #bc8031;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.give-btn:hover {
+background: #707070;
+background: linear-gradient(90deg, rgba(112, 112, 112, 1) 0%, rgba(184, 184, 184, 1) 100%, rgba(237, 221, 83, 1) 100%);
+}
