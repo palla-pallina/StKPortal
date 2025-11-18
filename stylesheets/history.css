@@ -1,0 +1,433 @@
+/* ===== Reset ===== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #fff;
+    color: #333;
+    line-height: 1.6;
+}
+
+/*
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: #bc8031;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 1rem;
+}
+
+.logo {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links a.active,
+.nav-links a:hover {
+    color: #9fecd3;
+}
+
+.services-dropdown {
+    position: relative;
+}
+
+.services-dropdown .dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #bc8031;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: none;
+    min-width: 160px;
+    border-radius: 0 0 8px 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.services-dropdown:hover .dropdown {
+    display: block;
+}
+
+.dropdown li a {
+    display: block;
+    padding: 0.75rem 1rem;
+    color: white;
+    text-decoration: none;
+}
+
+.dropdown li a:hover {
+    background-color: #9c6b2f;
+}
+
+.nav-profile img {
+    height: 40px;
+    border-radius: 20px;
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    font-size: 1.5rem;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+*/
+
+/* Navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: #bc8031;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+  flex-wrap: wrap;
+}
+
+.logo {
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 3rem;
+  position: absolute;
+  right: -22%;
+  transform: translateX(-50%);
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+}
+
+.nav-links a:hover {
+  color: #9fecd3;
+}
+
+.nav-profile img {
+  height: 40px;
+  margin-left: 1rem;
+  border-radius: 20px;
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  font-size: 1.5rem;
+  color: white;
+  border: none;
+}
+
+/* Dropdowns */
+.hamburg-dropdown {
+  position: relative;
+}
+
+.hamburg-dropdown .dropdown {
+  position: absolute;
+  top: 100%;
+  right: 5px;
+  background-color: #bc8031;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: none;
+  min-width: 150px;
+  border-radius: 0 0 8px 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.hamburg-dropdown:hover .dropdown {
+  display: block;
+}
+
+.services-dropdown {
+  position: relative;
+}
+
+.services-dropdown .dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #bc8031;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: none;
+  min-width: 150px;
+  border-radius: 0 0 8px 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.services-dropdown:hover .dropdown {
+  display: block;
+}
+
+.dropdown li a {
+  display: block;
+  padding: 0.75rem 1rem;
+  color: white;
+  text-decoration: none;
+}
+
+.dropdown li a:hover {
+  background-color: #9c6b2f;
+}
+
+.hero {
+    text-align: center;
+    padding-top: 6rem;
+}
+
+.hero h1 {
+    font-family: 'Lora', serif;
+    text-align: left;
+    margin-left: 1rem;
+    font-size: 4.50rem;
+    color: #333;
+}
+
+.hero h2 {
+    color: green;
+    text-align: left;
+    margin-left: 1rem;
+    font-size: 2rem;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.history {
+    background-color: #ffffff;
+    padding: 0.75rem 1rem;
+}
+
+.history h3 {
+    color: rgb(0, 0, 0);
+    font-family: 'Lora', serif;
+    font-size: 5rem;
+    text-align: center;
+}
+
+.history-text {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+.history-text p {
+    text-align: center;
+    line-height: 2;
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+
+.history-texts {
+    text-align: center;
+    margin: 1rem auto;
+    font-size: 2rem;
+    font-family: 'arial', bold;
+    color: #000000;
+}
+
+.history-texts p {
+    margin: 0;
+}
+
+.priests-gallery {
+    display: flex;
+    justify-content: center;
+    gap: 5rem;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.priest img {
+    width: 200px;
+    height: 250px;
+    border-radius: 45%;
+    object-fit: cover;
+    border: 3px solid #ffffff;
+    margin-bottom: 0.5rem;
+}
+
+.priest-role {
+    font-weight: bold;
+    color: #444;
+    margin: 0.2rem 0;
+}
+
+.priest-years {
+    font-style: italic;
+    color: #666;
+    margin: 0.2rem 0;
+}
+
+.priest-name {
+    font-size: 1rem;
+    font-weight: bold;
+    background: #bc8031;
+    color: white;
+    padding: 0.3rem 0.6rem;
+    border-radius: 10px;
+    display: inline-block;
+    margin-top: 0.3rem;
+}
+
+.mission-vision {
+    background: #2e7d32;
+    color: white;
+    padding: 1rem 2rem;
+    text-align: left;
+    border-radius: 0;
+    margin: 2rem 0;
+    width: 100%;
+    max-width: none;
+    box-sizing: border-box;
+}
+
+.mission-image {
+    display: flex;
+    justify-content: center;
+    margin: 2rem 0;
+}
+
+.mission-image img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #2e7d32;
+}
+
+.mission-vision h3 {
+    margin: 0;
+    font-size: 1.8rem;
+    font-weight: bold;
+    display: inline-block;
+    padding-bottom: 0.3rem;
+}
+
+.mission-text {
+    background: #f9f9f9;
+    padding: 1.5rem 2rem;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto 2rem;
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    border-top: none;
+}
+
+.mission-text p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.parish-priest {
+    background: #bc8031;
+    color: white;
+    padding: 1rem 2rem;
+    text-align: left;
+    border-radius: 0;
+    margin: 2rem 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.parish-priest h3 {
+    font-size: 2rem;
+    font-weight: bold;
+    font-family: 'Lora', serif;
+}
+
+.priest-gallery {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.priest {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.priest img {
+    width: 220px;
+    height: 350px;
+    border-radius: 40%;
+    object-fit: cover;
+    border: 4px solid #bc803100;
+    transition: transform 0.3s ease;
+    margin-bottom: 0.8rem;
+}
+
+.priest img:hover {
+    transform: scale(1.05);
+}
+
+.priest-name {
+    font-size: 1.2rem;
+    font-weight: bold;
+    font-family: 'Lora', serif;
+    background: #f4f4f4;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    color: #333;
+}
+
+.site-footer-simple {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 1rem 2rem;
+    font-size: 0.95rem;
+    border-top: 1px solid #444;
+    margin-top: 2rem;
+}
