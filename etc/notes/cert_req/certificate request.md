@@ -3,7 +3,9 @@ for admin dashboard:
 - user id (foreign key references users table)
 - contact
 - email 
-- **request_name** (request_firstname + request_middlename + request_lastname + request_suffix) **(if claiming for self)** or **owner_name** (owner_firstname + owner_middlename + owner_lastname + owner_suffix) **(if claiming for someone else)**
+- **request_name** (request_firstname + request_middlename + request_lastname + request_suffix) **(if claiming for self)**
+- or
+- **owner_name** (owner_firstname + owner_middlename + owner_lastname + owner_suffix) **(if claiming for someone else)**
 - certificate type (baptism, confirmation, first communion, wedding)
 - certificate status (pending, declined, accepted)
 - id_picture (path)
