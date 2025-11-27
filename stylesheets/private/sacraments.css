@@ -1,0 +1,653 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+:root {
+    --poppins: 'Poppins', sans-serif;
+    --lato: 'Lato', sans-serif;
+
+    --light: #F9F9F9;
+    --blue: #3C91E6;
+    --grey: #eee;
+    --dark-grey: #AAAAAA;
+    --dark: #342E37;
+    --red: #DB504A;
+    --green: #418033;
+    --success: #16a34a;
+    --warning: #f59e0b;
+    --danger: #dc2626;
+}
+
+html, body {
+    height: 100%;
+    overflow-x: hidden;
+}
+
+body.dark {
+    --light: #0C0C1E;
+    --grey: #060714;
+    --dark: #FBFBFB;
+}
+
+body {
+    background: var(--grey);
+    font-family: var(--lato);
+}
+
+
+.breadcrumb a {
+    color: #bc8031;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.breadcrumb a:hover {
+    color: #9c6b2f;
+}
+
+.breadcrumb span {
+    color: #777;
+}
+
+.breadcrumb span::before {
+    content: ">";
+    margin: 0 5px;
+    color: #999;
+}
+
+
+/* BUTTONS */
+/* ===============================
+   STATUS BADGES
+================================ */
+.status-badge {
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    display: inline-block;
+}
+
+.status-pending {
+    background: #fff3cd;
+    color: #856404;
+    border: 1px solid #ffeeba;
+}
+
+.status-accepted {
+    background: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.status-cancelled {
+    background: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+
+/* ===============================
+   ACCEPT & CANCEL BUTTONS
+================================ */
+.accept-btn,
+.cancel-btn {
+    border: none;
+    padding: 8px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.2s ease-in-out;
+}
+
+.accept-btn {
+    background: #28a745;
+    color: #fff;
+}
+
+.accept-btn:hover {
+    background: #218838;
+    transform: scale(1.05);
+}
+
+.cancel-btn {
+    background: #dc3545;
+    color: #fff;
+}
+
+.cancel-btn:hover {
+    background: #c82333;
+    transform: scale(1.05);
+}
+
+
+/* ===============================
+   ACTION LINKS AS BUTTONS
+================================ */
+.action-link {
+    display: block;
+    padding: 6px 6px;
+    margin: 3px 0;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.btn-schedule {
+    background: green;
+    color: white;
+}
+
+.btn-edit {
+    background: #007bff;
+    color: white;
+}
+
+.btn-view {
+    background: #eca948;;
+    color: white;
+}
+
+.btn-delete {
+    background: #dc3545;
+    color: white;
+}
+
+.action-link:hover {
+    opacity: 0.85;
+    text-decoration: none;
+    color: #fff;
+}
+
+
+.divider { border: none; border-top: 2px solid black; margin: 12px 0 20px 0; width: 100%; }
+
+.profile {
+    position: relative; 
+    z-index: 10;       
+}
+
+.profile-img {
+    position: absolute; 
+    right: 0;      
+    border-radius: 50%;
+    border: 2px solid #fff; 
+    z-index: 20;
+}
+
+/* SIDEBAR */
+#sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 280px;
+    height: 100%;
+    background: var(--light);
+    z-index: 2000;
+    transition: .3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0;
+}
+
+#sidebar.hide {
+    width: 0 !important;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+#sidebar .label {
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 20px;
+}
+
+#sidebar .label .logo {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+#sidebar .side-menu { width: 100%; }
+#sidebar .side-menu li { height: 48px; }
+#sidebar .side-menu li a {
+    display: flex; align-items: center; justify-content: center;
+    height: 100%; font-size: 16px; color: var(--dark); text-decoration: none;
+}
+#sidebar .side-menu li.active {
+    background: var(--grey);
+}
+
+#content {
+    position: relative;
+    width: calc(100% - 280px);
+    left: 280px;
+    transition: .3s ease;
+    min-width: 0;
+}
+
+#sidebar.hide ~ #content {
+    width: 100%;
+    left: 0;
+}
+
+.profile-img {
+    z-index: 10;             /* above navbar */
+    object-fit: cover;
+}
+
+#content nav {
+    height: 56px;
+    background-color: #418033;
+    padding: 0 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    grid-gap: 16px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+#content nav .bx {
+    font-size: 24px;
+    color: var(--dark);
+    cursor: pointer;
+}
+
+#content nav a {
+    color: var(--dark);
+}
+
+#content nav .nav-link {
+    font-size: 16px;
+    transition: .3s ease;
+}
+
+#content nav #datetime {
+    color: white;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    margin-left: 16px;
+    flex-grow: 1;
+}
+
+#content nav .profile {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#content nav .profile .greeting {
+    font-size: 14px;
+    color: var(--light);
+    font-weight: 500;
+}
+
+#content nav .profile-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    font-size: 24px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#content nav .profile-link:hover {
+    background-color: #9fecd3;
+    transform: scale(1.05);
+}
+
+.content-section {
+    display: none;
+    padding: 20px;
+    min-height: calc(100vh - 56px);
+}
+
+.content-section.active {
+    display: block;
+}
+/* SIDEBAR END */
+
+.main-content {
+    background: white;
+    /*border-radius: 31px;*/
+    padding: 51px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+}
+
+.main-content h1 {
+    font-family: var(--poppins);
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--dark);
+    margin-bottom: 16px;
+}
+
+.main-content h2 {
+    font-family: var(--poppins);
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--dark);
+    margin-bottom: 12px;
+}
+
+@media screen and (max-width: 768px) {
+    #sidebar {
+        width: 200px;
+    }
+    #content {
+        width: calc(100% - 200px);
+        left: 200px;
+    }
+    #content nav .nav-link {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    #content nav .nav-link {
+        display: none;
+    }
+}
+
+/*-------------- TABLE STYLING*/
+table styling
+.sacraments-table-container {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+}
+
+.sacraments-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    font-family: var(--poppins);
+    table-layout: fixed;
+}
+
+.sacraments-table thead {
+    background: #f1d3a8;
+}
+
+.sacraments-table th {
+    padding: 14px 8px;
+    text-align: left;
+    font-weight: 600;
+    color: var(--dark);
+    border-bottom: 2px solid #e9ecef;
+    font-size: 12px;
+    position: relative;
+    white-space: normal;
+    word-wrap: break-word;
+    line-height: 1.2;
+}
+
+.sacraments-table th:nth-child(1) { width: 2%; }
+.sacraments-table th:nth-child(2) { width: 4%; }
+.sacraments-table th:nth-child(3) { width: 4%; }
+.sacraments-table th:nth-child(4) { width: 4%; }
+.sacraments-table th:nth-child(5) { width: 8%; }
+.sacraments-table th:nth-child(6) { width: 10%; }
+.sacraments-table th:nth-child(7) { width: 4%; }
+.sacraments-table th:nth-child(8) { width: 4%; }
+.sacraments-table th:nth-child(9) { width: 3%; }
+.sacraments-table th:nth-child(10) { width: 8%; }
+.sacraments-table th:nth-child(11) { width: 6%; }
+.sacraments-table th:nth-child(12) { width: 6%; }
+
+.sacraments-table td {
+    padding: 14px 8px;
+    border-bottom: 1px solid #f1f3f4;
+    vertical-align: middle;
+    position: relative;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 150px;
+}
+
+.sacraments-table td:hover {
+    overflow: visible;
+    white-space: normal;
+    word-wrap: break-word;
+    z-index: 10;
+    background: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.sacraments-table tbody tr:hover {
+    background: #f8f9fa;
+}
+
+.sacraments-table .status-pending {
+    color: #f59e0b;
+    font-weight: 500;
+}
+
+.sacraments-table .status-verified {
+    color: #16a34a;
+    font-weight: 500;
+}
+
+.sacraments-table .status-unverified {
+    color: #dc2626;
+    font-weight: 500;
+}
+
+.sacraments-table .action-buttons {
+    display: flex;
+    gap: 2px;
+    align-items: center;
+    justify-content: center;
+}
+
+.sacraments-table td:last-child {
+    text-align: center;
+}
+
+.sacraments-table th:last-child {
+    text-align: center;
+}
+
+.sacraments-table td:nth-last-child(2) {
+    text-align: center;
+    vertical-align: middle;
+}
+
+.sacraments-table th:nth-last-child(2) {
+    text-align: center;
+}
+
+.sacraments-table td:nth-last-child(2) i {
+    display: block;
+    margin: 0 auto;
+}
+
+.sacraments-table .confirm-column {
+    text-align: center;
+    vertical-align: middle;
+}
+
+.confirm-column .btn-approve,
+.confirm-column .btn-reject {
+    display: inline-block !important;
+    margin: 0 1px;
+    float: none;
+    vertical-align: middle;
+}
+
+.sacraments-table .action-column {
+    text-align: center;
+    vertical-align: middle;
+}
+
+.sacraments-table .btn-approve,
+.sacraments-table .btn-reject,
+.sacraments-table .btn-delete,
+.sacraments-table .btn-view,
+.sacraments-table .btn-edit,
+.sacraments-table .btn-schedule {
+    width: 28px;
+    height: 28px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.confirm-column .btn-approve,
+.confirm-column .btn-reject {
+    display: inline-flex !important;
+    margin: 0 1px;
+    float: none;
+    vertical-align: middle;
+}
+
+
+.sacraments-table .btn-schedule {
+    background: green;
+    color: white;
+}
+
+.sacraments-table .btn-edit {
+    background: #007bff;
+    color: white;
+}
+
+.sacraments-table .btn-view {
+    background: #eca948;
+    color: white;
+}
+
+.sacraments-table .btn-approve {
+    background: #16a34a;
+    color: white;
+}
+
+.sacraments-table .btn-reject {
+    background: #dc2626;
+    color: white;
+}
+
+.sacraments-table .btn-delete {
+    background: #dc2626;
+    color: white;
+}
+
+.sacraments-table .btn-approve:hover,
+.sacraments-table .btn-reject:hover,
+.sacraments-table .btn-delete:hover,
+.sacraments-table .btn-view:hover,
+.sacraments-table .btn-edit:hover,
+.sacraments-table .btn-schedule:hover  {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.sacraments-table .proof-link {
+    color: #3C91E6;
+    text-decoration: underline;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.sacraments-table .proof-link:hover {
+    color: #2563eb;
+    text-decoration: none;
+}
+
+/*---------HEADER*/
+.reservations-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.reservations-header h1 {
+    margin: 0;
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--dark);
+}
+
+.reservations-controls {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.search-box {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.search-box input {
+    padding: 8px 12px 8px 40px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 14px;
+    width: 200px;
+}
+
+.search-box i {
+    position: absolute;
+    left: 12px;
+    color: #666;
+    font-size: 16px;
+}
+
+/*---------ADD BTN*/
+.add-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--green);
+    color: white;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    transition: all 0.3s ease;
+}
+
+.add-btn:hover {
+    background: #2d5a25;
+    transform: scale(1.05);
+}

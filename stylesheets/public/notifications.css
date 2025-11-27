@@ -1,0 +1,344 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #fff;
+    color: #333;
+    line-height: 1.6;
+}
+
+
+/*------- NAVBAR DROPDOWN -------*/
+/*-------------------------------*/
+
+.logout-dropdown {
+  position: relative;
+}
+
+.logout-dropdown .dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #47210a;;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: none;
+  min-width: 150px;
+  border-radius: 0 0 8px 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.logout-dropdown:hover .dropdown {
+  display: block;
+}
+
+.dropdown li a {
+  display: block;
+  padding: 0.75rem 1rem;
+  color: white;
+  text-decoration: none;
+}
+
+/*------- NAVBAR DROPDOWN -------*/
+/*-------------------------------*/
+
+/*------- NAVBAR NOTIFICATION -------*/
+/*-----------------------------------*/
+
+.nav-notification {
+    position: relative;
+    margin-left: 1rem;
+}
+
+.nav-notification .bell {
+    font-size: 1.5rem;
+    margin-left: -33px;
+}
+
+.nav-notification .badge {
+    position: absolute;
+    top: 4px;
+    right: 16px;
+    background: red;
+    color: white;
+    font-size: 0.75rem;
+    font-weight: bold;
+    padding: 2px 6px;
+    border-radius: 132%;
+}
+
+/*------- NAVBAR NOTIFICATION -------*/
+/*-----------------------------------*/
+
+/*----------- NAVBAR ------------*/
+/*-------------------------------*/
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: #47210a;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.logo {
+    height: 74px;
+    padding-left: 13px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.nav-links .active {
+    color: #efad06;
+}
+
+.nav-links li {
+    padding: 10px 18px;
+    border-radius: 6px;
+    transition: 0.3s;
+    position: relative;
+}
+
+.nav-links li:hover>a {
+    color: #efad06;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 500;
+    display: block;
+}
+
+.nav-profile img {
+    height: 40px;
+    margin-left: 1rem;
+    border-radius: 20px;
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    font-size: 1.5rem;
+    color: white;
+    border: none;
+}
+
+.login-btn {
+    display: inline-block;
+    padding: 12px 28px;
+    background: #efad06;         
+    color: #fff;               
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 85px;
+    transition: 0.3s;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.login-btn:hover {
+    background: #47210a;        
+    transform: translateY(-2px);   /* Elegant lift effect */
+}
+
+.login-btn:active {
+    transform: translateY(0);      /* Pressed effect */
+    background: #efad06;
+}
+
+/*----------- NAVBAR ------------*/
+/*-------------------------------*/
+
+
+/* slideshow */
+
+.slideshow {
+    position: relative;
+    width: 100vw;
+    /* Full screen width */
+    max-height: 35.3vw;
+    /* Maintain 16:9 landscape ratio (height = width * 9/16) */
+    overflow: hidden;
+    background: #000;
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    height: 80%;
+}
+
+.slides img {
+    width: 100%;
+    height: 100%;
+    flex-shrink: 0;
+    object-fit: cover;
+    /* Ensure landscape image covers the container */
+}
+
+
+/* Dropdowns */
+
+.hamburg-dropdown {
+    position: relative;
+}
+
+.hamburg-dropdown .dropdown {
+    position: absolute;
+    top: 100%;
+    right: 5px;
+    background-color: #bc8031;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: none;
+    min-width: 150px;
+    border-radius: 0 0 8px 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.hamburg-dropdown:hover .dropdown {
+    display: block;
+}
+
+.services-dropdown {
+    position: relative;
+}
+
+.services-dropdown .dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #bc8031;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: none;
+    min-width: 150px;
+    border-radius: 0 0 8px 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.services-dropdown:hover .dropdown {
+    display: block;
+}
+
+.dropdown li a {
+    display: block;
+    padding: 0.75rem 1rem;
+    color: white;
+    text-decoration: none;
+}
+
+.dropdown li a:hover {
+    background-color: #9c6b2f;
+}
+
+.hero {
+    text-align: center;
+    padding-top: 6rem;
+}
+
+.hero h1 {
+    font-family: 'Lora', serif;
+    text-align: left;
+    margin-left: 1rem;
+    font-size: 3.50rem;
+    color: #333;
+}
+
+.hero h2 {
+    color: #333;
+    text-align: left;
+    margin-left: 1rem;
+    font-size: 1.50rem;
+    margin-top: 0rem;
+    margin-bottom: 1rem;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+    .card {
+        height: 190px;
+    }
+}
+
+.site-footer-simple {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 1rem 2rem;
+    font-size: 0.95rem;
+    border-top: 1px solid #444;
+    margin-top: 23rem;
+    position: relative;
+}
+
+/* NOTIFS */
+
+    h1 {
+        font-weight: 600;
+        margin-bottom: 20px;
+    }
+
+    .notification-container {
+        max-width: 700px;
+        margin: auto;
+    }
+
+    .notification {
+        background: white;
+        padding: 15px 20px;
+        border-radius: 8px;
+        margin-bottom: 15px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-left: 6px solid #ccc;
+    }
+
+    .notification.success { border-color: #4caf50; }
+    .notification.warning { border-color: #ff9800; }
+    .notification.info { border-color: #2196f3; }
+    .notification.error { border-color: #e53935; }
+
+    .notification .text {
+        max-width: 85%;
+    }
+
+    .notification small {
+        color: #666;
+        font-size: 12px;
+    }
+
+    .btn-clear {
+        text-align: center;
+        background: #d32f2f;
+        color: white;
+        padding: 10px 15px;
+        border-radius: 8px;
+        display: block;
+        width: 200px;
+        margin: 25px auto 0;
+        cursor: pointer;
+        text-decoration: none;
+    }
+    .btn-clear:hover {
+        background: #b71c1c;
+    }

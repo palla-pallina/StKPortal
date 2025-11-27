@@ -1,0 +1,226 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #fff;
+    color: #333;
+}
+
+/* Navbar */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: #47210a;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.logo {
+    height: 74px;
+    padding-left: 13px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    /*gap: 3.99rem;  */
+    /* keeps spacing */
+    align-items: center;
+}
+
+.nav-links .active {
+    color: #efad06;
+}
+
+
+.nav-links li {
+    padding: 10px 18px;
+    /* makes each item a box */
+    border-radius: 6px;
+    transition: 0.3s;
+    position: relative;
+    /* for dropdown */
+}
+
+.nav-links li:hover>a {
+    color: #efad06;
+    /* change text color on hover */
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 500;
+    display: block;
+    /* makes link fill the whole li box */
+}
+
+
+.nav-profile img {
+    height: 40px;
+    margin-left: 1rem;
+    border-radius: 20px;
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    font-size: 1.5rem;
+    color: white;
+    border: none;
+}
+
+.login-btn {
+    display: inline-block;
+    padding: 12px 28px;
+    background: #efad06;         
+    color: #fff;               
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 85px;
+    transition: 0.3s;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.login-btn:hover {
+    background: #47210a;        
+    transform: translateY(-2px);   /* Elegant lift effect */
+}
+
+.login-btn:active {
+    transform: translateY(0);      /* Pressed effect */
+    background: #efad06;
+}
+
+
+/* Login Section */
+
+.login-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+    padding-top: 80px;
+    /* space for navbar */
+}
+
+.logo-container {
+    display: flex;
+    flex-direction: column;
+    /* logo on top, text below */
+    align-items: center;
+    /* center horizontally */
+    margin-top: 20px;
+}
+
+.login-logo {
+    width: 130px;
+    margin: 1rem auto;
+    display: block;
+}
+
+.site-name {
+    font-size: 3rem;
+    /* adjust size */
+    font-weight: bold;
+    color: #111;
+    white-space: nowrap;
+    /* prevents text from wrapping */
+    text-align: center;
+    /* makes sure it's centered */
+    margin-top: 10px;
+    /* spacing between logo and text */
+}
+
+.login-form {
+    width: 100%;
+    max-width: 350px;
+    /* controls overall form width */
+    margin: 0 auto;
+}
+
+.login-form input {
+    width: 100%;
+    padding: 12px 15px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 25px;
+    /* rounded like in image */
+    background: #d3d3d3;
+    /* light gray */
+    font-size: 1rem;
+    outline: none;
+}
+
+.log-in-btn {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 25px;
+    /* rounded button */
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fff;
+    background: linear-gradient(to right, #111, #666);
+    /* gradient black → gray */
+    cursor: pointer;
+}
+
+.log-in-btn:hover {
+    opacity: 0.9;
+    /* hover effect */
+}
+
+.form-links {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.forgot-password {
+    font-size: 0.9rem;
+    color: #111;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.signup-text {
+    margin-top: 1rem;
+    font-size: 0.95rem;
+}
+
+.signup-text a {
+    color: green;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.signup-text a:hover {
+    text-decoration: underline;
+}
+
+
+/* Footer */
+
+.site-footer-simple {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 1rem 2rem;
+    font-size: 0.95rem;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
