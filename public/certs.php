@@ -35,7 +35,7 @@ $conn->close();
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Santa Krus Parish</title>
   <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../stylesheets/public/certicates.css" /> 
+  <link rel="stylesheet" href="../../stylesheets/public/certicates.css" /> 
 </head>
 <body>
 
@@ -43,7 +43,7 @@ $conn->close();
   <!-- NAVBAR -->
   <header>
     <nav class="navbar">
-      <img src="../stylesheets/assets/santa krus logo.png" alt="Parish Logo" class="logo" />
+      <img src="../../stylesheets/assets/santa krus logo.png" alt="Parish Logo" class="logo" />
       <ul class="nav-links">
         <li><a href="homepage.php">Home</a></li>
         <li><a href="history.php">History</a></li>
@@ -90,33 +90,15 @@ $conn->close();
       <h1>SANTA KRUS PARISH</h1>
       <h2>DIOCESE OF NOVALICHES</h2>
       <div class="hero-image">
-        <img src="../stylesheets/assets/banner.png" alt="Church Interior" />
+        <img src="../../stylesheets/assets/banner.png" alt="Church Interior" />
       </div>
     </section>
-    <section class="sacraments">
-      <h3>Sacraments</h3>
-    </section>
-    <section class="sacrament-reservation-wrapper">
-      <div class="sacrament-cards">
-        <a href="baptism.php" class="card-link">
-          <div class="card">
-            <img src="../stylesheets/assets/baptism.png" alt="Baptism" />
-            <div class="card-label">Baptism</div>
-          </div>
-        </a>
-        <a href="wedding.php" class="card-link">
-        <div class="card">
-          <img src="../stylesheets/assets/wedding.png" alt="Wedding" />
-          <div class="card-label">Wedding</div>
-        </div>
-        <a href="funeral.php" class="card-link">
-        <div class="card">
-          <img src="../stylesheets/assets/funeral.png" alt="Funeral" />
-          <div class="card-label">Funeral</div>
-        </div>
-      </a>
-      </div>
-      <div class="reservation-form">
+
+  <div class="breadcrumb">
+      <a href="sacraments.php">Sacraments</a><span>Certificate Request</span>
+  </div>
+
+  <div class="reservation-form">
   <h3>Claiming of Certificate</h3>
   <form>
     <div class="form-row">
@@ -215,5 +197,4 @@ $conn->close();
   }
 </script>
 </body>
-
 </html>
