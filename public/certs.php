@@ -125,12 +125,7 @@ $conn->close();
         <select required>
           <option value="baptism">Baptism</option>
           <option value="wedding">Wedding</option>
-          <option value="funeral">Funeral</option>
         </select>
-      </div>
-      <div>
-        <label>Pick-up Date*</label><br>
-        <input type="date" required />
       </div>
     </div>
     <label>Name*</label>
@@ -220,4 +215,5 @@ $conn->close();
   }
 </script>
 </body>
+
 </html>
