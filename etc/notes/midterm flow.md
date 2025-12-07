@@ -13,15 +13,21 @@ PAGE/S:
 7. Reconciliation Info
 8. Donate
 
+---
+
 #### USE CASE 2: Prayer Request
 USER LEVEL: **Guest**
 PAGE/S:
 1. Prayer Request
 
+---
+
 #### USE CASE 3: Inquiry
 USER LEVEL: **Guest**
 PAGE/S:
 1. Contact
+
+---
 
 #### USE CASE 4: Sacrament Reservation
 USER LEVEL: **Member**
@@ -48,11 +54,15 @@ PAGE/S:
 9. Donations
 10. Prayer Requests (iapprove yung sinend na request)
 
+---
+
 #### USE CASE 6: Approve Sacrament Reservation
 USER LEVEL: **Admin**
 PAGE/S:
 1. Baptism Reservation Dashboard 
 2. Log out
+
+---
 
 #### USE CASE 7: View Notification
 USER LEVEL: **Member**
@@ -60,11 +70,15 @@ PAGE/S:
 1. Log In
 2. Notification
 
+---
+
 #### USE CASE 8: Request Certificate
 USER LEVEL: **Member**
 PAGE/S:
 1. Request (Baptism) Certificate
 2. Log Out
+
+---
 
 #### USE CASE 9: Approve Certificate Request
 USER LEVEL: **Admin**
@@ -72,6 +86,8 @@ PAGE/S:
 1. Log In
 2. Manage Certificate Requests
 3. Log Out
+
+---
 
 #### USE CASE 10: View Notification
 USER LEVEL: **Member**
