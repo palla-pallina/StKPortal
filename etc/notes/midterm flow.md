@@ -1,4 +1,5 @@
 #### USE CASE 1: Browse Website
+
 USER LEVEL: **Guest**
 - mabilis lang, daanan lang lahat ng pages
 - sa sacraments info, di lahat may reservation form (ex. reconciliation, holy orders)
@@ -17,6 +18,7 @@ PAGE/S:
 
 #### USE CASE 2: Prayer Request
 USER LEVEL: **Guest**
+
 PAGE/S:
 1. Prayer Request
 
@@ -24,6 +26,7 @@ PAGE/S:
 
 #### USE CASE 3: Inquiry
 USER LEVEL: **Guest**
+
 PAGE/S:
 1. Contact
 
@@ -31,6 +34,7 @@ PAGE/S:
 
 #### USE CASE 4: Sacrament Reservation
 USER LEVEL: **Member**
+
 PAGE/S:
 1. Register (pakita lang)
 2. Log In
@@ -42,6 +46,7 @@ PAGE/S:
 
 #### USE CASE 5: Browse Admin Dashboard
 USER LEVEL: **Admin**
+
 PAGE/S:
 1. Log In
 2. Dashboard
@@ -58,30 +63,25 @@ PAGE/S:
 
 #### USE CASE 6: Approve Sacrament Reservation
 USER LEVEL: **Admin**
+
 PAGE/S:
 1. Baptism Reservation Dashboard 
 2. Log out
 
 ---
 
-#### USE CASE 7: View Notification
+#### USE CASE 7: Request Certificate
 USER LEVEL: **Member**
-PAGE/S:
-1. Log In
-2. Notification
 
----
-
-#### USE CASE 8: Request Certificate
-USER LEVEL: **Member**
 PAGE/S:
 1. Request (Baptism) Certificate
 2. Log Out
 
 ---
 
-#### USE CASE 9: Approve Certificate Request
+#### USE CASE 8: Approve Certificate Request
 USER LEVEL: **Admin**
+
 PAGE/S:
 1. Log In
 2. Manage Certificate Requests
@@ -89,8 +89,9 @@ PAGE/S:
 
 ---
 
-#### USE CASE 10: View Notification
+#### USE CASE 9: View Notification
 USER LEVEL: **Member**
+
 PAGE/S:
 1. Log In
 2. Notification
