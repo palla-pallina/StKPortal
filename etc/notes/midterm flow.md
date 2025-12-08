@@ -1,6 +1,6 @@
 #### USE CASE 1: Browse Website
 
-USER LEVEL: **Guest**
+USER LEVEL: <u>Guest</u>
 - mabilis lang, daanan lang lahat ng pages
 - sa sacraments info, di lahat may reservation form (ex. reconciliation, holy orders)
 - no transactions muna
