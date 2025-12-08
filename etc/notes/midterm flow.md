@@ -7,6 +7,30 @@ MEMBER CREDENTIALS
 - Password: blank_ink
 
 ---
+
+# hatian ng parts 
+
+Guest: 
+
+Use Case 1 - Browse Website - Eri
+Use Case 2 - Make Donation - Eri
+Use Case 3 - Submit Prayer Request - Eri
+Use Case 4 - Submit inquiry - Eri
+
+Member: 
+
+Use Case 5 - Reserve  Sacrament Service - Pau
+Use Case 6 - Request Wedding Certificate - Pau
+Use Case 11 - View Notification - Erl (pang pa to huli)
+
+Admin:
+
+Use Case 7 - Browse Admin Dashboard + Publish Prayer Request - Vic
+Use Case 8 - Approve Certificate Request - Vic 
+Use Case 9 - Approve Sacrament Reservation - Erl
+Use Case 10 - Generate Wedding Certificate - Pau
+
+---
 #### USE CASE 1: Browse Website
 USER LEVEL: **Guest**
 
@@ -69,7 +93,7 @@ NOTES:
 
 ---
 
-#### USE CASE 6: Request Wedding Certificate (PAU)
+#### USE CASE 6: Request Wedding Certificate
 USER LEVEL: **Member**
 
 PAGE/S:
@@ -121,7 +145,7 @@ PAGE/S:
 
 ---
 
-#### USE CASE 10: Generate Wedding Certificate (PAU)
+#### USE CASE 10: Generate Wedding Certificate
 USER LEVEL: **Admin**
 
 PAGE/S:
@@ -129,7 +153,6 @@ PAGE/S:
 - kung ano details sinubmit ni user, yun yung iggenerate
 
 ---
-
 
 
 #### USE CASE 11: View Notification
