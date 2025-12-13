@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Cantata+One&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Goudy+Bookletter+1911&display=swap');
+
+:root {
+    --primary: #481d00; 
+    --yellow: #efad06;
+    --green: #2e7d32;
+    --greenhover: #22a028;
+    --off-white: #faf5ef;
+    --white: #fff;
+    --gray: #6c757d;
+    --dark: #343a40;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Cantata One", serif;
+    font-weight: 400;
+    font-style: normal;
+    background-color: var(--off-white);
+    color: #333;
+    line-height: 1.6;
+}
+
+/*---------- HERO SECT ----------*/
+/*-------------------------------*/
+
+.hero {
+    text-align: center;
+    padding-top: 6rem;
+}
+
+.hero h1 {
+    font-family: 'Lora', serif;
+    text-align: left;
+    margin-left: 1rem;
+    font-size: 3.50rem;
+    color: #333;
+}
+
+.hero h2 {
+    color: green;
+    text-align: left;
+    margin-left: 1rem;
+    font-size: 1.50rem;
+    margin-top: 0rem;
+    margin-bottom: 1rem;
+}
+
+.hero-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* ======= MAIN CONTENT ========*/
+/*==============================*/
+
+.hero-image img {
+    width: 102%;
+    height: auto;
+    display: block;
+    margin-top: 20px;
+}
+
+/* SECTION */
+.services-section {
+    width: 100%;
+    padding: 3rem 3rem;
+}
+
+.services-header h2 {
+    background-color: #481d00;
+    color: white;
+    font-family: "Cantata One", serif;
+    font-size: 30px;
+    padding: 8px 0 8px 40px;
+}
+
+/* GRID */
+.services-grid-1 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+    margin: 0 auto;
+}
+
+.services-grid-2 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+    margin: 0 auto;
+    width: 1073px;
+    padding-top: 23px;
+}
+
+/* CARD */
+.card {
+    position: relative;
+    height: 230px;
+    border-radius: 12px;
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+    overflow: hidden;
+    text-decoration: none;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    transition: transform .3s ease, box-shadow .3s ease;
+}
+
+/* HOVER EFFECT */
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 18px 28px rgba(0, 0, 0, 0.25);
+}
+
+
+/* DARK OVERLAY */
+.card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient( to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.15));
+    transition: .3s ease;
+    z-index: 1;
+}
+
+.card:hover::before {
+    background: linear-gradient( to top, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.2));
+}
+
+/* TEXT AREA */
+.card-overlay {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    z-index: 2;
+    width: calc(100% - 30px);
+    color: white;
+    font-family: "Nunito Sans", sans-serif;
+}
+
+/* TITLE */
+.card-overlay h3 {
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+/* DESCRIPTION */
+.card-overlay p {
+    margin: 2px 0 0;
+    font-size: 0.85rem;
+    opacity: 0.9;
+}
+
+/* HOVER GRADIENT COLORS */
+.card.baptism:hover::before {
+    background: linear-gradient(to right, rgba(31, 151, 191, 0.7), rgba(31, 151, 191, 0));
+}
+
+.card.eucharist:hover::before {
+    background: linear-gradient(to right, rgba(255, 215, 0, 0.7), rgba(255, 215, 0, 0));
+}
+
+.card.confirmation:hover::before {
+    background: linear-gradient(to right, rgba(255, 69, 0, 0.7), rgba(255, 69, 0, 0));
+}
+
+.card.reconciliation:hover::before {
+    background: linear-gradient(to right, rgba(34, 139, 34, 0.7), rgba(34, 139, 34, 0));
+}
+
+.card.anointing:hover::before {
+    background: linear-gradient(to right, rgba(218, 165, 32, 0.7), rgba(218, 165, 32, 0));
+}
+
+.card.marriage:hover::before {
+    background: linear-gradient(to right, rgba(255, 105, 180, 0.7), rgba(255, 105, 180, 0));
+}
+
+.card.holyorders:hover::before {
+    background: linear-gradient(to right, rgba(75, 0, 130, 0.7), rgba(75, 0, 130, 0));
+}
+
+.card:hover .card-overlay h3,
+.card:hover .card-overlay p {
+    color: #ffffff;
+    font-weight: bold;
+    text-shadow: 0 0 6px rgba(0, 0, 0, 0.7);
+}

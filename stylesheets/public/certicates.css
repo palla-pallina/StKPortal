@@ -1,0 +1,191 @@
+
+
+.reservation-form {
+  background-color: #fff;
+  padding: 2rem;
+  margin: 0 auto;
+  border-radius: 20px;
+  box-shadow: 10px 0 30px rgba(0, 0, 0, 0.1), -10px 0 30px rgba(0, 0, 0, 0.1);
+  max-width: 1000px;
+}
+
+.reservation-form h3 {
+  font-family: Arial;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: black;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  margin-top: 0.75rem;
+}
+
+.reservation-form label {
+  font-weight: bold;
+  display: block;
+  margin-top: 1rem;
+  color: #333;
+}
+
+.reservation-form input,
+.reservation-form select {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  width: 100%;
+  font-size: 1rem;
+}
+
+.form-button-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+
+.reservation-form button {
+  padding: 0.75rem 2rem;
+  background-color: #9c6b2f;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 1rem;
+  width: 100%;
+  max-width: 950px; /* Adjust for visual balance */
+  text-align: center;
+  transition: background 0.3s ease;
+}
+
+.reservation-form button:hover {
+  background: linear-gradient(90deg, rgba(112, 112, 112, 1) 0%, rgba(184, 184, 184, 1) 100%);
+}
+
+.site-footer-simple {
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 1rem 2rem;
+  font-size: 0.95rem;
+  border-top: 1px solid;
+  line-height: 1.6;
+  margin-top: auto;
+}
+
+.instructions {
+  background-color: #f9f3e6;
+  border: 1px solid #e0d6bf;
+  padding: 1rem;
+  margin-top: 1rem;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  color: #5b4021;
+}
+
+.instructions ul {
+  margin-top: 0.5rem;
+  padding-left: 1.2rem;
+}
+
+.instructions li {
+  margin-bottom: 0.4rem;
+}
+
+.form-radio {
+  display: flex;
+  gap: 2rem;
+  margin-top: 0.5rem;
+  font-weight: normal;
+  color: #333;
+  align-items: center;
+}
+
+.form-radio label {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-weight: 500;
+}
+
+.form-radio input[type="radio"] {
+  transform: scale(1.1);
+}
+
+#authorization-section {
+  margin-top: 1rem;
+}
+
+.terms {
+  font-size: 0.8em;     /* smaller text */
+  color: #444;          /* softer text color */
+  margin: 10px 0;
+  display: flex;
+  align-items: flex-start;
+}
+
+.terms input[type="checkbox"] {
+  transform: scale(0.8);   /* shrink checkbox itself */
+  margin-right: -466px;
+  margin-top: 18px;
+}
+
+.terms a {
+  color: #0066cc;
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+.terms a:hover {
+  text-decoration: none;
+}
+
+.required {
+  color: red;
+  font-size: 0.8em;
+  vertical-align: super;
+}
+
+/* ======= MAIN CONTENT ========*/
+/*==============================*/
+
+.header-banner {
+    background-size: cover;
+    background-position: center;
+    padding: 120px 20px;
+    text-align: center;
+    color: white;
+    position: relative;
+    font-family: "Goudy Bookletter 1911", serif;
+}
+
+.header-banner::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(71, 33, 10, 0.45);
+}
+
+.header-banner h1,
+.header-banner p {
+    color: white;
+    position: relative;
+    z-index: 2;
+}
+
+.header-banner h1 {
+    font-size: 80px;
+    margin: 0;
+    letter-spacing: 2px;
+    font-weight: 700;
+}
+
+.header-banner p {
+    font-size: 22px;
+    margin-top: 10px;
+}

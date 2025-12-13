@@ -1,0 +1,399 @@
+@import url('https://fonts.googleapis.com/css2?family=Cantata+One&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Goudy+Bookletter+1911&display=swap');
+
+:root {
+    --primary: #481d00; 
+    --yellow: #efad06;
+    --green: #2e7d32;
+    --greenhover: #22a028;
+    --off-white: #faf5ef;
+    --white: #fff;
+    --gray: #6c757d;
+    --dark: #343a40;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Cantata One", serif;
+    font-weight: 400;
+    font-style: normal;
+    background-color: var(--off-white);
+    color: #333;
+    line-height: 1.6;
+}
+
+/*============ MAIN CONTENT ============*/
+/*======================================*/
+
+/* Section Wrapper */
+
+.section-wrapper {
+    background-color: #f0f0f0;
+    padding: 40px 20px 60px 20px;
+    margin: 66px auto -35px auto;
+    max-width: 1200px;
+}
+
+.container-title{
+    font-family: "Cantata One", serif;
+    font-size: 30px;
+    padding-left: 15px;
+    padding-bottom: 15px;
+}
+
+
+/* Breadcrumb */
+
+.breadcrumb {
+    margin: 0 0 20px 0;
+    padding: 12px 20px;
+    background: #f0f0f0;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 1rem;
+    color: #555;
+    box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.1);
+}
+
+.breadcrumb a {
+    color: #bc8031;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.breadcrumb a:hover {
+    color: #9c6b2f;
+}
+
+.breadcrumb span {
+    color: #777;
+}
+
+.breadcrumb span::before {
+    content: ">";
+    margin: 0 5px;
+    color: #999;
+}
+
+
+#New h2 {
+    font-family: 'Lora', serif; font-size: 30px; color: #333; padding: 20px;
+}
+
+/* Feed cards */
+
+.feed {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+
+/* Card styles */
+
+.card {
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+    /* positioning context for Read More */
+}
+
+
+.card img {
+    width: 371px;
+    height: 371px;
+    object-fit: cover;
+    border-radius: 15px 0 0 15px;
+}
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+    flex: 1;
+    position: relative;
+    /* needed for absolute Read More */
+}
+
+
+/* Read More button */
+
+/*-------- READ MORE BUTTON ---------*/
+/*-----------------------------------*/
+
+.read-more {
+    color: var(--green);
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+/* Card text */
+
+.card-content h2 {
+    color: #9c6b2f;
+    font-size: 1.7rem;
+    margin-bottom: 10px;
+    font-family: 'Lora', serif;
+}
+
+.card-content .date {
+    font-size: 0.9rem;
+    color: #888;
+    margin-bottom: 12px;
+}
+
+.card-content p {
+    color: #555;
+    font-size: 1rem;
+    margin-bottom: 50px;
+    /* leave space for button */
+}
+
+
+/* Modal */
+
+
+/* Modal - full screen */
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    padding: 20px;
+    overflow: auto;
+    /* allows scrolling if needed */
+}
+
+
+/* Modal content - takes most of the screen */
+
+.modal-content {
+    background: #fff;
+    border-radius: 15px;
+    width: 95%;
+    max-width: 1200px;
+    max-height: 95vh;
+    /* almost full screen */
+    overflow-y: auto;
+    /* scroll if content is too long */
+    padding: 30px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 0.3s ease;
+}
+
+
+/* Modal image - large and prominent */
+
+.modal img {
+    width: 39%;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-bottom: -8px;
+}
+
+
+/* Modal title */
+
+.modal h2 {
+    color: #9c6b2f;
+    text-align: center;
+    font-family: 'Lora', serif;
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+
+/* Modal date */
+
+.modal .date {
+    font-size: 0.9rem;
+    color: #888;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+
+/* Modal content paragraph */
+
+.modal p {
+    color: #555;
+    font-size: 1.2rem;
+    text-align: justify;
+    line-height: 1.6;
+    white-space: pre-wrap;
+}
+
+
+/* Close button */
+
+.modal-close {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 30px;
+    cursor: pointer;
+    color: #333;
+    transition: color 0.3s;
+}
+
+.modal-close:hover {
+    color: #bc8031;
+}
+
+
+/* Fade-in animation for modal */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+
+/* Scrollbar styling for modal content */
+
+.modal-content::-webkit-scrollbar {
+    width: 8px;
+}
+
+.modal-content::-webkit-scrollbar-thumb {
+    background-color: rgba(156, 107, 47, 0.7);
+    border-radius: 4px;
+}
+
+.modal-content::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.05);
+    border-radius: 4px;
+}
+
+
+/* Pagination */
+
+.pagination {
+    text-align: center;
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.pagination a,
+.pagination span {
+    display: inline-block;
+    padding: 8px 16px;
+    margin: 2px;
+    background: #bc8031;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+.pagination a:hover {
+    background: #9c6b2f;
+}
+
+.pagination .disabled {
+    background: #ccc;
+    pointer-events: none;
+}
+
+.pagination .active {
+    background: #9c6b2f;
+    font-weight: bold;
+}
+
+
+/* Footer */
+
+.site-footer-simple {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 1rem 2rem;
+    font-size: 0.95rem;
+    border-top: 1px solid #444;
+    margin-top: 2rem;
+    width: 100%;
+}
+
+
+/* Responsive */
+
+@media (max-width: 1024px) {
+    .card img {
+        width: 250px;
+    }
+}
+
+@media (max-width: 768px) {
+    .card {
+        flex-direction: column;
+    }
+    .card img {
+        width: 100%;
+        height: auto;
+        border-radius: 15px 15px 0 0;
+    }
+    .breadcrumb {
+        margin: 0 15px 20px 15px;
+    }
+    .nav-links {
+        flex-direction: column;
+        width: 100%;
+        display: none;
+        background-color: #47210a;
+    }
+    .nav-links.show {
+        display: flex;
+    }
+    .nav-links li {
+        width: 100%;
+        text-align: center;
+    }
+    .hamburg-dropdown {
+        display: block;
+    }
+    /* Move Read More button under content on mobile */
+    .card-content .read-more {
+        position: relative;
+        bottom: auto;
+        right: auto;
+        align-self: flex-start;
+        margin-top: 10px;
+    }
+}

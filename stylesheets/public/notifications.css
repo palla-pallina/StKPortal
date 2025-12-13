@@ -1,0 +1,108 @@
+
+
+/* NOTIFS */
+
+    .notif-header h2 {
+        text-align: center;
+        margin-top: 7rem;
+        font-size: 1.5rem;
+        color: #000000e9;
+        margin-bottom: 1rem;
+    }
+
+    .notification-container {
+        max-width: 700px;
+        margin: auto;
+    }
+
+    .notification {
+        background: white;
+        padding: 15px 20px;
+        border-radius: 8px;
+        margin-bottom: 15px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-left: 6px solid #ccc;
+    }
+
+    .notification.success { border-color: #4caf50; }
+    .notification.warning { border-color: #ff9800; }
+    .notification.info { border-color: #2196f3; }
+    .notification.error { border-color: #e53935; }
+
+    .notification .text {
+        max-width: 85%;
+    }
+
+    .notification small {
+        color: #666;
+        font-size: 12px;
+    }
+
+    .btn-clear {
+        text-align: center;
+        background: #d32f2f;
+        color: white;
+        padding: 10px 15px;
+        border-radius: 8px;
+        display: block;
+        width: 200px;
+        margin: 25px auto 0;
+        cursor: pointer;
+        text-decoration: none;
+        margin-bottom: 20px;
+    }
+    .btn-clear:hover {
+        background: #b71c1c;
+    }
+
+    .notification.unread {
+    background-color: #fff9e6; /* light yellow */
+    border-left-color: #ffc107; /* yellow */
+    font-weight: bold;
+}
+
+.notification {
+    position: relative; /* allow absolute positioning for delete button */
+    padding: 15px 20px;
+    border-radius: 10px;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.notification .delete-btn {
+    position: absolute;
+    top: 8px;
+    right: 12px;
+    font-size: 18px;
+    color: #888;
+    cursor: pointer;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.notification .delete-btn:hover {
+    color: #f44336;
+}
+
+.notification-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.notification.unread {
+    background-color: #fff9e6; /* light yellow for unread */
+    border-left-color: #ffc107; /* yellow */
+    font-weight: bold;
+    transition: background-color 0.2s;
+}
+
+.notification.unread:hover {
+    background-color: #fff3cd;
+}
+

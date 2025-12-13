@@ -1,0 +1,693 @@
+@import url('https://fonts.googleapis.com/css2?family=Cantata+One&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Goudy+Bookletter+1911&display=swap');
+
+
+:root {
+    --primary: #481d00; 
+    --yellow: #efad06;
+    --green: #2e7d32;
+    --greenhover: #22a028;
+    --off-white: #faf5ef;
+    --white: #fff;
+    --gray: #6c757d;
+    --dark: #343a40;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Cantata One", serif;
+    font-weight: 400;
+    font-style: normal;
+    background-color: var(--off-white);
+    color: #333;
+    line-height: 1.6;
+}
+
+/* ======= MAIN CONTENT ========*/
+/*==============================*/
+
+.hero-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* HISTORY SECTION */
+.history-section {
+    background-image: url('../assets/history/Santa krus parish banner2.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 60px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    position: relative;
+}
+
+.history-section .history-header {
+    z-index: 1;
+    margin-bottom: 30px;
+}
+
+.history-section .history-header h2 {
+    font-family: 'Lora', serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #000000;
+    letter-spacing: 2px;
+}
+
+/* HISTORY SLIDE-UP ANIMATION */
+.history-animate {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.8s ease-out;
+}
+
+.history-animate.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+.priests-gallery {
+    display: flex;
+    justify-content: center;
+    gap: 5rem;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.priest img {
+    width: 200px;
+    height: 250px;
+    border-radius: 45%;
+    object-fit: cover;
+    border: 3px solid #ffffff;
+    margin-bottom: 0.5rem;
+}
+
+.priest-role {
+    font-weight: bold;
+    color: #444;
+    margin: 0.2rem 0;
+}
+
+.priest-years {
+    font-style: italic;
+    color: #666;
+    margin: 0.2rem 0;
+}
+
+.priest-name {
+    font-size: 1rem;
+    font-weight: bold;
+    background: #bc8031;
+    color: white;
+    padding: 0.3rem 0.6rem;
+    border-radius: 10px;
+    display: inline-block;
+    margin-top: 0.3rem;
+}
+
+.parish-priest {
+    background: #47210a;
+    color: white;
+    padding: 1rem 2rem;
+    text-align: left;
+    border-radius: 0;
+    margin: 2rem 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+
+.parish-priest h3 {
+    font-size: 2rem;
+    font-weight: bold;
+    font-family: 'Lora', serif;
+}
+
+.priest-gallery {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.priest {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.priest img {
+    width: 220px;
+    height: 350px;
+    border-radius: 40%;
+    object-fit: cover;
+    border: 4px solid #bc803100;
+    transition: transform 0.3s ease;
+    margin-bottom: 0.8rem;
+}
+
+.priest img:hover {
+    transform: scale(1.05);
+}
+
+.priest-name {
+    font-size: 1.2rem;
+    font-weight: bold;
+    font-family: 'Lora', serif;
+    background: #f4f4f4;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    color: #333;
+}
+
+.site-footer-simple {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 1rem 2rem;
+    font-size: 0.95rem;
+    border-top: 1px solid #444;
+    margin-top: 2rem;
+}
+
+/* ===== PARALLAX SECTION ===== */
+.parallax {
+    position: relative;
+    height: 70vh;
+    margin-top: 30px;
+    padding-top: 550px;
+    background-image: url('../assets/history/santa krus history banner.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.parallax-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.35);
+}
+
+.parallax-title-h1 {
+    font-family: "Goudy Bookletter 1911", serif;
+    font-style: normal;
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    color: white;
+    font-size: 83px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.parallax-title-h2 {
+    font-family: "Nunito Sans", sans-serif;
+    font-style: normal;
+    position: absolute;
+    top: 64%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    color: white;
+    font-size: 1.5rem;
+    text-align: center;
+    font-weight: lighter;
+}
+
+.parallax-shield {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(85, 50, 30, 0.75);
+    z-index: 1;
+}
+
+/* ===== TIMELINE SECTION ===== */
+.timeline {
+    position: relative;
+    width: 100%;
+    margin: 0;
+    padding: 20px 0;
+
+    background-image: url("../assets/history/HIstoryc.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.timeline-heading-h2 {
+    text-align: center;
+    color: #47210a;
+    font-family: "Goudy Bookletter 1911", serif;
+    font-size: 76px;
+    font-weight: bold;
+    margin-bottom: -18px;
+    margin-top: 45px;
+}
+
+.timeline-heading-h3 {
+    text-align: center;
+    color: #47210a;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+
+.container {
+    padding: 60px 40px;
+    position: relative;
+    background-color: inherit;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    box-sizing: border-box;
+    min-height: 360px;
+    opacity: 0;
+    transform: translateY(-30px);
+    transition: all 0.8s ease-out;
+}
+
+.container.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+@keyframes movedown {
+    0% {
+        transform: translateY(-30px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+.container:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.container:nth-child(2) {
+    animation-delay: 1s;
+}
+
+.container:nth-child(3) {
+    animation-delay: 2s;
+}
+
+.container:nth-child(4) {
+    animation-delay: 3s;
+}
+
+.container:nth-child(5) {
+    animation-delay: 4s;
+}
+
+
+.text-box {
+    padding: 6px 12px;
+    background: transparent;
+    position: relative;
+    border-radius: 0;
+    font-size: 16px;
+}
+
+.divider {
+    width: 2px;
+    background: rgba(255,255,255,0.85);
+    align-self: stretch;
+    position: relative;
+    margin: 0 18px;
+    z-index: 3;
+}
+
+.divider::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 22px;
+    height: 22px;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.18);
+    z-index: 4;
+}
+
+.divider::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 8px;
+    height: 8px;
+    background: #47210a;
+    border-radius: 50%;
+    z-index: 5;
+}
+
+.content-left {
+    width: 50%;
+    padding-right: 3rem;
+    color: #2b2b2b;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: left;
+}
+
+.content-right {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container:nth-child(odd) {
+    flex-direction: row;
+}
+
+.container:nth-child(odd) .content-left {
+    align-items: flex-start;
+    text-align: left;
+    padding-left: 3rem;
+    padding-right: 2rem;
+}
+
+.container:nth-child(odd) .content-right {
+    justify-content: flex-end;
+    padding-right: 4rem;
+}
+
+.container:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.container:nth-child(even) .content-left {
+    align-items: flex-end;
+    text-align: right;
+    padding-right: 3rem;
+    padding-left: 2rem;
+}
+
+.container:nth-child(even) .content-right {
+    padding-left: 4rem;
+}
+
+.container img {
+    width: 63%;
+    max-width: 720px;
+    height: auto;
+    border-radius: 4px;
+    object-fit: cover;
+    border: 12px solid #ffffff;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+}
+
+.container:last-child img {
+    transform: scale(0.8.5);
+}
+
+
+.text-box h2 {
+    font-weight: 600;
+}
+
+.text-box h4 {
+    font-family: "Goudy Bookletter 1911", serif;
+    color: #47210a;
+    font-size: 36px;
+    margin: 0 0 18px 0;
+    font-weight: 800;
+}
+
+.text-box p {
+    
+    color: #3b2a1d;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.45;
+    max-width: 760px;
+}
+
+@media screen and (min-width: 1200px) {
+    .container { min-height: 420px; }
+    .text-box h4 { font-size: 52px; }
+    .text-box p { font-size: 32px; }
+}
+
+.text-box p { 
+    display: block;
+    margin-bottom: 15px;
+}
+
+.left-container-arrow {
+    height: 0;
+    width: 0;
+    position: absolute;
+    top: 28px;
+    z-index: 1;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-left: 15px solid #ffffff;
+    right: -15px;
+}
+
+.right-container-arrow {
+    height: 0;
+    width: 0;
+    position: absolute;
+    top: 28px;
+    z-index: 1;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-right: 15px solid #ffffff;
+    left: -15px;
+}
+
+@media screen and (max-width: 600px) {
+    .timeline{
+        margin: 50px auto;
+    }
+    .timeline::before {
+        left: 20px;
+        transform: translateX(0);
+    }
+    .container{
+        width: 100%;
+        flex-direction: column;
+        padding-left: 20px;
+        padding-right: 20px;
+        gap: 14px;
+    }
+    .content-left, .content-right {
+        width: 100%;
+    }
+    .container::after {
+        left: 20px;
+        transform: translate(-50%, -50%);
+    }
+    .text-box {
+        font-size: 13px;
+    }
+    .text-box p {
+        margin-bottom: 10px;
+    }
+}
+
+/* ===== Mission & Vision Section ===== */
+.mission-vision-section {
+  position: relative;
+  width: 100%;
+  padding: 80px 20px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.mission-vision-bg {
+  position: absolute;
+  top: 62%;
+  left: 50%;
+  transform: translate(-50%, -120%) scale(0.3);
+  width: 180px;
+  height: 180px;
+  background-image: url('../assets/history/2.jpeg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 0;
+  z-index: 0;
+}
+
+.mission-vision-bg.show-zoom {
+  animation: bgZoomDown 1s ease-out forwards;
+}
+
+.mission-vision-bg.show-drop {
+  animation: bgDrop 1s ease-out forwards;
+}
+
+@keyframes bgDrop {
+  0% {
+    transform: translate(-50%, 150%) scale(0.3);
+    opacity: 0;
+  }
+  60% {
+    opacity: 0.22;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0.3;
+  }
+}
+
+.mission-vision-text {
+  position: relative;
+  z-index: 1;
+  max-width: 850px;
+}
+
+.mission-vision-text h3 {
+  position: relative;
+  top: -10px;
+  font-family: "Goudy Bookletter 1911", serif;
+  font-size: 3.4rem;
+  font-weight: 800;
+  color: #000000;
+  margin-bottom: 15px;
+}
+
+.mission-vision-text p {
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 1.25rem;
+  color: #000000;
+  font-weight: 600;
+  line-height: 1.8;
+}
+
+
+/* HISTORY SECTION WRAPPER */
+.history-section {
+  padding: 80px 20px;
+  background: #f7f7f7;
+}
+
+/* HEADER */
+.history-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.history-header h2 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #2b2b2b;
+  letter-spacing: 1px;
+}
+
+/* MAIN CONTENT CARD */
+.history-content {
+  max-width: 1000px;
+  margin: 0 auto;
+  background: #ffffff;
+  padding: 50px 60px;
+  border-radius: 18px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 28px;
+  line-height: 1.9;
+  font-size: 1.05rem;
+  color: #444;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Soft decorative accent */
+.history-content::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 8px;
+  height: 100%;
+  background: linear-gradient(180deg, #b08d57, #e0c08c);
+}
+
+/* PARAGRAPH STYLING */
+.history-content p {
+  margin: 0;
+  text-align: justify;
+}
+
+/* EMPHASIZED TEXT */
+.history-content em {
+  color: #b08d57;
+  font-style: italic;
+  font-weight: 500;
+}
+
+/* ANIMATION (works with your IntersectionObserver) */
+.history-animate {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease;
+}
+
+.history-animate.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* RESPONSIVE FIXES */
+@media (max-width: 768px) {
+  .history-content {
+    padding: 35px 25px;
+    font-size: 1rem;
+  }
+
+  .history-header h2 {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .history-content {
+    padding: 25px 18px;
+  }
+
+  .history-header h2 {
+    font-size: 1.6rem;
+  }
+}

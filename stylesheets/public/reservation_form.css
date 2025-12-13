@@ -1,0 +1,383 @@
+@import url('https://fonts.googleapis.com/css2?family=Cantata+One&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Goudy+Bookletter+1911&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Petit+Formal+Script&display=swap');
+
+:root {
+    --primary: #481d00; 
+    --yellow: #efad06;
+    --green: #2e7d32;
+    --greenhover: #22a028;
+    --off-white: #faf5ef;
+    --white: #fff;
+    --gray: #6c757d;
+    --dark: #343a40;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Nunito Sans", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    background-color: var(--off-white);
+    color: #333;
+    line-height: 1.6;
+}
+
+/* ======= MAIN CONTENT ========*/
+/*==============================*/
+
+.header-banner {
+    background-size: cover;
+    background-position: center;
+    padding: 120px 20px;
+    text-align: center;
+    color: white;
+    position: relative;
+    font-family: "Goudy Bookletter 1911", serif;
+}
+
+.header-banner::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(71, 33, 10, 0.45);
+}
+
+.header-banner h1,
+.header-banner p {
+    color: white;
+    position: relative;
+    z-index: 2;
+}
+
+.header-banner h1 {
+    font-size: 80px;
+    margin: 0;
+    letter-spacing: 2px;
+    font-weight: 700;
+}
+
+.header-banner p {
+    font-size: 22px;
+    margin-top: 10px;
+}
+
+/*---------FORM STYLING---------*/
+/*------------------------------*/
+.reservation-form {
+  background-color: #fff;
+  padding: 2rem;
+  margin: 0 auto;
+  margin-bottom: 38px;
+  border-radius: 20px;
+  box-shadow: 10px 0 30px rgba(0, 0, 0, 0.1), -10px 0 30px rgba(0, 0, 0, 0.1);
+  max-width: 1000px;
+}
+
+.reservation-form h3 {
+  font-family: Arial;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #000;
+}
+
+.reservation-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 1rem;
+}
+
+.reservation-form label {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.reservation-form input,
+.reservation-form select {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  width: 100%;
+  font-size: 1rem;
+}
+
+#reserve-btn button {
+  padding: 0.75rem 2rem;
+  background-color: #9c6b2f;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 1rem;
+  width: 100%;
+  max-width: 950px;
+  text-align: center;
+  transition: background 0.3s ease;
+}
+
+#reserve-btn button:hover {
+background: #707070;
+background: linear-gradient(90deg, rgba(112, 112, 112, 1) 0%, rgba(184, 184, 184, 1) 100%, rgba(237, 221, 83, 1) 100%);
+}
+
+.label-with-icon {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: bold;
+  margin-top: 1rem;
+}
+
+.icon-plus {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  color: white;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.site-footer-simple {
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.95rem;
+}
+
+.card-link {
+  all: unset; 
+  cursor: pointer;
+  display: block;
+}
+
+.card-link:focus,
+.card-link:active {
+  outline: none;
+}
+
+/*---------FORM STYLING---------*/
+/*------------------------------*/
+
+
+/*---------BREADCRUMB-----------*/
+/*------------------------------*/
+.breadcrumb {
+    margin: 0 0 20px 0;
+    padding: 12px 20px;
+    background: #f0f0f0;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 1rem;
+    color: #555;
+    box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.1);
+}
+
+.breadcrumb a {
+    color: #bc8031;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.breadcrumb a:hover {
+    color: #9c6b2f;
+}
+
+.breadcrumb span {
+    color: #777;
+}
+
+.breadcrumb span::before {
+    content: ">";
+    margin: 0 5px;
+    color: #999;
+}
+/*---------BREADCRUMB-----------*/
+/*------------------------------*/
+
+
+/* ==============================
+   MINI MONTHLY CALENDAR UI
+============================== */
+
+.mini-calendar {
+    background: #fffaf3;
+    border: 2px solid #c9b18a;
+    border-radius: 12px;
+    padding: 15px;
+    margin-bottom: 10px;
+    max-width: 458px;
+}
+
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+    font-size: 16px;
+    color: #5c3a1a;
+    margin-bottom: 10px;
+}
+
+.calendar-header button {
+    border: none;
+    background: #8b5e34;
+    color: #fff;
+    padding: 4px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 6px;
+}
+
+.calendar-day {
+    text-align: center;
+    padding: 8px 0;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    background: #f6efe4;
+}
+
+.calendar-day.available:hover {
+    background: #d6c3a3;
+}
+
+.calendar-day.selected {
+    background: #8b5e34;
+    color: #fff;
+    font-weight: bold;
+}
+
+.calendar-day.blocked {
+    background: #f0f0f0;
+    color: #aaa;
+    cursor: not-allowed;
+}
+
+.calendar-day.full {
+    background: #f0f0f0;
+    color: #aaa;
+    cursor: not-allowed;
+}
+
+.calendar-weekday {
+    font-weight: bold;
+    text-align: center;
+    font-size: 12px;
+    color: #666;
+}
+
+.time-buttons {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.time-btn {
+  border: 1px solid #c9b18a;
+  background: #fffaf3;
+  color: #8b5e34;
+  border-radius: 16px;
+  cursor: pointer;
+  font-size: 15px;
+  padding-top: 29px;
+  padding-bottom: 28px;
+  padding-right: 21px;
+  padding-left: 21px;
+}
+
+.time-btn.active {
+  background: #8b5e34;
+  color: white;
+  font-weight: bold;
+}
+
+.time-btn.disabled {
+  background: #e9ecef;
+  border-color: #ccc;
+  color: #888;
+  cursor: not-allowed;
+}
+
+
+/*----TOOLTIP STYLING-----*/
+.tooltip-label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 600;
+}
+
+.tooltip-icon {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  color: #1e4fa1;
+  font-weight: bold;
+}
+
+.tooltip-text {
+  visibility: hidden;
+  width: 230px;
+  background-color: var(--green);
+  color: #fff;
+  text-align: center;
+  padding: 8px 10px;
+  border-radius: 6px;
+
+  position: absolute;
+  z-index: 99;
+  bottom: 130%;
+  left: 50%;
+  transform: translateX(-50%);
+
+  font-size: 12px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltip-text::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -6px;
+  border-width: 6px;
+  border-style: solid;
+  border-color: #1e4fa1 transparent transparent transparent;
+}
+
+.tooltip-icon:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+}
