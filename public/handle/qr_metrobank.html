@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Metrobank QR</title>
+  <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../stylesheets/public/qr.css">
+</head>
+<body>
+  <div class="wrap">
+    <div class="card">
+  <img src="../../stylesheets/assets/metrobg.png" alt="Metrobank" class="gcash-logo metro-logo" />
+      <p class="subtitle">Scan this QR code to continue with your Metrobank payment.</p>
+      <img id="qrImage" class="qr" src="qr.jpg" alt="Metrobank QR" />
+      <div id="donationInfo" class="donation-info" style="text-align:center; margin-top:12px;"></div>
+      <div class="btns">
+        <a href="../donation.php" class="btn secondary">Back</a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const params = new URLSearchParams(window.location.search);
+      const cause = params.get('cause');
+      const amount = params.get('amount');
+      const donationInfo = document.getElementById('donationInfo');
+
+      if (cause && amount) {
+        const causeLabels = {
+          parishdonations: 'Parish Donations',
+          tithes: 'Tithes',
+          charity: 'Charity'
+        };
+        const label = causeLabels[cause] || cause;
+        const formattedAmount = Number(amount).toLocaleString();
+        donationInfo.innerHTML = `
+          <p class="donation-amount">PHP ${formattedAmount}</p>
+          <p class="donation-type">${label}</p>
+        `;
+      } else {
+        donationInfo.innerHTML = '';
+      }
+    });
+  </script>
+</body>
+</html>
