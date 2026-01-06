@@ -17,7 +17,7 @@
 - for reservation (baptism, wedding, confirmation, etc.) and services forms (mass and blessings)
 - also for register din
 
-**English (Filipino)**
+**English (Filipino) Translation**
 - for sacrament info, reservation and services forms
 
 **Events Admin Dashboard**
@@ -51,6 +51,7 @@
 - age validation (register and wedding form)
 - sorting function for admin reservation 
 - pagination for admin dashboards
+- ayos design ng printed certificates
 
 **ETCECT**
 - tf gagawin naten sa donations ;u;
