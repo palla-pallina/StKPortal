@@ -8,7 +8,7 @@
 7. Drag and drop these files into the `src` folder you created earlier.
 
 `src` folder should look like this
-<img src="src ref.png">
+<img src="src_ref.png">
 
 ---
 
