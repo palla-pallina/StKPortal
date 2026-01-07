@@ -1,6 +1,6 @@
 # To Do List for Finals (⁄ ⁄>⁄ ▽ ⁄<⁄ ⁄)
 
-**Live Mass Dashboard**
+**Live Mass Dashboard** -- ERL
 - dashboard for admin to update the live mass feed's facebook live link
 - should have a tutorial (kahit step by step or flowchart sa canva)
 
@@ -9,25 +9,25 @@
 - email validation
 - forgot password
 
-**Mass Schedule Dashboard**
+**Mass Schedule Dashboard** -- VIC
 - dashboard for admin to update the mass schedule displayed at homepage
 - should have fields for day, time and presider (priest)
 
-**Data Privacy Disclaimer**
+**Data Privacy Disclaimer** -- PAU
 - for reservation (baptism, wedding, confirmation, etc.) and services forms (mass and blessings)
 - also for register din
 
 **English (Filipino) Translation**
 - for sacrament info, reservation and services forms
 
-**Events Admin Dashboard**
+**Events Admin Dashboard** -- PAU
 - add repetition option (yearly event)
 
 **Improve Notification System**
 - admin should be able to add remarks/notes
 - email notification 
 
-**Priest Dashboard**
+**Priest Dashboard** --PAU
 - view all prayer requests
 - schedule calendar -- view mass and sacrament dates that they're presiding
 
@@ -46,12 +46,12 @@
 - members can reapply for failed reservations/services
 
 **ETC**
-- field validation __\*__
+- field validation __\*__ -- PAU
 - implement security measures against SQL injections
-- age validation (register and wedding form)
+- age validation (register and wedding form) -- PAU
 - sorting function for admin reservation 
 - pagination for admin dashboards
-- ayos design ng printed certificates
+- ayos design ng printed certificates -- PAU
 
 **ETCECT**
 - tf gagawin naten sa donations ;u;
