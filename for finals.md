@@ -1,6 +1,6 @@
 # SCHEDULE
 *Week 3 (JAN 12-16)*, finish all processes and transactions  
-*Week 4 (JAN 19-23)*, polish of processes and UI
+*Week 4 (JAN 19-23)*, polish of processes and UI<br>
 *WEEK 5 (JAN 26-29),* final defense ;u;
 
 ## DELIVERABLES
