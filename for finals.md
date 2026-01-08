@@ -55,6 +55,10 @@
 - tabular certificate requests on user side
 - email notification (PAU)
 
+- **notification**
+- successful submission of request
+- donation reminder
+
 **ETCECT**
 - tf gagawin naten sa donations ;u;
 - tanggalin na ba yung file manager? ;u;;;
