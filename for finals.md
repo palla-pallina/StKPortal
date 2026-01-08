@@ -28,8 +28,8 @@
 **ERLSHAWN**
 1. Activity Diagram revision
 2. Live Mass Dashboard
-- dashboard for admin to update the live mass feed's facebook live link
-- should have a tutorial (kahit step by step or flowchart sa canva)
+	- dashboard for admin to update the live mass feed's facebook live link
+	- should have a tutorial (kahit step by step or flowchart sa canva)
 1. View all prayer requests for Priest 
 
 **PAU**
