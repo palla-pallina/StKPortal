@@ -13,7 +13,7 @@
 
 # TO DO LIST FOR FINALS (⁄ ⁄>⁄ ▽ ⁄<⁄ ⁄)
 
-**Ericka**
+**ERICKA**
 1. Deployment Diagram revision
 2. Login/Register
 	- captcha (try using [cap](https://capjs.js.org/), open source alternative sa reCaptcha)
@@ -48,6 +48,11 @@
 	- successful submission of request
 	- donation reminder
 	- additional remarks/custom notification
+
+**VIC**
+1. Data Flow Diagram
+2. Mass Schedule Dashboard
+3. English (Filipino) Translation
 
 **WALA PA**
 - donation revision ;u;
