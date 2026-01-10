@@ -38,16 +38,17 @@
 3. Admin Events - repetition option (yearly event)
 4. Priest Dashboard + Priest Schedule Calendar
 5. Admin Announcement - announcement category (general announcement, event, news or wedding banns)
-6. Reapplication Option
+6. Improve sacrament reservations dashboard
 7. Field Validation
 8. Age Validation
 9. Sorting
 10. Pagination
 11. Certificate Designs
-12. Improve notifications
+12. ==Improve notifications==
 	- successful submission of request
 	- donation reminder
 	- additional remarks/custom notification
+	- reapplication option
 
 **VIC**
 1. Data Flow Diagram
