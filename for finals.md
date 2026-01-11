@@ -51,9 +51,10 @@
 	- ~~reapplication option~~
 13. implement updated notifications for
 	- ~~baptism~~
-	- first communion
-	- confirmation
-	- funeral mass
+	- ~~first communion~~
+	- ~~confirmation~~
+	- ~~wedding~~
+ 	- funeral mass
 	- certificate request
 
 pagination for admin notifications
