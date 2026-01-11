@@ -44,11 +44,19 @@
 9. Sorting
 10. Pagination
 11. Certificate Designs
-12. ==Improve notifications==
-	- successful submission of request
-	- donation reminder
-	- additional remarks/custom notification
-	- reapplication option
+12. ~~Improve notifications~~
+	- ~~successful submission of request~~
+	- ~~donation reminder~~
+	- ~~additional remarks/custom notification~~
+	- ~~reapplication option~~
+13. implement updated notifications for
+	- ~~baptism~~
+	- first communion
+	- confirmation
+	- funeral mass
+	- certificate request
+
+pagination for admin notifications
 
 **VIC**
 1. Data Flow Diagram
