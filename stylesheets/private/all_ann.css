@@ -1,0 +1,99 @@
+.announcement-card { width: 100%; background: var(--light); padding: 15px; border-radius: 10px; display: flex; align-items: flex-start; gap: 20px; border: 1px solid #ddd; margin-bottom: 18px; }
+.announcement-card img { width: 300px; height: 180px; object-fit: cover; border-radius: 8px; }
+.ann-text { flex: 1; }
+.ann-text h4 { margin: 0; font-size: 20px; font-weight: bold; }
+.ann-text p { margin: 8px 0; }
+.btn { display: inline-block; padding: 6px 12px; border-radius: 6px; text-decoration: none; background: #0baf5a;
+color: white; margin-right: 5px;}
+.btn-danger { background: #dc2626; color: white; }
+.filter { margin-bottom: 20px; display: flex; justify-content: flex-end; gap: 10px; }
+.btn:hover { color: white; text-decoration: none; background-color: #029d4d;}
+.filter-wrapper {
+  display: flex;
+  justify-content: flex-end; /* push to the right */
+  align-items: center;
+  gap: 8px;
+
+  float: right;
+
+}
+
+.add-event input{
+    height: 50px
+}
+
+.add-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--green);
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    transition: all 0.3s ease;
+    padding-top: 8px;
+}
+
+.add-btn:hover {
+    background: #2d5a25;
+    transform: scale(1.05);
+}
+
+
+.actions button {
+    padding: 8px 12px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    color: white;
+}
+
+
+/*---- PAGE HEADER ----*/
+.page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 24px;
+}
+
+.page-header-left h1 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: 600;
+    color: #333;
+}
+
+.page-header-right {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.page-header-right label {
+    font-size: 14px;
+    color: #555;
+    margin-top: 24px;
+}
+
+.filter-wrapper {
+    display: flex;
+    align-items: center;
+    margin-top: 35px;
+}
+
+.filter select {
+    padding: 8px 12px;
+    font-size: 14px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    background: #fff;
+    cursor: pointer;
+}
+
+.filter select:focus {
+    outline: none;
+    border-color: #4f46e5;
+    box-shadow: 0 0 0 2px rgba(79, 70, 229, 0.2);
+}

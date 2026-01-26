@@ -1,0 +1,35 @@
+body { font-family: Arial, sans-serif; margin: 0;}
+.layout { display: grid; grid-template-columns: 2fr 1fr; gap: 20px; }
+#calendar { background: #fff; padding: 10px; border-radius: 8px; }
+#summary { background: #f9f9f9; padding: 15px; border-radius: 8px; }
+#summary h3 { margin-top: 0; }
+.summary-item { margin-bottom: 10px; }
+.no-events { color: #777; font-style: italic; }
+
+.nav-btn {
+    padding: 6px 12px;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 13px;
+    font-weight: 600;
+    transition: transform 0.15s ease, opacity 0.15s ease;
+}
+
+.nav-btn:hover {
+    transform: translateY(-1px);
+    opacity: 0.9;
+}
+
+.nav-btn.anointing { background: #c0392b; }
+.nav-btn.baptism { background: #2980b9; }
+.nav-btn.communion { background: #27ae60; }
+.nav-btn.confirmation { background: #8e44ad; }
+.nav-btn.wedding { background: #e84393; }
+.nav-btn.funeral { background: #2d3436; }
+.nav-btn.celebratory { background: #16a085; }
+.nav-btn.house { background: #d35400; }
+.nav-btn.mass { background: #34495e; }
+.nav-btn:hover {
+    background: #1a252f;
+}

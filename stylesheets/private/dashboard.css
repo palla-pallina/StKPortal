@@ -1,0 +1,260 @@
+@import url('https://fonts.googleapis.com/css2?family=Cantata+One&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap'); 
+.hero-banner {
+    position: relative;
+    height: 400px;
+    overflow: hidden;
+}
+
+.banner-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.banner-image.active {
+    opacity: 1;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+}
+
+.hero-content {
+    position: absolute;
+    top: 20%;
+    left: 5%;
+    text-align: left;
+    color: white;
+    z-index: 2;
+}
+
+.hero-content h1 {
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero-content p {
+    font-size: 25px;
+    font-weight: 300;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.verse-content {
+    position: absolute;
+    top: 12%;
+    right: 5%;
+    max-width: 420px;
+    color: #ffffff;
+    text-align: right;
+    z-index: 2;
+}
+
+
+.verse-text {
+    font-size: 17px;
+    font-family: "Nunito Sans", sans-serif;
+    font-style: italic;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.verse-ref {
+    display: block;
+    font-family: "Nunito Sans", sans-serif;
+    margin-top: 6px;
+    font-size: 15px;
+    font-weight: 500;
+    opacity: 0.85;
+}
+
+.type-cursor::after {
+    content: "|";
+    margin-left: 3px;
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0%, 50%, 100% { opacity: 1; }
+    25%, 75% { opacity: 0; }
+}
+
+.main-content span {
+    font-size: 22px;
+}
+
+
+/* ahhhhh */
+
+
+.main-container {
+  padding: 25px;
+}
+
+.content-card {
+  border-radius: 8px;
+}
+
+.action-card {
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    padding: 20px;
+    height: 188px;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    text-align: left;
+}
+
+.dashboard-grid a {
+  color: black;
+}
+
+.action-card p {
+    font-size: 16px;
+}
+.action-card i {
+  font-size: 28px;
+  color: #7b140e;
+}
+
+.action-card h6 {
+  color: #3a7a1f;
+  font-weight: 700;
+  margin-top: 10px;
+  font-size: 18px;
+}
+
+.action-card:hover {
+  box-shadow: 0 12px 20px rgba(0,0,0,0.12);
+  background-color: #66ff6133;
+}
+
+.logout {
+  border-color: #999;
+}
+
+.side-card {
+  background: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.side-card h6 {
+  font-weight: 700;
+}
+
+.side-card .item {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+
+.side-card small {
+  width: 100%;
+  color: #555;
+}
+
+.side-card a {
+  color: #3a7a1f;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.side-card a:hover {
+  text-decoration: underline;
+}
+
+.sacrament-reservations {
+    width: 100%;
+    background: linear-gradient(135deg, #a82a1d, #821010);
+    border-radius: 18px;
+    padding: 40px;
+    margin-bottom: 35px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.sacrament-reservations:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 14px 35px rgba(0, 0, 0, 0.35);
+}
+
+.sacrament-reservations .label span {
+    font-size: 26px;
+    color: #ffffff;
+    letter-spacing: 2px;
+    font-weight: lighter;
+}
+
+.main-content a {
+    text-decoration: none;
+}
+
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 22px;
+}
+
+.dashboard-btn {
+    background: #ffffff;
+    border-radius: 18px;
+    padding: 30px 15px;
+    text-align: center;
+    font-size: 17px;
+    color: black;
+    border: 1px solid #e6d7c7;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.dashboard-btn:hover {
+    background: #388e3c;
+    color: white;
+    transform: translateY(-6px) scale(1.03);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.3);
+}
+
+.dashboard-btn br {
+    display: block;
+    margin-top: 8px;
+}
+
+.dashboard-grid a:last-child .dashboard-btn {
+    background: #7b1d14;
+    color: #fff;
+    border-color: #a83227;
+}
+
+.dashboard-grid a:last-child .dashboard-btn:hover {
+    background: #a83227;
+    color: #fff;
+}
+
+@media (max-width: 768px) {
+    .main-content {
+        padding: 25px 18px;
+    }
+
+    .sacrament-reservations {
+        padding: 30px 22px;
+    }
+
+    .dashboard-btn {
+        padding: 25px 10px;
+        font-size: 16px;
+    }
+}

@@ -1,0 +1,360 @@
+/*
+    styling for USER navbar, footer, and website elements (fonts, header styling, etc)
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Cantata+One&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap'); 
+/* Cantata One for headers, Nunito Sans for general, readable text */
+
+@import url('https://fonts.googleapis.com/css2?family=Goudy+Bookletter+1911&display=swap');
+/* Goudy Bookletter for special headers */
+
+:root {
+    --primary: #481d00; 
+    --yellow: #efad06;
+    --green: #2e7d32;
+    --greenhover: #22a028;
+    --off-white: #faf5ef;
+    --white: #fff;
+    --gray: #6c757d;
+    --dark: #343a40;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Cantata One", serif;
+    font-weight: 400;
+    font-style: normal;
+    background-color: var(--off-white);
+    color: #333;
+    line-height: 1.6;
+}
+
+
+/*----------- NAVBAR ------------*/
+/*-------------------------------*/
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: var(--primary);
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-family: "Nunito Sans", sans-serif;
+    font-weight: 501;
+    font-style: normal;
+    font-size: 17px;
+}
+
+.logo {
+    height: 74px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* ACTIVE NAV-LINK */
+.nav-links a.active {
+    color: var(--yellow);
+    font-weight: 500;
+}
+
+/* active + hover combo */
+.nav-links a.active,
+.nav-links a.active:hover {
+    color: var(--yellow);
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.nav-links li {
+    padding: 2px 18px;
+    transition: 0.4s;
+    position: relative;
+}
+
+.nav-links a:hover {
+    transition: 0.2s;
+    color: var(--yellow);
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    display: block;
+    font-weight: 600;
+}
+
+.nav-profile img {
+    height: 40px;
+    margin-left: 1rem;
+    border-radius: 20px;
+}
+
+
+/*------- NAVBAR DROPDOWN -------*/
+/*-------------------------------*/
+
+.li-dropdown {
+  position: relative;
+}
+
+.li-dropdown .dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: var(--primary);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: none;
+  min-width: 150px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);    
+}
+
+.li-dropdown:hover .dropdown {
+  display: block;
+  border-bottom: 1px solid var(--yellow);
+}
+
+.dropdown li a {
+  display: block;
+  padding: 0.65rem 0rem;
+  color: white;
+  text-decoration: none;
+}
+
+
+/*---------- LOGIN BTN ----------*/
+/*-------------------------------*/
+
+
+#login-btn {
+    padding: 10px 14px;
+    background: var(--green);
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 11px;
+    transition: 0.3s;
+}
+
+#login-btn:hover {
+    background: var(--greenhover);
+}
+
+#login-btn:active { 
+    background: var(--green);
+}
+
+/*------- NAVBAR NOTIFICATION -------*/
+/*-----------------------------------*/
+
+.nav-notification {
+    position: relative;
+    margin-left: 1rem;
+}
+
+.nav-notification .bell {
+    font-size: 1.5rem;
+    margin-left: -33px;
+}
+
+.nav-notification .badge {
+    position: absolute;
+    top: 4px;
+    right: 16px;
+    background: red;
+    color: white;
+    font-size: 0.75rem;
+    font-weight: bold;
+    padding: 2px 6px;
+    border-radius: 132%;
+}
+
+/*------------- FOOTER --------------*/
+/*-----------------------------------*/
+
+@media (max-width: 992px) {
+    .custom-footer {
+        flex-direction: column;
+    }
+    .footer-links {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+    
+/* Footer base */
+.custom-footer {
+    display: flex;
+    flex-wrap: wrap;
+    font-family: "Nunito Sans", sans-serif;
+    color: var(--white);
+    background: black;
+    margin-top: 13px; 
+}
+
+/* Left section */
+.footer-left {
+    flex: 1 1 250px;
+    padding: 40px;
+}
+
+.footer-left h2 {
+    margin-bottom: 15px;
+    font-family: "Cantata One", serif;
+}
+
+.footer-left p {
+    margin-bottom: 20px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    padding: 0;
+    list-style: none;
+    color: #e0e0e0;
+}
+
+.social-icons li a {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    background: white;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 35px;
+    color: black;
+    font-size: 1rem;
+    transition: 0.3s;
+}
+
+.social-icons li a:hover{
+    background: var(--greenhover);
+    color: black;
+}
+
+/* Center links */
+.link-column h3 {
+    margin-bottom: 15px;
+}
+
+.link-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.link-column ul li {
+    margin-bottom: 10px;
+}
+
+.link-column ul li a {
+    color: var(--gray);
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.link-column ul li a:hover {
+    color: var(--dark);
+}
+
+
+/* Right contact form */
+.footer-contact {
+    flex: 1 1 300px;
+    padding: 40px;
+    background: var(--primary);
+    color: var(--white);
+}
+
+.footer-contact h3 {
+    margin-bottom: 20px;
+    color: var(--white);
+}
+
+.footer-contact form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.footer-contact input,
+.footer-contact textarea {
+    width: 100%;
+    padding: 12px;
+    border-radius: 11px;
+    border: none;
+    font-size: 0.95rem;
+}
+
+.footer-contact textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+.footer-contact button {
+    padding: 12px;
+    background: var(--green);
+    color: var(--white);
+    font-weight: bold;
+    border: none;
+    border-radius: 85px;
+    cursor: pointer;
+}
+
+.footer-contact button:hover {
+    background: var(--greenhover);
+}
+
+.footer-location {
+    flex: 2 1 500px;
+    padding: 40px;
+}
+
+.footer-location h3 {
+    margin-bottom: 15px;
+}
+
+.map-container {
+    margin-top: 10px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* header text */
+.services-header h2 {
+  background-color: #481d00;
+  color: white;
+  font-family: "Cantata One", serif;
+  font-size: 30px;
+  padding: 8px 0 8px 40px;
+}
+
+/* header image */
+.hero-image img {
+  width: 102%;
+  height: auto;
+  display: block;
+  margin-top: 20px;
+}
+
+/* required */
+.required {
+    color: #ff0707;
+    font-size: 18px;
+    font-family: courier;
+    font-weight: bold;
+}
