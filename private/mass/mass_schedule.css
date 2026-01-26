@@ -1,0 +1,254 @@
+/* ================================
+   MASS SCHEDULE ADMIN CALENDAR
+================================ */
+
+.mass-container {
+    padding: 25px;
+}
+
+
+/* FLEX ROW FOR CALENDAR + ADD MASS FORM */
+
+.row {
+    display: flex;
+    gap: 5px;
+}
+
+
+/* LEFT: CALENDAR */
+
+.col-md-8 {
+    width: 78%;
+}
+
+
+/* RIGHT: ADD MASS FORM */
+
+.col-md-4 {
+    width: 22%;
+}
+
+
+/* CARD */
+
+.mass-card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 20px;
+    border: 2px solid #7b140e;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+/* CALENDAR GRID */
+
+.mass-calendar {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 12px;
+    margin-top: 15px;
+    overflow-x: auto;
+}
+
+
+/* DAY COLUMN */
+
+.day-column {
+    border: 1px solid #7b140e;
+    border-radius: 8px;
+    padding: 10px;
+    min-height: 250px;
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+}
+
+
+/* DAY HEADER */
+
+.day-header {
+    text-align: center;
+    font-weight: 700;
+    color: #fff;
+    background: #7b140e;
+    border-radius: 6px 6px 0 0;
+    padding: 8px 0;
+    margin-bottom: 10px;
+}
+
+
+/* MASS ITEM */
+
+.mass-item {
+    background: #fdfdfd;
+    border-left: 2px solid #7b140e;
+    border-radius: 7px;
+    padding: 10px 10px;
+    margin-bottom: 25px;
+    display: flex;
+    flex-direction: column;
+}
+
+.mass-item:hover {
+    background: #fff0f0;
+}
+
+
+/* TIME + EDIT ICON */
+
+.mass-time-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 4px;
+}
+
+.mass-time-row .mass-time {
+    font-size: 14px;
+    font-weight: 600;
+    color: #000;
+}
+
+.mass-time-row .edit-icon {
+    color: #7b140e;
+    font-size: 16px;
+}
+
+.mass-time-row .edit-icon:hover {
+    color: #3a7a1f;
+}
+
+
+/* PRIEST NAME + DELETE ICON */
+
+.priest-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 4px;
+}
+
+.priest-row small {
+    font-size: 13px;
+    color: #3a7a1f;
+    flex: 1;
+}
+
+.priest-row .delete-icon {
+    color: #7b140e;
+    font-size: 16px;
+}
+
+.priest-row .delete-icon:hover {
+    color: #000;
+}
+
+
+/* NO MASS */
+
+.no-mass {
+    font-size: 13px;
+    color: #999;
+    text-align: center;
+    margin-top: auto;
+}
+
+
+/* ================================
+   CURRENT MASS HIGHLIGHT (CHURCH COLORS)
+================================ */
+
+.mass-item.highlight-mass {
+    background-color: #7b140e !important;
+    /* Church red */
+    border-left: 4px solid #3a7a1f !important;
+    /* Church green */
+    color: #fff;
+    transition: background 0.3s, border-left 0.3s;
+    box-shadow: 0 0 12px rgba(123, 20, 14, 0.6);
+    /* Optional glow */
+}
+
+.mass-item.highlight-mass:hover {
+    background-color: #3a7a1f;
+    /* Green on hover */
+}
+
+.mass-item.highlight-mass .mass-time,
+.mass-item.highlight-mass small,
+.mass-item.highlight-mass i {
+    color: #fff !important;
+    /* Ensure text/icons are readable */
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 1200px) {
+    .col-md-8 {
+        width: 100%;
+    }
+    .col-md-4 {
+        width: 100%;
+        margin-top: 15px;
+    }
+    .mass-calendar {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+/* ================================
+   ADD MASS BUTTON STYLING
+================================ */
+
+button[name="add_schedule"] {
+    background-color: #7b140e;
+    border: none;
+    color: #fff;
+    font-weight: 600;
+    border-radius: 8px;
+    padding: 10px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button[name="add_schedule"]:hover {
+    background-color: #3a7a1f;
+    transform: translateY(-1px);
+}
+
+button[name="add_schedule"]:active {
+    background-color: #000;
+    transform: translateY(0);
+}
+
+
+/* Simple modal CSS */
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+}
+
+.modal-content {
+    background: #fff;
+    padding: 20px;
+    max-width: 400px;
+    margin: 100px auto;
+    border-radius: 5px;
+    position: relative;
+}
+
+#sidebar.hide {
+    transform: translateX(-100%);
+}
+
+#sidebar {
+    transition: all 10s ease;
+}
