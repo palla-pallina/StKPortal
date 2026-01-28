@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Jan 26, 2026 at 12:20 PM
+-- Generation Time: Jan 28, 2026 at 02:18 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.0.30
 
@@ -48,11 +48,11 @@ INSERT INTO `admin_notifications` (`id`, `sacrament`, `service`, `reference_id`,
 (18, 'Wedding', NULL, 13, 'Wedding Reservation', 'Blessica Pasado submitted a wedding reservation for Groom: H HHH HHHH and Bride: Blessica Rosal Pasado on October 31, 2026 at 10:00 AM.', 'Unread', '2026-01-11 15:24:25'),
 (20, 'Wedding', NULL, 15, 'Wedding Reservation', 'Blessica Pasado submitted a wedding reservation for Groom: John Winston Lennon and Bride: Blessica Rosal Pasado on June 01, 2026 at 01:00 PM.', 'Read', '2026-01-11 18:59:17'),
 (21, 'Baptism', NULL, 96, 'Baptism Reservation', 'Blessica Pasado submitted a baptism reservation for Meow Maw on February 02, 2026 at 08:00 AM.', 'Read', '2026-01-13 16:46:20'),
-(22, 'Certificate Request', NULL, 0, 'Certificate Request', 'Blessica Pasado submitted a certificate request (Confirmation) for Blessica Pasado.', 'Read', '2026-01-14 13:27:56'),
-(23, 'Certificate Request', NULL, 0, 'Certificate Request', 'Blessica Pasado submitted a certificate request (First Communion) for Pau Line Jean.', 'Read', '2026-01-15 01:38:00'),
+(22, 'Certificate Request', NULL, 21, 'Certificate Request', 'Blessica Pasado submitted a certificate request (Confirmation) for Blessica Pasado.', 'Read', '2026-01-14 13:27:56'),
+(23, 'Certificate Request', NULL, 21, 'Certificate Request', 'Blessica Pasado submitted a certificate request (First Communion) for Pau Line Jean.', 'Read', '2026-01-15 01:38:00'),
 (24, 'Confirmation', NULL, 79, 'Confirmation Reservation', 'Blessica Pasado submitted a confirmation reservation for Pau  line jeeen on January 30, 2026 at 03:00 PM.', 'Read', '2026-01-15 02:01:27'),
 (25, 'Anointing of the Sick', NULL, 0, 'Anointing of the Sick Request', 'Blessica Pasado submitted an Anointing of the Sick request for sada sad sd scheduled on 2026-01-19 at 03:00.', 'Read', '2026-01-18 13:33:47'),
-(26, 'Anointing of the Sick', NULL, 0, 'Anointing of the Sick Request', 'Blessica Pasado submitted an Anointing of the Sick request for Pauline Jean Pasion scheduled on 2026-01-21 at 07:00.', 'Unread', '2026-01-18 13:38:44'),
+(26, 'Anointing of the Sick', NULL, 0, 'Anointing of the Sick Request', 'Blessica Pasado submitted an Anointing of the Sick request for Pauline Jean Pasion scheduled on 2026-01-21 at 07:00.', 'Read', '2026-01-18 13:38:44'),
 (27, 'Funeral', NULL, 0, 'Funeral Mass Request', 'Blessica Pasado submitted a Funeral Mass request for sadsa ad dda scheduled on 2026-01-28 at 18:00.', 'Unread', '2026-01-18 13:56:16'),
 (28, 'Celebratory Mass', NULL, 14, 'Celebratory Mass Request', 'Blessica Pasado submitted a Celebratory Mass request (Birthday) for ad asd asd scheduled on 2026-01-26 at 14:00 at At Santa Krus Parish.', 'Unread', '2026-01-18 14:20:20'),
 (29, 'Celebratory Mass', NULL, 15, 'Celebratory Mass Request', 'Blessica Pasado submitted a Celebratory Mass request (Birthday) for adas dadad sadsada scheduled on 2026-01-27 at 21:00 at At Santa Krus Parish.', 'Unread', '2026-01-18 14:21:55'),
@@ -70,22 +70,57 @@ INSERT INTO `admin_notifications` (`id`, `sacrament`, `service`, `reference_id`,
 (41, 'Baptism', NULL, 102, 'Baptism Reservation', 'Blessica Pasado submitted a baptism reservation for j j on February 26, 2026 at 11:00 AM.', 'Unread', '2026-01-23 17:45:55'),
 (42, 'Baptism', NULL, 103, 'Baptism Reservation', 'Blessica Pasado submitted a baptism reservation for ada dsa on February 26, 2026 at 11:00 AM.', 'Unread', '2026-01-23 17:59:26'),
 (43, 'Baptism', NULL, 104, 'Baptism Reservation', 'Blessica Pasado submitted a baptism reservation for ads asd on March 01, 2026 at 10:00 AM.', 'Unread', '2026-01-25 06:35:26'),
-(44, 'Baptism', NULL, 105, 'Baptism Reservation', 'Blessica Pasado submitted a baptism reservation for ads sad on February 17, 2026 at 10:00 AM.', 'Unread', '2026-01-25 06:40:54'),
-(45, 'Baptism', NULL, 106, 'Baptism Reservation', 'Blessica Pasado submitted a baptism reservation for asda dsa on February 18, 2026 at 02:00 PM.', 'Unread', '2026-01-25 07:08:41'),
-(46, 'Baptism', NULL, 107, 'Baptism Reservation', 'Blessica Pasado submitted a baptism reservation for asd dsa on March 01, 2026 at 10:00 AM.', 'Unread', '2026-01-25 07:18:05'),
-(47, 'First Communion', NULL, 19, 'First Communion Reservation', 'Blessica Pasado submitted a First Communion reservation for sa dsad d on February 15, 2026 at 03:00 PM.', 'Unread', '2026-01-25 07:40:21'),
-(48, 'First Communion', NULL, 20, 'First Communion Reservation', 'Blessica Pasado submitted a First Communion reservation for asd asd ads on February 15, 2026 at 01:00 PM.', 'Unread', '2026-01-25 07:45:07'),
-(49, 'First Communion', NULL, 21, 'First Communion Reservation', 'Blessica Pasado submitted a First Communion reservation for asd asd asd on February 22, 2026 at 10:00 AM.', 'Unread', '2026-01-25 07:50:49'),
-(50, 'Confirmation', NULL, 80, 'Confirmation Reservation', 'Blessica Pasado submitted a confirmation reservation for dsf dsfsdf dsf on March 10, 2026 at 01:00 PM.', 'Unread', '2026-01-25 08:19:46'),
-(51, 'Wedding', NULL, 16, 'Wedding Reservation', 'Blessica Pasado submitted a wedding reservation for Groom: asdf saf saf and Bride: Blessica Rosal Pasado on April 25, 2026 at 08:00 AM.', 'Unread', '2026-01-25 08:49:08'),
-(52, 'Wedding', NULL, 17, 'Wedding Reservation', 'Blessica Pasado submitted a wedding reservation for Groom: sdf af saf and Bride: Blessica Rosal Pasado on May 29, 2026 at 03:00 PM.', 'Unread', '2026-01-25 08:51:51'),
-(53, 'Baptism', NULL, 108, 'Baptism Reservation', 'Blessica Pasado submitted a baptism reservation for Papot Pasada on February 16, 2026 at 09:00 AM.', 'Unread', '2026-01-25 15:10:45'),
-(54, NULL, 'Certificate Request', 0, 'Certificate Request', 'Blessica Pasado submitted a certificate request (Baptism) for Papot Rosal Pasado.', 'Unread', '2026-01-25 15:20:06'),
-(55, 'Confirmation', NULL, 81, 'Confirmation Reservation', 'Bryan Quiambao submitted a confirmation reservation for Elton Aquino Rico on March 03, 2026 at 01:00 PM.', 'Unread', '2026-01-25 15:40:28'),
-(56, 'First Communion', NULL, 22, 'First Communion Reservation', 'Matthew Mallari submitted a First Communion reservation for Ilyana Aquino Mallari on May 03, 2026 at 01:00 PM.', 'Unread', '2026-01-25 15:46:46'),
-(57, 'Baptism', NULL, 109, 'Baptism Reservation', 'Blessica Pasado submitted a baptism reservation for kyle remponi on February 16, 2026 at 03:00 PM.', 'Unread', '2026-01-26 02:36:23'),
-(58, 'Confirmation', NULL, 82, 'Confirmation Reservation', 'Blessica Pasado submitted a confirmation reservation for Eri Sav Fen on February 16, 2026 at 01:00 PM.', 'Unread', '2026-01-26 03:35:23'),
-(59, 'Baptism', NULL, 110, 'Baptism Reservation', 'Blessica Pasado submitted a baptism reservation for Kenneth Pasion on February 26, 2026 at 11:00 AM.', 'Unread', '2026-01-26 05:12:03');
+(44, 'Baptism', NULL, 105, 'Baptism Reservation', 'Blessica Pasado submitted a baptism reservation for ads sad on February 17, 2026 at 10:00 AM.', 'Read', '2026-01-25 06:40:54'),
+(45, 'Baptism', NULL, 106, 'Baptism Reservation', 'Blessica Pasado submitted a baptism reservation for asda dsa on February 18, 2026 at 02:00 PM.', 'Read', '2026-01-25 07:08:41'),
+(46, 'Baptism', NULL, 107, 'Baptism Reservation', 'Blessica Pasado submitted a baptism reservation for asd dsa on March 01, 2026 at 10:00 AM.', 'Read', '2026-01-25 07:18:05'),
+(47, 'First Communion', NULL, 19, 'First Communion Reservation', 'Blessica Pasado submitted a First Communion reservation for sa dsad d on February 15, 2026 at 03:00 PM.', 'Read', '2026-01-25 07:40:21'),
+(48, 'First Communion', NULL, 20, 'First Communion Reservation', 'Blessica Pasado submitted a First Communion reservation for asd asd ads on February 15, 2026 at 01:00 PM.', 'Read', '2026-01-25 07:45:07'),
+(49, 'First Communion', NULL, 21, 'First Communion Reservation', 'Blessica Pasado submitted a First Communion reservation for asd asd asd on February 22, 2026 at 10:00 AM.', 'Read', '2026-01-25 07:50:49'),
+(50, 'Confirmation', NULL, 80, 'Confirmation Reservation', 'Blessica Pasado submitted a confirmation reservation for dsf dsfsdf dsf on March 10, 2026 at 01:00 PM.', 'Read', '2026-01-25 08:19:46'),
+(51, 'Wedding', NULL, 16, 'Wedding Reservation', 'Blessica Pasado submitted a wedding reservation for Groom: asdf saf saf and Bride: Blessica Rosal Pasado on April 25, 2026 at 08:00 AM.', 'Read', '2026-01-25 08:49:08'),
+(52, 'Wedding', NULL, 17, 'Wedding Reservation', 'Blessica Pasado submitted a wedding reservation for Groom: sdf af saf and Bride: Blessica Rosal Pasado on May 29, 2026 at 03:00 PM.', 'Read', '2026-01-25 08:51:51'),
+(53, 'Baptism', NULL, 108, 'Baptism Reservation', 'Blessica Pasado submitted a baptism reservation for Papot Pasada on February 16, 2026 at 09:00 AM.', 'Read', '2026-01-25 15:10:45'),
+(54, 'Certificate Request', 'Certificate Request', 0, 'Certificate Request', 'Blessica Pasado submitted a certificate request (Baptism) for Papot Rosal Pasado.', 'Read', '2026-01-25 15:20:06'),
+(55, 'Confirmation', NULL, 81, 'Confirmation Reservation', 'Bryan Quiambao submitted a confirmation reservation for Elton Aquino Rico on March 03, 2026 at 01:00 PM.', 'Read', '2026-01-25 15:40:28'),
+(56, 'First Communion', NULL, 22, 'First Communion Reservation', 'Matthew Mallari submitted a First Communion reservation for Ilyana Aquino Mallari on May 03, 2026 at 01:00 PM.', 'Read', '2026-01-25 15:46:46'),
+(57, 'Baptism', NULL, 109, 'Baptism Reservation', 'Blessica Pasado submitted a baptism reservation for kyle remponi on February 16, 2026 at 03:00 PM.', 'Read', '2026-01-26 02:36:23'),
+(58, 'Confirmation', NULL, 82, 'Confirmation Reservation', 'Blessica Pasado submitted a confirmation reservation for Eri Sav Fen on February 16, 2026 at 01:00 PM.', 'Read', '2026-01-26 03:35:23'),
+(59, 'Baptism', NULL, 110, 'Baptism Reservation', 'Blessica Pasado submitted a baptism reservation for Kenneth Pasion on February 26, 2026 at 11:00 AM.', 'Read', '2026-01-26 05:12:03'),
+(60, 'Baptism', NULL, 110, 'Cancellation Requested: Baptism (#110)', 'User #65 requested cancellation for Baptism (Reference #110). Date: 2026-02-26. Time: 11:00:00.', 'Read', '2026-01-26 19:00:37'),
+(61, 'Baptism', NULL, 109, 'Cancellation Requested: Baptism (Reference #109)', 'Blessica Pasado requested the cancellation for \'s Baptism (Reference #109). Date: 2026-02-16. Time: 15:00:00.', 'Read', '2026-01-26 19:07:42'),
+(62, 'Confirmation', NULL, 82, 'Cancellation Requested: Confirmation (Reference #82)', 'Blessica Pasado requested the cancellation for Eri Sav Fen\'s Confirmation (Reference #82). Date: 2026-02-16. Time: 13:00:00.', 'Read', '2026-01-26 19:10:44'),
+(63, 'Celebratory', NULL, 19, 'Cancellation Requested: Celebratory (Reference #19)', 'Blessica Pasado requested the cancellation for this record\'s Celebratory (Reference #19). Date: 2026-01-30. Time: 08:00:00.', 'Read', '2026-01-26 19:10:51'),
+(64, 'Certificate Request', '', 0, 'Certificate Request', 'Blessica Pasado submitted a certificate request (First Communion) for Blessica Pasado.', 'Unread', '2026-01-27 05:03:34'),
+(65, NULL, 'Certificate Request', 24, 'Certificate Request', 'Blessica Pasado submitted a certificate request (First Communion) for aaBlessica Pasado.', 'Unread', '2026-01-27 05:07:05'),
+(66, 'Certificate Request', NULL, 25, 'Certificate Request', 'Blessica Pasado submitted a certificate request (Confirmation) for Blessicaaaaa Pasado.', 'Unread', '2026-01-27 05:11:07'),
+(67, 'Anointing of the Sick', NULL, 28, 'Anointing of the Sick Request', 'Matthew Mallari submitted an Anointing of the Sick request for Joanna Milton Mallari scheduled on 2026-01-30 at 07:00.', 'Unread', '2026-01-27 05:17:56'),
+(68, 'Funeral', NULL, 13, 'Funeral Mass Request', 'Matthew Mallari submitted a Funeral Mass request for Joshua Mallari scheduled on 2026-01-30 at 03:00.', 'Unread', '2026-01-27 05:22:03'),
+(69, 'First Communion', NULL, 23, 'First Communion Reservation', 'Blessica Pasado submitted a First Communion reservation for John Winston Lennon on February 22, 2026 at 10:00 AM.', 'Unread', '2026-01-27 10:47:57'),
+(70, 'First Communion', NULL, 24, 'First Communion Reservation', 'Blessica Pasado submitted a First Communion reservation for ads sad dsa on February 22, 2026 at 01:00 PM.', 'Unread', '2026-01-27 10:48:38'),
+(71, 'First Communion', NULL, 23, 'Cancellation Requested: First Communion (Reference #23)', 'Blessica Pasado requested the cancellation for John Winston Lennon\'s First Communion (Reference #23).\nReason: Schedule conflict Date: 2026-02-22. Time: 10:00:00.', 'Unread', '2026-01-27 17:56:33'),
+(72, 'Anointing of the Sick', NULL, 23, 'Cancellation Requested: Anointing of the Sick (Reference #23)', 'Blessica Pasado requested the cancellation for sada sad sd\'s Anointing of the Sick (Reference #23).\nReason: pleaseee Date: 2026-01-19. Time: 03:00:00.', 'Unread', '2026-01-27 18:07:50'),
+(73, 'House Blessing', NULL, 12, 'Cancellation Requested: House Blessing (Reference #12)', 'Blessica Pasado requested the cancellation for this record\'s House Blessing (Reference #12).<br>Reason: ddddd Date: 2026-01-29. Time: 12:00:00.', 'Unread', '2026-01-27 18:09:21'),
+(74, 'First Communion', NULL, 24, 'Reschedule Requested: First Communion (Reference #24)', 'Blessica Pasado requested a reschedule for ads sad dsa\'s First Communion (Reference #24).\nType: Service\nRequested: 2026-01-22 10:00\nReason: dunno', 'Unread', '2026-01-27 18:45:45'),
+(75, 'First Communion', NULL, 65, 'Batch Date Request', 'Blessica Rosal Pasado is requesting to open a date for solo First Communion for 2 people, at 2026-01-21 10:00', 'Unread', '2026-01-27 19:19:34'),
+(76, 'Wedding', NULL, 65, 'Batch Date Request', 'Blessica Rosal Pasado is requesting to open a date for solo Wedding for 2 people, at 2026-01-29 10:00', 'Unread', '2026-01-27 19:34:42'),
+(77, 'Confirmation', NULL, 65, 'Batch Date Request', 'Blessica Rosal Pasado is requesting to open a date for solo Confirmation for 3 people, at 2026-01-30 10:00', 'Read', '2026-01-27 19:35:29'),
+(78, 'Anointing of the Sick', NULL, 29, 'Anointing of the Sick Request', 'Jovie Magbanua submitted an Anointing of the Sick request for Katrina Mae Villanueva Ramos scheduled on 2026-01-30 at 02:00.', 'Unread', '2026-01-28 04:44:31'),
+(79, 'Certificate Request', NULL, 26, 'Certificate Request', 'Jovie Magbanua submitted a certificate request (First Communion) for Jovie Magbanua.', 'Unread', '2026-01-28 04:45:54'),
+(80, 'First Communion', NULL, 25, 'First Communion Reservation', 'Jovie Magbanua submitted a First Communion reservation for Louisa Pineda Magbanua on February 22, 2026 at 01:00 PM.', 'Unread', '2026-01-28 04:50:49'),
+(81, 'Celebratory Mass', NULL, 21, 'Celebratory Mass Request', 'Jovie Magbanua submitted a Celebratory Mass request (Birthday) for Andrea Nicole Bautista Torres scheduled on 2026-01-30 at 03:00 at At Santa Krus Parish.', 'Unread', '2026-01-28 04:54:11'),
+(82, 'House Blessing', NULL, 13, 'House Blessing Request', 'Jovie Magbanua submitted a House Blessing request (Newly Built House) for Jovie Banes Magbanua scheduled on 2026-01-31 at 17:00 located at 22 Tatalon St., Bagong Silang, Caloocan, Metro Manila.', 'Unread', '2026-01-28 04:55:19'),
+(83, 'House Blessing', NULL, 14, 'House Blessing Request', 'Victoria Enriquez submitted a House Blessing request (Newly Built House) for Victoria Cara Enriquez scheduled on 2026-02-28 at 12:00 located at 10 Junio St., Bagumbong, Caloocan, Metro Manila.', 'Unread', '2026-01-28 04:58:47'),
+(84, 'Celebratory Mass', NULL, 22, 'Celebratory Mass Request', 'Victoria Enriquez submitted a Celebratory Mass request (Thanksgiving) for Recovery from cancer scheduled on 2026-03-31 at 08:00 at At Santa Krus Parish.', 'Unread', '2026-01-28 04:59:55'),
+(85, 'House Blessing', NULL, 15, 'House Blessing Request', 'Joshua Agustin submitted a House Blessing request (Newly Built House) for Joshua Moreno Agustin scheduled on 2026-03-27 at 08:00 located at 15 Chihuahua St., Kaligayahan, Quezon City, Metro Manila.', 'Unread', '2026-01-28 05:00:56'),
+(86, 'Baptism', NULL, 111, 'Baptism Reservation', 'Blessica Pasado submitted a baptism reservation for erlshawn rivera on February 22, 2026 at 10:00 AM.', 'Read', '2026-01-28 06:45:45'),
+(87, 'Certificate Request', NULL, 27, 'Certificate Request', 'Blessica Pasado submitted a certificate request (Baptism) for Blessica Pasado.', 'Unread', '2026-01-28 07:06:02'),
+(88, 'Certificate Request', NULL, 28, 'Certificate Request', 'Blessica Pasado submitted a certificate request (Baptism) for victor z Garlitos.', 'Unread', '2026-01-28 07:14:37'),
+(89, 'Baptism', NULL, 112, 'Baptism Reservation', 'Blessica Pasado submitted a baptism reservation for sasas asa on February 22, 2026 at 10:00 AM.', 'Unread', '2026-01-28 07:29:42'),
+(90, 'Certificate Request', NULL, 29, 'Certificate Request', 'Blessica Pasado submitted a certificate request (Baptism) for sasas dad asa.', 'Unread', '2026-01-28 07:32:06'),
+(91, 'Baptism', NULL, 113, 'Baptism Reservation', 'Blessica Pasado submitted a baptism reservation for Victor Garlitos on February 18, 2026 at 08:00 AM.', 'Unread', '2026-01-28 07:41:12'),
+(92, 'Certificate Request', NULL, 30, 'Certificate Request', 'Blessica Pasado submitted a certificate request (Baptism) for Victor Z Garlitos.', 'Unread', '2026-01-28 07:42:27'),
+(93, 'Celebratory Mass', NULL, 23, 'Celebratory Mass Request', 'Blessica Pasado submitted a Celebratory Mass request (Thanksgiving) for wsdsdsdsd scheduled on 2026-01-29 at 04:00 at At Santa Krus Parish.', 'Unread', '2026-01-28 07:56:16'),
+(94, 'Confirmation', NULL, 83, 'Confirmation Reservation', 'Blessica Pasado submitted a confirmation reservation for A A A on March 10, 2026 at 01:00 PM.', 'Unread', '2026-01-28 08:00:31');
 
 -- --------------------------------------------------------
 
@@ -122,7 +157,7 @@ INSERT INTO `announcements` (`ann_id`, `title`, `image_path`, `ann_categ`, `cont
 (24, 'Christ the King Motorcade Procession', 'uploads/1765194364_christtheking.png', 'General', 'Then he said, \"Jesus, remember me when you come into your kingdom.\"\r\n- Luke 23:42\r\n\r\nOn this Solemnity of Our Lord Jesus Christ, King of the Universe, we unite as one community to honor Jesus as our King. 👑✨\r\nWe encourage everyone to take part in the 𝟯:𝟬𝟬 𝗣𝗠 𝗖𝗵𝗿𝗶𝘀𝘁 𝘁𝗵𝗲 𝗞𝗶𝗻𝗴 𝗺𝗼𝘁𝗼𝗿𝗰𝗮𝗱𝗲 𝗽𝗿𝗼𝗰𝗲𝘀𝘀𝗶𝗼𝗻 today. May this celebration remind us of His love, His guidance, and His place at the center of our lives.🙏🏼🌟', '2025-11-22 11:46:04', 40, NULL, NULL, NULL, NULL, NULL, NULL),
 (25, 'Red Wednesday | Living Hope Amidst Suffering', 'uploads/1765194468_redwed.png', 'General', 'Today, we join the whole Church in remembering our 𝘀𝘂𝗳𝗳𝗲𝗿𝗶𝗻𝗴 𝗮𝗻𝗱 𝗽𝗲𝗿𝘀𝗲𝗰𝘂𝘁𝗲𝗱 𝗖𝗵𝗿𝗶𝘀𝘁𝗶𝗮𝗻 𝗯𝗿𝗼𝘁𝗵𝗲𝗿𝘀 𝗮𝗻𝗱 𝘀𝗶𝘀𝘁𝗲𝗿𝘀 across the world. We wear red, we pray, and we stand in solidarity with those who continue to bear witness to Christ even in the midst of violence, discrimination, and fear. 🕊️✝️\r\n\r\nMay this day open our hearts to the reality of their sacrifices and inspire us to deepen our own faith, courage, and compassion. Let us be a voice for the voiceless, a light in the darkness, and instruments of peace where hope seems lost. ❤️\r\n\r\n“𝗜𝗳 𝗼𝗻𝗲 𝗺𝗲𝗺𝗯𝗲𝗿 𝘀𝘂𝗳𝗳𝗲𝗿𝘀, 𝗮𝗹𝗹 𝘀𝘂𝗳𝗳𝗲𝗿 𝘁𝗼𝗴𝗲𝘁𝗵𝗲𝗿.” — 𝟭 𝗖𝗼𝗿𝗶𝗻𝘁𝗵𝗶𝗮𝗻𝘀 𝟭𝟮:𝟮𝟲\r\nLord, strengthen those who suffer for Your name, and awaken in us the commitment to love, pray, and act for justice. 🙏✨\r\n\r\n𝐇𝐨𝐥𝐲 𝐌𝐚𝐬𝐬 - 6:00 𝐩𝐦\r\n𝙒𝙚𝙖𝙧 𝙧𝙚𝙙 𝙖𝙣𝙙 𝙗𝙧𝙞𝙣𝙜 𝙘𝙖𝙣𝙙𝙡𝙚.', '2025-11-25 11:47:48', 40, NULL, NULL, NULL, NULL, NULL, NULL),
 (26, 'ℕ𝕆𝕍𝔼𝕄𝔹𝔼ℝ 𝟚𝟜 | 𝕊𝔸𝕀ℕ𝕋𝕊 𝕆𝔽 𝕋ℍ𝔼 𝔻𝔸𝕐', 'uploads/1765194996_saintsoftheday.png', 'General', 'Remembering Saint Andrew Dũng-Lạc & Companions: The Martyrs of Vietnam ✝️\r\n\r\nToday, we honor the Vietnamese Martyrs — brave bishops, priests, religious, men, women, and even children who chose faith over fear. From the 1600s to the 1800s, thousands were arrested, tortured, and killed because they refused to deny their love for Christ. Their courage helped the Catholic faith grow in Vietnam, supported by early missionaries and lay catechists who shared the Gospel even in secret. Among them is Saint Andrew Dũng-Lạc, whose life of simplicity, sacrifice, and steadfast faith represents all the known and unknown martyrs who gave everything for God.\r\n\r\nTheir legacy inspires us today. Even through persecution, the Church in Vietnam continued to flourish — proof that faith is stronger than fear. These martyrs remind us that no matter what hardships we face, our hope in God is worth everything. Their words echo to us now, like the beautiful reflection of St. Théophane Vénard: “My thoughts are fixed on eternity… I thirst for the waters of Life Eternal.” May their courage strengthen our own faith and inspire us to live boldly for Christ. 🙏🔥\r\n\r\n𝙎𝙖𝙣𝙘𝙩𝙚 𝘼𝙣𝙙𝙧𝙚𝙖𝙚 𝘿ũ𝙣𝙜-𝙇ạ𝙘 𝙚𝙩 𝙎𝙤𝙘𝙞𝙞, 𝙤𝙧𝙖𝙩𝙚 𝙥𝙧𝙤 𝙣𝙤𝙗𝙞𝙨!', '2025-11-24 11:56:36', 40, NULL, NULL, NULL, NULL, NULL, NULL),
-(54, 'wedding banns', 'uploads/wedding_banns_6976abbee9998.png', 'Wedding Banns', 'wedding', '2026-01-25 23:48:14', 39, NULL, NULL, NULL, NULL, NULL, NULL);
+(57, 'Wedding Banns', 'uploads/wedding_banns_697892bb637ac.png', 'Wedding Banns', 'We are pleased to announce the upcoming marriage of Ernie Roxas and Alina Ortega.\r\n', '2026-01-27 10:26:03', 39, NULL, NULL, NULL, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -134,6 +169,7 @@ CREATE TABLE `anointing_of_sick_requests` (
   `id` int(11) NOT NULL,
   `reservation_user_id` int(11) DEFAULT NULL,
   `status` varchar(20) NOT NULL DEFAULT 'Pending',
+  `decline_reason` text DEFAULT NULL,
   `date` date NOT NULL,
   `time` time NOT NULL,
   `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
@@ -162,9 +198,9 @@ CREATE TABLE `anointing_of_sick_requests` (
 -- Dumping data for table `anointing_of_sick_requests`
 --
 
-INSERT INTO `anointing_of_sick_requests` (`id`, `reservation_user_id`, `status`, `date`, `time`, `created_at`, `venue`, `province`, `city`, `street_no`, `barangay`, `hospital_name`, `sick_firstname`, `sick_middlename`, `sick_lastname`, `sick_suffix`, `contact_person_firstname`, `contact_person_middlename`, `contact_person_lastname`, `contact_person_suffix`, `age`, `sick_condition`, `contact_relation`, `contact_number`, `contact_email`) VALUES
-(23, 65, 'Pending', '2026-01-19', '03:00:00', '2026-01-18 13:33:47', 'At Home', 'ada', 'sadad', 'sadas', 'dasd', NULL, 'sada', 'sad', 'sd', '', 'Blessica', 'Rosal', 'Pasado', '', 23, 'sad', 'Sibling', '09186477722', 'blank_ink@gmail.com'),
-(24, 65, 'Pending', '2026-01-21', '07:00:00', '2026-01-18 13:38:44', 'At Home', 'dsfaf', 'fdaf', 'dfa', 'fdsa', NULL, 'Pauline', 'Jean', 'Pasion', '', 'Blessica', 'Rosal', 'Pasado', '', 22, 'Sick as Heck', 'Spouse', '09186477722', 'blank_ink@gmail.com');
+INSERT INTO `anointing_of_sick_requests` (`id`, `reservation_user_id`, `status`, `decline_reason`, `date`, `time`, `created_at`, `venue`, `province`, `city`, `street_no`, `barangay`, `hospital_name`, `sick_firstname`, `sick_middlename`, `sick_lastname`, `sick_suffix`, `contact_person_firstname`, `contact_person_middlename`, `contact_person_lastname`, `contact_person_suffix`, `age`, `sick_condition`, `contact_relation`, `contact_number`, `contact_email`) VALUES
+(26, 63, 'Pending', NULL, '2026-01-30', '07:00:00', '2026-01-27 05:16:26', 'At Home', 'Metro Manila', 'Quezon City', '11 Puno St.', 'Kaligayahan', NULL, 'Joanna', 'Milton', 'Mallari', '', 'Matthew', 'Magtuba', 'Mallari', '', 78, 'Alzheimers', 'Relative', '09621734829', 'mattmagmal@gmail.com'),
+(29, 58, 'Pending', NULL, '2026-01-30', '02:00:00', '2026-01-28 04:44:31', 'At Home', 'Metro Manila', 'Caloocan', '18 Verde St.', 'Bagong Silang', NULL, 'Katrina Mae', 'Villanueva', 'Ramos', '', 'Jovie', 'Banes', 'Magbanua', '', 28, 'Cancer', 'Relative', '09183274283', 'joviemb@gmail.com');
 
 -- --------------------------------------------------------
 
@@ -198,7 +234,8 @@ INSERT INTO `as_ninang_tbl` (`as_ninang_id`, `baptism_id`, `wedding_id`, `confir
 (79, 77, NULL, NULL, 'Natalie ', 'Flores', 'Valenzuela'),
 (80, NULL, NULL, 75, 'Sally', 'Rivera', 'Villamor'),
 (93, NULL, NULL, 81, 'Anne', 'Patricia', 'Mendoza'),
-(94, 109, NULL, NULL, 'sese', 'sese', 'sse');
+(94, 109, NULL, NULL, 'sese', 'sese', 'sse'),
+(95, NULL, NULL, 83, 'asa', 'sas', 'asas');
 
 -- --------------------------------------------------------
 
@@ -233,7 +270,8 @@ INSERT INTO `as_ninong_tbl` (`as_ninong_id`, `baptism_id`, `wedding_id`, `confir
 (86, 77, NULL, NULL, 'Joseph', 'Perez', 'Manzano', ''),
 (87, NULL, NULL, 75, 'Rafael ', 'Jimenez', 'Cordova', ''),
 (100, NULL, NULL, 81, 'Juan', 'Miguel', 'Ramos', ''),
-(101, 109, NULL, NULL, 'se', 'sese', 'sesesese', 'seses');
+(101, 109, NULL, NULL, 'se', 'sese', 'sesesese', 'seses'),
+(102, NULL, NULL, 83, 'asas', 'asa', 'sasas', '');
 
 -- --------------------------------------------------------
 
@@ -292,9 +330,12 @@ INSERT INTO `baptisms` (`id`, `reservation_user_id`, `baptism_type`, `status`, `
 (75, 61, 'Solo', 'Done', NULL, 0, 'jragust@gmail.com', '9185738275', '2025-12-24', '08:00:00', '2025-12-06 16:13:13', NULL, NULL, 'Alice', 'Baguio', 'Agustin', '', 'Female', 'Filipino', '2025-12-01', 'Caloocan, Metro Manila', 'Cynthia', 'Torres', 'Baguio', 'Joshua', 'Moreno', 'Agustin', 'Jr', NULL, 'Yes', 'Civil Marriage', 'private/sacraments/uploads/birth_certificate_6934561984e1f.png', 'private/sacraments/uploads/marriage_certificate_6934561984e61.png', 'Metro Manila', 'Quezon City', '681 Sunflower St.', 'Kaybiga', 'Rev. Fr. James Nitollama'),
 (76, 62, 'Regular', 'Done', '', 0, 'victoriacara@gmail.com', '9183726183', '2026-01-18', '11:30:00', '2025-12-06 16:40:17', NULL, NULL, 'Erick', '', 'Enriquez', '', 'Male', 'Filipino', '2025-11-25', 'Caloocan, Metro Manila', 'Victoria', 'Cara', 'Enriquez', 'Wayne', 'Mata', 'Borlongan', '', NULL, 'No', NULL, 'private/sacraments/uploads/birth_certificate_69345c716d5e5.png', NULL, 'Metro Manila', 'Quezon City', '121 Damong Maliit St.', 'Tala', 'Rev. Fr. James Nitollama'),
 (77, 63, 'Regular', 'Done', NULL, 0, 'mattmagmal@gmail.com', '9621734829', '2026-01-20', '11:30:00', '2025-12-06 16:54:58', NULL, NULL, 'Jomar', 'Aquino', 'Mallari', '', 'Male', 'Filipino', '2025-12-20', 'Caloocan, Metro Manila', 'Riley ', 'Villegas', 'Mallari', 'Matthew', 'Magtuba', 'Mallari', '', NULL, 'Yes', 'Church Marriage', 'private/sacraments/uploads/birth_certificate_69345fe27c152.png', 'private/sacraments/uploads/marriage_certificate_69345fe27c18c.png', 'Metro Manila', 'Quezon City', '15 Diamond St.', 'Bagumbong', 'Rev. Fr. James Nitollama'),
-(108, 65, 'Solo', 'Accepted', NULL, 0, 'blank_ink@gmail.com', '09186477722', '2026-02-16', '09:00:00', '2025-12-25 15:10:45', '2026-01-20', '10:00:00', 'Papot', 'Rosal', 'Pasado', '', 'Female', 'Filipino', '2025-12-01', 'Caloocan, Metro Manila', 'Blessica', 'Rosal', 'Pasado', 'Mueller', 'Tajo', 'Pasado', '', NULL, 'Yes', 'Church Marriage', 'private/sacraments/uploads/birth_certificate_697632754bf5e.png', 'private/sacraments/uploads/marriage_certificate_697632754bfc4.png', 'Metro Manila', 'Quezon City', '12 Tatalon St.', 'Bagumbong', 'Rev. Fr. James Nitollama'),
-(109, 65, 'Solo', 'Accepted', NULL, 0, 'blank_ink@gmail.com', '09186477722', '2026-02-16', '15:00:00', '2026-01-26 02:36:23', '2026-01-23', '07:06:00', 'kyle', 'eris', 'remponi', 'Jr.', 'Male', 'Filipino', '2026-01-14', 'Quezon CIty', 'Kylie', 'Caer', 'Remponi', 'Carlo', 'maeden', 'Remponi', 'Jr.', NULL, 'Yes', 'Church Marriage', 'private/sacraments/uploads/birth_certificate_6976d32747620.png', 'private/sacraments/uploads/marriage_certificate_6976d327476f4.png', NULL, NULL, NULL, NULL, 'Rev. Fr. James Nitollama'),
-(110, 65, 'Regular', 'Accepted', NULL, 0, NULL, NULL, '2026-02-26', '11:00:00', '2026-01-26 05:12:03', '2026-01-26', '10:00:00', 'Kenneth', 'Gilid', 'Pasion', '', 'Female', 'Filipino', '2026-01-02', 'Caloocan, Metro Manila', 'Erlina', 'Shauna', 'Rivera', 'Victor', 'Victor', 'Garlic', '', NULL, NULL, NULL, 'private/sacraments/uploads/birth_certificate_6976f7a36bfbd.png', NULL, NULL, NULL, NULL, NULL, 'Rev. Fr. James Nitollama');
+(108, 65, 'Solo', 'Done', NULL, 0, 'blank_ink@gmail.com', '09186477722', '2026-01-05', '09:00:00', '2025-12-25 15:10:45', '2026-01-20', '10:00:00', 'Papot', 'Rosal', 'Pasado', '', 'Female', 'Filipino', '2025-12-01', 'Caloocan, Metro Manila', 'Blessica', 'Rosal', 'Pasado', 'Mueller', 'Tajo', 'Pasado', '', NULL, 'Yes', 'Church Marriage', 'private/sacraments/uploads/birth_certificate_697632754bf5e.png', 'private/sacraments/uploads/marriage_certificate_697632754bfc4.png', 'Metro Manila', 'Quezon City', '12 Tatalon St.', 'Bagumbong', 'Rev. Fr. James Nitollama'),
+(109, 65, 'Solo', 'Declined', NULL, 0, 'blank_ink@gmail.com', '09186477722', '2026-02-16', '15:00:00', '2026-01-26 02:36:23', '2026-01-23', '07:06:00', 'kyle', 'eris', 'remponi', 'Jr.', 'Male', 'Filipino', '2026-01-14', 'Quezon CIty', 'Kylie', 'Caer', 'Remponi', 'Carlo', 'maeden', 'Remponi', 'Jr.', NULL, 'Yes', 'Church Marriage', 'private/sacraments/uploads/birth_certificate_6976d32747620.png', 'private/sacraments/uploads/marriage_certificate_6976d327476f4.png', NULL, NULL, NULL, NULL, 'Rev. Fr. James Nitollama'),
+(110, 65, 'Regular', 'Cancelled', 'Schedule conflict or fully booked date', 0, NULL, NULL, '2026-02-26', '11:00:00', '2026-01-26 05:12:03', '2026-01-26', '10:00:00', 'Kenneth', 'Gilid', 'Pasion', '', 'Female', 'Filipino', '2026-01-02', 'Caloocan, Metro Manila', 'Erlina', 'Shauna', 'Rivera', 'Victor', 'Victor', 'Garlic', '', NULL, NULL, NULL, 'private/sacraments/uploads/birth_certificate_6976f7a36bfbd.png', NULL, NULL, NULL, NULL, NULL, 'Rev. Fr. James Nitollama'),
+(111, 65, 'Regular', 'Accepted', NULL, 0, NULL, NULL, '2026-02-22', '10:00:00', '2026-01-28 06:45:45', '2026-02-06', '10:30:00', 'erlshawn', 'josh', 'rivera', NULL, 'Male', 'Filipino', '2026-01-08', 'Quezon CIty', 'Ma. Jane', 'orcales', 'RIvera', 'Eduard', 'mark', 'RIvera', NULL, NULL, NULL, NULL, 'private/sacraments/uploads/birth_certificate_6979b09923f3f.png', NULL, NULL, NULL, NULL, NULL, 'Rev. Fr. James Nitollama'),
+(112, 65, 'Regular', 'Accepted', NULL, 0, 'blank_ink@gmail.com', '09186477722', '2026-02-22', '10:00:00', '2026-01-28 07:29:42', NULL, NULL, 'sasas', 'dad', 'asa', '', 'Male', 'Filipino', '2026-01-12', 'sas', 'j', 'j', 'j', 'j', 'j', 'j', '', NULL, 'No', NULL, 'private/sacraments/uploads/birth_certificate_6979bae633e26.png', NULL, NULL, NULL, NULL, NULL, 'Rev. Fr. James Nitollama'),
+(113, 65, 'Solo', 'Pending', NULL, 0, 'blank_ink@gmail.com', '09186477722', '2026-02-18', '08:00:00', '2026-01-28 07:41:12', NULL, NULL, 'Victor', 'Z', 'Garlitos', '', 'Male', 'Filipino', '2026-01-22', 'CALOCAN', 'MAMA', 'PAPA', 'A', 'sas', 'asa', 'sasa', 'sasa', NULL, 'No', NULL, 'private/sacraments/uploads/birth_certificate_6979bd98253f7.pdf', NULL, NULL, NULL, NULL, NULL, 'Rev. Fr. James Nitollama');
 
 -- --------------------------------------------------------
 
@@ -324,8 +365,10 @@ INSERT INTO `calendar_control` (`id`, `date`, `type`, `service_type`, `time`, `i
 (4, '2026-02-07', 'Regular', 'Baptism', '11:00:00', 1, 15, NULL),
 (5, '2026-02-04', 'Solo', 'Baptism', '13:00:00', 1, 15, ''),
 (6, '2026-03-01', 'Solo', 'Baptism', '10:00:00', 1, 15, ''),
-(7, '2026-02-22', 'Regular', 'First Communion', '10:00:00', 1, 15, ''),
-(8, '2026-01-14', 'Regular', 'Baptism', '13:00:00', 1, 15, '');
+(8, '2026-01-14', 'Regular', 'Baptism', '13:00:00', 1, 15, ''),
+(9, '2026-02-22', 'Regular', 'First Communion', '10:00:00', 1, 2, ''),
+(10, '2026-02-22', 'Regular', 'First Communion', '13:00:00', 1, 2, ''),
+(11, '2026-02-22', 'Regular', 'Baptism', '10:00:00', 1, 15, '');
 
 -- --------------------------------------------------------
 
@@ -376,17 +419,9 @@ CREATE TABLE `celebratory` (
 --
 
 INSERT INTO `celebratory` (`id`, `reservation_user_id`, `status`, `date`, `time`, `celebration_type`, `created_at`, `decline_reason`, `mass_venue`, `province`, `city`, `street_no`, `barangay`, `thanksgiving`, `special_intention`, `celebrant_firstname`, `celebrant_middlename`, `celebrant_lastname`, `celebrant_suffix`, `celebrant_birthdate`, `wife_firstname`, `wife_middlename`, `wife_lastname`, `husband_firstname`, `husband_middlename`, `husband_lastname`, `husband_suffix`, `wedding_date`, `contact_firstname`, `contact_middlename`, `contact_lastname`, `contact_suffix`, `contact_relation`, `contact_number`, `contact_email`) VALUES
-(10, NULL, 'Pending', '2026-01-27', '11:00:00', 'Thanksgiving', '2026-01-17 15:51:53', NULL, '', NULL, NULL, NULL, NULL, 'asdasd', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Spouse', '09186477722', 'blank_ink@gmail.com'),
-(11, 65, 'Pending', '2026-01-19', '01:00:00', 'Birthday', '2026-01-17 15:54:21', NULL, '', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2013-08-14', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Spouse', '09186477722', 'blank_ink@gmail.com'),
-(12, 65, 'Pending', '2026-01-28', '07:00:00', 'Thanksgiving', '2026-01-18 13:34:58', NULL, '', NULL, NULL, NULL, NULL, 'dada', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Parent', '09186477722', 'blank_ink@gmail.com'),
-(13, 65, 'Pending', '2026-01-30', '06:00:00', 'Thanksgiving', '2026-01-18 14:04:54', NULL, 'At Home', 'adad', 'asd', 'asdas', 'dasd', 'sadada', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Spouse', '09186477722', 'blank_ink@gmail.com'),
-(14, 65, 'Pending', '2026-01-26', '14:00:00', 'Birthday', '2026-01-18 14:20:20', NULL, 'At Santa Krus Parish', NULL, NULL, NULL, NULL, NULL, NULL, 'ad', 'asd', 'asd', '', '2015-10-15', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Blessica', 'Rosal', 'Pasado', '', 'Parent', '09186477722', 'blank_ink@gmail.com'),
-(15, 65, 'Pending', '2026-01-27', '21:00:00', 'Birthday', '2026-01-18 14:21:55', NULL, 'At Santa Krus Parish', NULL, NULL, NULL, NULL, NULL, NULL, 'adas', 'dadad', 'sadsada', '', '2015-08-12', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Blessica', 'Rosal', 'Pasado', '', 'Spouse', '09186477722', 'blank_ink@gmail.com'),
-(16, 65, 'Pending', '2026-01-22', '12:00:00', 'Birthday', '2026-01-18 14:30:14', NULL, 'At Santa Krus Parish', NULL, NULL, NULL, NULL, NULL, NULL, 'adas', 'dada', 'da', '', '2013-09-16', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Blessica', 'Rosal', 'Pasado', '', 'Spouse', '09186477722', 'blank_ink@gmail.com'),
-(17, 65, 'Pending', '2026-01-22', '12:00:00', 'Birthday', '2026-01-18 14:30:34', NULL, 'At Santa Krus Parish', NULL, NULL, NULL, NULL, NULL, NULL, 'adas', 'dada', 'da', '', '2013-09-16', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Blessica', 'Rosal', 'Pasado', '', 'Spouse', '09186477722', 'blank_ink@gmail.com'),
-(18, 65, 'Pending', '2026-01-30', '02:00:00', 'Special Intention', '2026-01-18 14:31:00', NULL, 'At Home', 'dad', 'asd', 'sada', 'ads', NULL, 'adasd', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Blessica', 'Rosal', 'Pasado', '', 'Parent', '09186477722', 'blank_ink@gmail.com'),
-(19, 65, 'Pending', '2026-01-30', '08:00:00', 'Thanksgiving', '2026-01-18 14:31:34', NULL, 'At Santa Krus Parish', NULL, NULL, NULL, NULL, 'adadad', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Blessica', 'Rosal', 'Pasado', '', 'Sibling', '09186477722', 'blank_ink@gmail.com'),
-(20, 65, 'Pending', '2026-01-22', '02:00:00', 'Wedding Anniversary', '2026-01-18 14:32:21', NULL, 'At Santa Krus Parish', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'da', 'dadasda', 'asdsa', 'sad', 's', 'dad', '', '2012-09-15', 'Blessica', 'Rosal', 'Pasado', '', 'Sibling', '09186477722', 'blank_ink@gmail.com');
+(21, 58, 'Pending', '2026-01-30', '03:00:00', 'Birthday', '2026-01-28 04:54:11', NULL, 'At Santa Krus Parish', NULL, NULL, NULL, NULL, NULL, NULL, 'Andrea Nicole', 'Bautista', 'Torres', '', '1993-01-30', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Jovie', 'Banes', 'Magbanua', '', 'Relative', '09183274283', 'joviemb@gmail.com'),
+(22, 62, 'Accepted', '2026-03-31', '08:00:00', 'Thanksgiving', '2026-01-28 04:59:55', NULL, 'At Santa Krus Parish', NULL, NULL, NULL, NULL, 'Recovery from cancer', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Victoria', 'Cara', 'Enriquez', '', 'Spouse', '09183726183', 'victoriacara@gmail.com'),
+(23, 65, 'Accepted', '2026-01-29', '04:00:00', 'Thanksgiving', '2026-01-28 07:56:16', NULL, 'At Santa Krus Parish', NULL, NULL, NULL, NULL, 'wsdsdsdsd', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Blessica', 'Rosal', 'Pasado', '', 'Child', '09186477722', 'blank_ink@gmail.com');
 
 -- --------------------------------------------------------
 
@@ -427,7 +462,12 @@ CREATE TABLE `certificate_request` (
 --
 
 INSERT INTO `certificate_request` (`cert_req_id`, `user_id`, `certificate_type`, `claiming_for`, `certificate_owner`, `certificate_status`, `request_reason`, `decline_reason`, `pickup_date`, `contact`, `email`, `request_firstname`, `request_middlename`, `request_lastname`, `request_suffix`, `owner_firstname`, `owner_middlename`, `owner_lastname`, `owner_suffix`, `id_picture`, `owner_id_picture`, `authorized_id_picture`, `created_at`, `receipt_picture`, `authorization_letter`) VALUES
-(21, 65, 'Baptism', 'other', 'Child', 'Accepted', 'Personal record', NULL, '2026-01-28', '09186477722', 'blank_ink@gmail.com', 'Blessica', 'Rosal', 'Pasado', '', 'Papot', 'Rosal', 'Pasado', '', NULL, 'owner_id_picture_697634a67d7a1.png', 'authorized_id_picture_697634a67d85b.png', '2026-01-25 15:20:06', NULL, NULL);
+(21, 65, 'Baptism', 'other', 'Child', 'Accepted', 'Personal record', NULL, '2026-01-28', '09186477722', 'blank_ink@gmail.com', 'Blessica', 'Rosal', 'Pasado', '', 'Papot', 'Rosal', 'Pasado', '', NULL, 'owner_id_picture_697634a67d7a1.png', 'authorized_id_picture_697634a67d85b.png', '2026-01-25 15:20:06', NULL, NULL),
+(22, 65, 'First Communion', 'self', 'Self', 'Cancelled', 'Personal record', 'Requested certificate is not available in parish records', NULL, '09186477722', 'blank_ink@gmail.com', 'Blessica', '', 'Pasado', '', 'Blessica', '', 'Pasado', '', '1id_picture_697846e2c52a9.png', NULL, NULL, '2026-01-27 05:02:26', NULL, NULL),
+(26, 58, 'First Communion', 'self', 'Self', 'Accepted', 'Church requirement', NULL, NULL, '09183274283', 'joviemb@gmail.com', 'Jovie', '', 'Magbanua', '', 'Jovie', '', 'Magbanua', '', '1id_picture_69799482d1cb5.png', NULL, NULL, '2026-01-28 04:45:54', NULL, NULL),
+(27, 65, 'Baptism', 'self', 'Self', 'Cancelled', 'Personal record', 'Requested certificate is not available in parish records', NULL, '09186477722', 'blank_ink@gmail.com', 'Blessica', '', 'Pasado', '', 'Blessica', '', 'Pasado', '', '1id_picture_6979b55a4bc58.png', NULL, NULL, '2026-01-28 07:06:02', NULL, NULL),
+(29, 65, 'Baptism', 'other', 'Child', 'Accepted', 'Personal record', NULL, NULL, '09186477722', 'blank_ink@gmail.com', 'Blessica', 'Rosal', 'Pasado', '', 'sasas', 'dad', 'asa', '', NULL, 'owner_id_picture_6979bb76a2e8f.png', 'authorized_id_picture_6979bb76a74a0.png', '2026-01-28 07:32:06', NULL, NULL),
+(30, 65, 'Baptism', 'other', 'Child', 'Accepted', 'Personal record', NULL, '2026-01-29', '09186477722', 'blank_ink@gmail.com', 'Blessica', 'Rosal', 'Pasado', '', 'Victor', 'Z', 'Garlitos', '', NULL, 'owner_id_picture_6979bde3e555d.png', 'authorized_id_picture_6979bde3e5b37.png', '2026-01-28 07:42:27', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -439,7 +479,7 @@ CREATE TABLE `confirmations` (
   `id` int(11) NOT NULL,
   `reservation_user_id` int(11) DEFAULT NULL,
   `confirmation_type` enum('Regular','Solo') NOT NULL,
-  `status` varchar(20) DEFAULT '''Pending''',
+  `status` varchar(20) DEFAULT 'Pending',
   `created_at` timestamp NULL DEFAULT current_timestamp(),
   `decline_reason` text DEFAULT NULL,
   `notif` tinyint(1) DEFAULT 0,
@@ -479,7 +519,7 @@ INSERT INTO `confirmations` (`id`, `reservation_user_id`, `confirmation_type`, `
 (74, 61, 'Solo', 'Accepted', '2026-01-13 17:50:44', NULL, 0, 'jragust@gmail.com', '9185738275', '2026-02-07', '15:00:00', NULL, NULL, 'Kyle ', ' Baguio', 'Agustin', '', 'Male', 'Filipino', '2003-05-20', 'Caloocan, Metro Manila', 'Cynthia', ' Torres', ' Baguio', 'Joshua', ' Moreno', 'Agustin', 'Jr', 'private/sacraments/uploads/birth_certificate_6934582ae26ce.png', 'private/sacraments/uploads/baptismal_certificate_6934582ae2709.png', NULL, 'Rev. Fr. James Nitollama'),
 (75, 63, 'Solo', 'Accepted', '2026-01-13 17:50:44', NULL, 0, 'mattmagmal@gmail.com', '9621734829', '2026-01-28', '10:00:00', NULL, NULL, 'Kenneth', ' Aquino', 'Mallari', '', 'Male', 'Filipino', '2015-10-02', 'Caloocan, Metro Manila', 'Riley', ' Villegas', ' Mallari', 'Matthew', ' Magtuba', ' Mallari', '', 'private/sacraments/uploads/birth_certificate_693460b18907c.png', 'private/sacraments/uploads/baptismal_certificate_693460b1890cd.png', NULL, 'Rev. Fr. James Nitollama'),
 (81, 59, 'Solo', 'Pending', '2026-01-25 15:40:28', NULL, 0, NULL, '09183274283', '2026-03-03', '13:00:00', NULL, NULL, 'Elton', 'Aquino', 'Rico', NULL, 'Male', 'Filipino', '2014-02-02', 'Metro Manila, Caloocan', 'Mia', 'Lim', 'Rico', 'Jonathan', 'Bancs', 'Rico', NULL, 'private/sacraments/uploads/birth_certificate_6976396c089d8.png', 'private/sacraments/uploads/baptismal_certificate_6976396c08a28.png', NULL, 'Rev. Fr. James Nitollama'),
-(82, 65, 'Solo', '\'Pending\'', '2026-01-26 03:35:23', NULL, 0, 'blank_ink@gmail.com', '09186477722', '2026-02-16', '13:00:00', NULL, NULL, 'Eri', 'Sav', 'Fen', '', 'Female', 'Filipino', '2012-04-14', 'QC', 'Erish', 'Sabile', 'Fenis', 'Josh', 'Quizon', 'Galvez', '', 'private/sacraments/uploads/birth_certificate_6976e0fbf3eee.png', 'private/sacraments/uploads/baptismal_certificate_6976e0fbf3f27.png', NULL, 'Rev. Fr. James Nitollama');
+(83, 65, 'Solo', 'Pending', '2026-01-28 08:00:31', NULL, 0, 'blank_ink@gmail.com', '09186477722', '2026-03-10', '13:00:00', NULL, NULL, 'A', 'A', 'A', '', 'Male', 'Filipino', '2009-02-04', 'A', 'as', 'asa', 'sas', 'asa', 'as', 'asas', '', 'private/sacraments/uploads/birth_certificate_6979c21fb8de1.png', 'private/sacraments/uploads/baptismal_certificate_6979c21fb8e89.png', NULL, 'Rev. Fr. James Nitollama');
 
 -- --------------------------------------------------------
 
@@ -497,7 +537,7 @@ CREATE TABLE `donations` (
   `mode_of_payment` varchar(50) NOT NULL,
   `proof_of_donation` varchar(300) DEFAULT NULL,
   `donation_amount` decimal(10,2) DEFAULT NULL,
-  `donation_status` enum('pending','verified','unverified') DEFAULT 'pending',
+  `donation_status` varchar(20) DEFAULT 'verified',
   `date_posted` date NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
@@ -506,20 +546,29 @@ CREATE TABLE `donations` (
 --
 
 INSERT INTO `donations` (`donate_id`, `donor_email`, `donor_contact_no`, `donation_type`, `donation_specified`, `donation_cause`, `mode_of_payment`, `proof_of_donation`, `donation_amount`, `donation_status`, `date_posted`) VALUES
-(19, '', '', 'Cash', '', 'Parish Donation', 'Mass', NULL, 543.00, 'pending', '2025-12-07'),
-(20, '', '', 'Cash', '', 'Parish Donation', 'Mass', NULL, 239.00, 'pending', '2025-12-06'),
-(23, '', '9148295738', 'Cash', '', 'Parish Donation', 'Gcash', 'IMG_20251208_140833_6936cdd14f1f2.png', 500.00, 'pending', '2025-12-08'),
-(25, '', '', 'Cash', '', 'Parish Donation', 'Onsite', NULL, 500.00, 'pending', '2025-12-08'),
-(26, '', '9172849223', 'Cash', '', 'Parish Donation', 'Gcash', 'IMG_20251208_141014_6936ce3602fb2.png', 230.00, 'pending', '2025-12-08'),
-(28, '', '', 'Clothes', '', 'Charity', 'Onsite', 'IMG_20251208_142115_6936d0cbc5045.png', 0.00, 'pending', '2025-12-08'),
-(31, '', '', 'Goods', '', 'Charity', 'Onsite', 'IMG_20251208_142641_6936d2110f5e8.png', 0.00, 'pending', '2025-12-08'),
-(32, '', '', 'Goods', '', 'Charity', 'Onsite', 'IMG_20251208_142651_6936d21b45eb2.png', 0.00, 'pending', '2025-12-08'),
-(33, '', '', 'Clothes', '', 'Charity', 'Onsite', 'IMG_20251208_142940_6936d2c48dbbe.png', 0.00, 'pending', '2025-12-08'),
-(34, '', '', 'Cash', '', 'Tithes', 'Onsite', NULL, 3000.00, 'pending', '2025-12-08'),
-(35, '', '', 'Cash', '', 'Parish Donation', 'Bank Transfer', NULL, 10.00, 'pending', '2025-12-08'),
+(23, '', '9148295738', 'Cash', '', 'Parish Donation', 'Gcash', 'IMG_20251208_140833_6936cdd14f1f2.png', 500.00, 'verified', '2025-12-08'),
+(25, '', '', 'Cash', '', 'Parish Donation', 'Onsite', NULL, 500.00, 'verified', '2025-12-08'),
+(26, '', '9172849223', 'Cash', '', 'Parish Donation', 'Gcash', 'IMG_20251208_141014_6936ce3602fb2.png', 230.00, 'verified', '2025-12-08'),
+(28, '', '', 'Clothes', '', 'Charity', 'Onsite', 'IMG_20251208_142115_6936d0cbc5045.png', 0.00, 'verified', '2025-12-08'),
+(31, '', '', 'Goods', '', 'Charity', 'Onsite', 'IMG_20251208_142641_6936d2110f5e8.png', 0.00, 'verified', '2025-12-08'),
+(32, '', '', 'Goods', '', 'Charity', 'Onsite', 'IMG_20251208_142651_6936d21b45eb2.png', 0.00, 'verified', '2025-12-08'),
+(33, '', '', 'Clothes', '', 'Charity', 'Onsite', 'IMG_20251208_142940_6936d2c48dbbe.png', 0.00, 'verified', '2025-12-08'),
+(34, '', '', 'Cash', '', 'Tithes', 'Onsite', NULL, 3000.00, 'verified', '2025-12-08'),
+(35, '', '', 'Cash', '', 'Parish Donation', 'Bank Transfer', NULL, 10.00, 'verified', '2025-12-08'),
 (36, '', '', 'Cash', '', 'Parish Donation', 'Bank Transfer', NULL, 928.00, 'verified', '2025-12-08'),
-(44, NULL, NULL, 'Cash', '', 'Parish Donation', 'GCash', 'private/donation_proof/1769383648_gcash.png', 100.00, 'pending', '2026-01-26'),
-(45, NULL, NULL, 'Cash', '', 'Charity', 'Metrobank', 'private/donation_proof/1769383666_gcash.png', 199.00, 'pending', '2026-01-26');
+(44, NULL, NULL, 'Cash', '', 'Parish Donation', 'GCash', 'private/donation_proof/1769383648_gcash.png', 100.00, 'unverified', '2026-01-26'),
+(45, NULL, NULL, 'Cash', '', 'Charity', 'Metrobank', 'private/donation_proof/1769383666_gcash.png', 199.00, 'unverified', '2026-01-26'),
+(46, NULL, NULL, 'Cash', '', 'Parish Donations', 'GCash', 'private/donation_proof/1769544829_gcash.png', 100.00, 'unverified', '2026-01-27'),
+(48, NULL, NULL, 'Cash', '', 'House Blessing Payment', 'Metrobank', 'private/donation_proof/1769571026_gcash.png', 2000.00, 'verified', '2026-01-28'),
+(50, NULL, NULL, 'Cash', '', 'Certificate Payment', 'Metrobank', 'private/donation_proof/1769571185_gcash.png', 50.00, 'verified', '2026-01-28'),
+(51, NULL, NULL, 'Cash', '', 'Parish Donation', 'Mass', NULL, 100.00, 'pending', '2026-01-28'),
+(52, NULL, NULL, 'Cash', '', 'Parish Donation', 'GCash', '../private/donation_proof/1769573683_gcash.png', 1000.00, 'unverified', '2026-01-28'),
+(53, NULL, NULL, 'Cash', '', 'Parish Donation', 'GCash', 'private/donation_proof/1769573745_gcash.png', 200.00, 'unverified', '2026-01-28'),
+(54, NULL, NULL, 'Cash', '', 'Parish Donation', 'Metrobank', '/private/donation_proof/1769573770_gcash.png', 1.00, 'verified', '2026-01-28'),
+(56, NULL, NULL, 'Cash', '', 'Parish Donation', 'GCash', '1769583309_gcash.png', 1000.00, 'verified', '2026-01-28'),
+(57, NULL, NULL, 'Cash', '', 'Parish Donation', 'Mass', NULL, 10000.00, 'pending', '2026-01-28'),
+(58, NULL, NULL, 'Cash', '', 'Parish Donation', 'Onsite', NULL, 100.00, 'pending', '2026-01-28'),
+(59, NULL, NULL, 'Cash', '', 'Certificate Payment', 'GCash', '1769584794_gcash.png', 50.00, 'verified', '2026-01-28');
 
 -- --------------------------------------------------------
 
@@ -650,7 +699,8 @@ CREATE TABLE `first_communion` (
 
 INSERT INTO `first_communion` (`id`, `reservation_user_id`, `status`, `created_at`, `decline_reason`, `time`, `date`, `contact`, `email`, `first_comm_type`, `notif`, `rehearsal_date`, `rehearsal_time`, `child_firstname`, `child_middlename`, `child_lastname`, `child_suffix`, `child_gender`, `child_nat`, `birth_date`, `birth_place`, `mother_firstname`, `mother_middlename`, `mother_lastname`, `father_firstname`, `father_middlename`, `father_lastname`, `father_suffix`, `baptismal_certificate`, `birth_certificate`, `presiding_priest`) VALUES
 (5, 61, 'Accepted', '2026-01-13 17:54:47', NULL, '15:00:00', '2026-07-11', '9185738275', 'jragust@gmail.com', 'Solo', 0, NULL, NULL, 'Kyle', ' Baguio', 'Agustin', '', NULL, NULL, '2014-12-09', 'Caloocan, Metro Manila', 'Cynthia', ' Torres', ' Baguio', 'Joshua', 'Moreno', 'Agustin', 'Jr', 'private/sacraments/uploads/baptismal_certificate_693456f18ec80.png', 'private/sacraments/uploads/birth_certificate_693456f18ecb9.png', 'Rev. Fr. James Nitollama	'),
-(22, 63, 'Pending', '2026-01-25 15:46:46', NULL, '13:00:00', '2026-05-03', '09621734829', 'mattmagmal@gmail.com', 'Solo', 0, NULL, NULL, 'Ilyana', 'Aquino', 'Mallari', '', 'Female', NULL, '2017-02-20', 'Caloocan, Metro Manila', 'Riley', 'Villegas', 'Mallari', 'Matthew', 'Magtuba', 'Mallari', '', 'private/sacraments/uploads/baptismal_certificate_69763ae67c524.png', 'private/sacraments/uploads/birth_certificate_69763ae67c575.png', 'Rev. Fr. James Nitollama	');
+(22, 63, 'Accepted', '2026-01-25 15:46:46', NULL, '13:00:00', '2026-05-03', '09621734829', 'mattmagmal@gmail.com', 'Solo', 0, '2026-01-30', '10:00:00', 'Ilyana', 'Aquino', 'Mallari', '', 'Female', NULL, '2017-02-20', 'Caloocan, Metro Manila', 'Riley', 'Villegas', 'Mallari', 'Matthew', 'Magtuba', 'Mallari', '', 'private/sacraments/uploads/baptismal_certificate_69763ae67c524.png', 'private/sacraments/uploads/birth_certificate_69763ae67c575.png', 'Rev. Fr. James Nitollama	'),
+(25, 58, 'Accepted', '2026-01-28 04:50:49', NULL, '13:00:00', '2026-02-22', '09183274283', 'joviemb@gmail.com', 'Solo', 0, NULL, NULL, 'Louisa', 'Pineda', 'Magbanua', '', 'Female', NULL, '2015-02-02', 'Caloocan, Metro Manila', 'Janice', 'Lou', 'Magbanua', 'Jovie ', 'Banes', 'Magbanua', '', 'private/sacraments/uploads/baptismal_certificate_697995a9a994f.png', 'private/sacraments/uploads/birth_certificate_697995a9a99d3.png', 'Rev. Fr. James Nitollama	');
 
 -- --------------------------------------------------------
 
@@ -717,7 +767,7 @@ INSERT INTO `funerals` (`id`, `reservation_user_id`, `status`, `decline_reason`,
 (6, 58, 'Done', NULL, '', 'Sophiel ', 'Banes', 'Trinidad', '', '2025-12-07', '02:00:00', NULL, 'Jovie', 'Banes', 'Magbanua', '', 'Friend', '9183274283', 'joviemb@gmail.com', '2025-12-06 14:45:44', 'Lung Cancer', NULL, 'Metro Manila', 'Quezon City', '681 Sunflower St.', 'Llano'),
 (7, 59, 'Done', NULL, '', 'Amy', 'Calderon', 'Quiambao', '', '2026-01-01', '17:00:00', NULL, 'Bryan', 'Lim', 'Quiambao', '', 'Relative', '9621937285', 'quia_ryan@gmail.com', '2025-12-06 15:55:03', 'Car Crash', NULL, 'Metro Manila', 'Quezon City', '8 Jupiter St.', 'Bagumbong'),
 (8, 62, 'Done', NULL, '', 'Sylvia', 'Asis', 'Enriquez', '', '2025-12-13', '12:00:00', NULL, 'Victoria', 'Cara', 'Enriquez', '', 'Parent', '9183726183', 'victoriacara@gmail.com', '2025-12-06 16:47:55', 'Pneumonia', NULL, 'Metro Manila', 'Quezon City', '22 Jupiter St.', 'Bagumbong'),
-(9, 63, 'Accepted', NULL, '', 'Marcos', 'Magtuba', 'Mallari', '', '2026-02-19', '07:00:00', NULL, 'Matthew', 'Magtuba', 'Mallari', '', 'Sibling', '9621734829', 'mattmagmal@gmail.com', '2025-12-06 17:02:12', 'Drowning', 'Rev. Fr. James Nitollama', 'Metro Manila', 'Quezon City', '16 Kuneg St.', 'Bagumbong');
+(13, 63, 'Accepted', NULL, 'At Home', 'Joshua', '', 'Mallari', '', '2026-01-30', '03:00:00', NULL, 'Matthew', 'Magtuba', 'Mallari', '', 'Sibling', '09621734829', 'mattmagmal@gmail.com', '2026-01-27 05:22:03', 'Drowning', 'Rev. Fr. James Nitollama', 'Metro Manila', 'Quezon City', '34 Mango Grove', 'Bagong Silang');
 
 -- --------------------------------------------------------
 
@@ -745,7 +795,8 @@ CREATE TABLE `guardian_tbl` (
 INSERT INTO `guardian_tbl` (`guardian_id`, `baptism_id`, `first_comm_id`, `confirmation_id`, `guardian_firstname`, `guardian_middlename`, `guardian_lastname`, `guardian_suffix`, `guardian_type`, `guardian_address`) VALUES
 (8, NULL, NULL, NULL, 'Blessica', 'Rosal', 'Pasado', '', 'Mother', NULL),
 (12, NULL, NULL, 81, 'Bryan', 'Lim', 'Quiambao', '', 'Uncle', NULL),
-(13, 110, NULL, NULL, 'Blessica', 'Rosal', 'Pasado', '', 'Aunt', NULL);
+(13, 110, NULL, NULL, 'Blessica', 'Rosal', 'Pasado', '', 'Aunt', NULL),
+(14, 111, NULL, NULL, 'Blessica', 'Rosal', 'Pasado', '', 'Aunt', NULL);
 
 -- --------------------------------------------------------
 
@@ -780,8 +831,9 @@ CREATE TABLE `house_blessings` (
 --
 
 INSERT INTO `house_blessings` (`id`, `reservation_user_id`, `status`, `date`, `time`, `created_at`, `decline_reason`, `province`, `city`, `street_no`, `barangay`, `notes`, `special_intention`, `requesting_firstname`, `requesting_middlename`, `requesting_lastname`, `requesting_suffix`, `requesting_contact`, `requesting_email`) VALUES
-(11, 65, 'Pending', '2026-01-27', '02:00:00', '2026-01-17 16:30:16', NULL, 'asd', 'sad', 'sds', 'dasd', 'Family Intention', NULL, NULL, NULL, NULL, NULL, '09186477722', 'blank_ink@gmail.com'),
-(12, 65, 'Pending', '2026-01-29', '12:00:00', '2026-01-18 14:42:00', NULL, 'asdsad', 'ad', 'asdsad', 'sadasd', 'Family Intention', NULL, 'Blessica', 'Rosal', 'Pasado', '', '09186477722', 'blank_ink@gmail.com');
+(13, 58, 'Pending', '2026-01-31', '17:00:00', '2026-01-28 04:55:19', NULL, 'Metro Manila', 'Caloocan', '22 Tatalon St.', 'Bagong Silang', 'Newly Built House', NULL, 'Jovie', 'Banes', 'Magbanua', '', '09183274283', 'joviemb@gmail.com'),
+(14, 62, 'Accepted', '2026-02-28', '12:00:00', '2026-01-28 04:58:47', NULL, 'Metro Manila', 'Caloocan', '10 Junio St.', 'Bagumbong', 'Newly Built House', NULL, 'Victoria', 'Cara', 'Enriquez', '', '09183726183', 'victoriacara@gmail.com'),
+(15, 61, 'Pending', '2026-03-27', '08:00:00', '2026-01-28 05:00:56', NULL, 'Metro Manila', 'Quezon City', '15 Chihuahua St.', 'Kaligayahan', 'Newly Built House', NULL, 'Joshua', 'Moreno', 'Agustin', '', '09185738275', 'jragust@gmail.com');
 
 -- --------------------------------------------------------
 
@@ -800,7 +852,7 @@ CREATE TABLE `live_streams` (
 --
 
 INSERT INTO `live_streams` (`id`, `embed`, `created_at`) VALUES
-(1, '<iframe src=\"https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2FDioNova.StaKrusParish%2Fvideos%2F869334085859103%2F&show_text=false&width=560&t=0\" width=\"560\" height=\"314\" style=\"border:none;overflow:hidden\" scrolling=\"no\" frameborder=\"0\" allowfullscreen=\"true\" allow=\"autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share\" allowFullScreen=\"true\"></iframe>', '2026-01-18 09:02:32');
+(1, '<iframe src=\"https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2FDioNova.StaKrusParish%2Fvideos%2F25550228207983016%2F&show_text=false&width=560&t=0\" width=\"560\" height=\"314\" style=\"border:none;overflow:hidden\" scrolling=\"no\" frameborder=\"0\" allowfullscreen=\"true\" allow=\"autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share\" allowFullScreen=\"true\"></iframe>', '2026-01-28 05:04:50');
 
 -- --------------------------------------------------------
 
@@ -812,7 +864,7 @@ CREATE TABLE `mass_schedule` (
   `id` int(11) NOT NULL,
   `day` enum('Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday') NOT NULL,
   `mass_time` time NOT NULL,
-  `priest_name` varchar(100) NOT NULL,
+  `priest_name` varchar(100) DEFAULT NULL,
   `status` enum('active','inactive') DEFAULT 'active',
   `time_in` time NOT NULL,
   `time_out` time NOT NULL
@@ -823,21 +875,24 @@ CREATE TABLE `mass_schedule` (
 --
 
 INSERT INTO `mass_schedule` (`id`, `day`, `mass_time`, `priest_name`, `status`, `time_in`, `time_out`) VALUES
-(34, 'Tuesday', '06:00:00', 'VICTOR GARLITOS', 'active', '06:00:00', '07:30:00'),
-(39, 'Thursday', '07:54:00', 'VICTOR GARLITOS', 'active', '07:54:00', '07:56:00'),
-(41, 'Friday', '06:00:00', 'VICTOR GARLITOS', 'active', '00:00:00', '00:00:00'),
-(42, 'Friday', '18:00:00', 'VICTOR GARLITOS', 'active', '00:00:00', '00:00:00'),
-(43, 'Saturday', '06:00:00', 'VICTOR GARLITOS', 'active', '00:00:00', '00:00:00'),
-(44, 'Saturday', '18:00:00', 'VICTOR GARLITOS', 'active', '00:00:00', '00:00:00'),
-(46, 'Sunday', '05:30:00', 'VICTOR GARLITOS', 'active', '00:00:00', '00:00:00'),
-(76, 'Monday', '07:30:00', 'MAMA', 'active', '00:00:00', '00:00:00'),
-(103, 'Wednesday', '18:00:00', 'VICTOR GARLITOS', 'active', '18:00:00', '19:30:00'),
-(107, 'Tuesday', '18:00:00', 'VICTOR GARLITOS', 'active', '18:00:00', '19:30:00'),
-(108, 'Wednesday', '06:00:00', 'VICTOR GARLITOS', 'active', '06:00:00', '07:30:00'),
-(109, 'Sunday', '06:00:00', 'VICTOR GARLITOS', 'active', '06:00:00', '07:00:00'),
-(110, 'Sunday', '06:00:00', 'VICTOR GARLITOS', 'active', '06:00:00', '07:00:00'),
-(111, 'Sunday', '06:00:00', 'VICTOR GARLITOS', 'active', '06:00:00', '07:00:00'),
-(112, 'Sunday', '20:10:00', 'VICTOR GARLITOS', 'active', '20:10:00', '20:11:00');
+(117, 'Monday', '06:00:00', NULL, 'active', '06:00:00', '07:00:00'),
+(118, 'Tuesday', '06:00:00', NULL, 'active', '06:00:00', '07:00:00'),
+(119, 'Wednesday', '06:00:00', NULL, 'active', '06:00:00', '07:00:00'),
+(120, 'Thursday', '06:00:00', NULL, 'active', '06:00:00', '07:00:00'),
+(121, 'Friday', '06:00:00', NULL, 'active', '06:00:00', '07:00:00'),
+(122, 'Saturday', '06:00:00', NULL, 'active', '06:00:00', '07:00:00'),
+(123, 'Sunday', '05:30:00', NULL, 'active', '05:30:00', '06:30:00'),
+(124, 'Sunday', '07:30:00', NULL, 'active', '07:30:00', '08:30:00'),
+(125, 'Sunday', '10:30:00', NULL, 'active', '10:30:00', '11:30:00'),
+(126, 'Sunday', '03:30:00', NULL, 'active', '03:30:00', '04:30:00'),
+(127, 'Sunday', '17:30:00', NULL, 'active', '17:30:00', '18:30:00'),
+(128, 'Sunday', '15:30:00', NULL, 'active', '15:30:00', '16:30:00'),
+(129, 'Tuesday', '18:00:00', NULL, 'active', '18:00:00', '19:00:00'),
+(131, 'Thursday', '18:00:00', NULL, 'active', '18:00:00', '19:00:00'),
+(132, 'Friday', '18:00:00', NULL, 'active', '18:00:00', '19:00:00'),
+(133, 'Saturday', '18:00:00', NULL, 'active', '18:00:00', '19:00:00'),
+(134, 'Wednesday', '14:00:00', NULL, 'active', '14:00:00', '15:00:00'),
+(135, 'Monday', '03:43:00', NULL, 'active', '03:43:00', '03:43:00');
 
 -- --------------------------------------------------------
 
@@ -874,8 +929,12 @@ INSERT INTO `ninang_tbl` (`ninang_id`, `baptism_id`, `wedding_id`, `confirmation
 (71, NULL, NULL, 81, 'Maria Angela', 'Reyes', 'Cruz'),
 (72, NULL, NULL, 81, 'Maria Angela', 'Reyes', 'Cruz'),
 (73, 109, NULL, NULL, '2323', 'seese', '2323'),
-(74, NULL, NULL, 82, 'Betty', 'Beatrix', 'Condes'),
-(75, 110, NULL, NULL, 'ewan', 'ewan', 'ewan');
+(75, 110, NULL, NULL, 'ewan', 'ewan', 'ewan'),
+(76, 111, NULL, NULL, 'Jerimia', 'shane', 'Martinez'),
+(77, 111, NULL, NULL, 'Jerimia', 'shane', 'Martinez'),
+(78, 112, NULL, NULL, 'h', 'h', 'h'),
+(79, 113, NULL, NULL, 'asa', 'asa', 'sa'),
+(80, NULL, NULL, 83, 'asas', 'saas', 'asa');
 
 -- --------------------------------------------------------
 
@@ -913,8 +972,12 @@ INSERT INTO `ninong_tbl` (`ninong_id`, `baptism_id`, `wedding_id`, `confirmation
 (79, NULL, NULL, 81, 'Daniel', ' Enrique', 'Flores', ''),
 (80, NULL, NULL, 81, 'Daniel', 'Enrique', 'Flores', NULL),
 (81, 109, NULL, NULL, '2323', '2323', '2323', ''),
-(82, NULL, NULL, 82, 'Erl', 'Shawn', 'Rivera', ''),
-(83, 110, NULL, NULL, 'ewan', 'ewan', 'ewan', '');
+(83, 110, NULL, NULL, 'ewan', 'ewan', 'ewan', ''),
+(84, 111, NULL, NULL, 'Jerome', 'Carlo', 'Rivera', ''),
+(85, 111, NULL, NULL, 'Jerome', 'Carlo', 'Rivera', NULL),
+(86, 112, NULL, NULL, 'h', 'h', 'h', 'h'),
+(87, 113, NULL, NULL, 'sa', 'sas', 'sa', 'as'),
+(88, NULL, NULL, 83, 'sa', 'asas', 'asas', '');
 
 -- --------------------------------------------------------
 
@@ -938,25 +1001,37 @@ CREATE TABLE `notifications` (
 --
 
 INSERT INTO `notifications` (`id`, `user_id`, `title`, `message`, `type`, `is_read`, `created_at`, `category`) VALUES
-(309, 65, 'Certificate Request Submitted', 'Good day, Blessica! We have received your request for a Baptism certificate for Papot Rosal Pasado. Your request is currently under review. You will be notified once it is approved for pickup. Thank you and God bless!', 'successful_request', 0, '2026-01-25 23:20:06', 'general'),
-(310, 59, 'Confirmation Reservation Submitted', 'Good day, Bryan! We’ve received your request for confirmation for Elton Aquino Rico, and it’s currently being reviewed. We’ll get back to you soon. Thank you and God bless!', 'successful_request', 0, '2026-01-25 23:40:28', 'general'),
-(311, 63, 'Communion Reservation Submitted', 'Good day, Matthew! We’ve received your request for communion for Ilyana Aquino Mallari, and it’s currently being reviewed. We’ll get back to you soon. Thank you and God bless!', 'successful_request', 0, '2026-01-25 23:46:46', 'general'),
-(312, 58, 'Baptism Request Accepted', 'Good day! We\'re happy to let you know that your baptism request for Mary Joy Roldan has been accepted. Stay tuned for more details on the baptismal rehearsal schedule.<br><br>If you have any questions or need more info, don’t hesitate to reach out or drop by the church office. We look forward to celebrating this special moment with you! Thank you and God bless!', 'reservation_accepted', 0, '2026-01-25 23:51:21', 'general'),
-(313, 65, 'Baptism Request Accepted', 'Good day! We\'re happy to let you know that your baptism request for Papot Pasado has been accepted. Stay tuned for more details on the baptismal rehearsal schedule.<br><br>If you have any questions or need more info, don’t hesitate to reach out or drop by the church office. We look forward to celebrating this special moment with you! Thank you and God bless!', 'reservation_accepted', 0, '2026-01-25 23:51:59', 'general'),
-(314, 65, 'Rehearsal Scheduled', 'Good day! This is to inform you that the rehearsal for Papot Rosal Pasado \'s Baptism has been scheduled for January 27, 2026 at 10:00 AM. Kindly arrive on time to avoid any delays. We appreciate your cooperation. If you have any questions, feel free to contact or visit the church office. Thank you and God bless!', 'rehearsal_schedule', 0, '2026-01-26 07:52:43', 'general'),
-(316, 65, 'Rehearsal Scheduled', 'Good day! This is to inform you that the rehearsal for Papot Rosal Pasado \'s Baptism has been scheduled for January 20, 2026 at 10:00 AM. Kindly arrive on time to avoid any delays. We appreciate your cooperation. If you have any questions, feel free to contact or visit the church office. Thank you and God bless!', 'rehearsal_schedule', 1, '2026-01-26 08:00:47', 'general'),
-(317, 65, 'Donation Reminder', 'Thank you for allowing us to serve you through our church. To help cover the costs of the Baptism service, we kindly ask for a donation of at least ₱1000. You can make your donation via <a href=\"http://localhost/stkportal_src/src/public/donation_reservation.php\">GCash</a> or at the church office. God bless!', 'donation_reminder', 0, '2026-01-26 08:00:47', 'general'),
-(318, 65, 'Certificate Request Update', 'Your certificate request for Papot Pasado is now marked as Accepted.', 'certificate_update', 0, '2026-01-26 10:18:45', 'general'),
-(319, 65, 'Certificate Request Update', 'Your certificate request for Papot Pasado is now marked as Accepted.', 'certificate_update', 0, '2026-01-26 10:18:57', 'general'),
-(320, 65, 'Baptism Reservation Submitted', 'Good day, Blessica! We’ve received your request for baptism for kyle eris remponi Jr., and it’s currently being reviewed. We’ll get back to you soon. Thank you and God bless!', 'successful_request', 0, '2026-01-26 10:36:23', 'general'),
-(321, 65, 'Baptism Request Accepted', 'Good day! We\'re happy to let you know that your baptism request for kyle remponi has been accepted. Stay tuned for more details on the baptismal rehearsal schedule.<br><br>If you have any questions or need more info, don’t hesitate to reach out or drop by the church office. We look forward to celebrating this special moment with you! Thank you and God bless!', 'reservation_accepted', 1, '2026-01-26 10:37:15', 'general'),
-(322, 65, 'Rehearsal Scheduled', 'Good day! This is to inform you that the rehearsal for kyle eris remponi Jr.\'s Baptism has been scheduled for January 23, 2026 at 07:06 AM. Kindly arrive on time to avoid any delays. We appreciate your cooperation. If you have any questions, feel free to contact or visit the church office. Thank you and God bless!', 'rehearsal_schedule', 1, '2026-01-26 10:41:51', 'general'),
-(323, 65, 'Donation Reminder', 'Thank you for allowing us to serve you through our church. To help cover the costs of the Baptism service, we kindly ask for a donation of at least ₱1000. You can make your donation via <a href=\"http://localhost/stkportal_src/src/public/donation_reservation.php\">GCash</a> or at the church office. God bless!', 'donation_reminder', 1, '2026-01-26 10:41:51', 'general'),
-(324, 65, 'Confirmation Reservation Submitted', 'Good day, Blessica! We’ve received your request for confirmation for Eri Sav Fen, and it’s currently being reviewed. We’ll get back to you soon. Thank you and God bless!', 'successful_request', 0, '2026-01-26 11:35:24', 'general'),
-(325, 65, 'Baptism Reservation Submitted', 'Good day, Blessica! We’ve received your request for baptism for Kenneth Gilid Pasion, and it’s currently being reviewed. We’ll get back to you soon. Thank you and God bless!', 'successful_request', 0, '2026-01-26 13:12:03', 'general'),
-(326, 65, 'Baptism Request Accepted', 'Good day! We\'re happy to let you know that your baptism request for Kenneth Pasion has been accepted. Stay tuned for more details on the baptismal rehearsal schedule.<br><br>If you have any questions or need more info, don’t hesitate to reach out or drop by the church office. We look forward to celebrating this special moment with you! Thank you and God bless!', 'reservation_accepted', 0, '2026-01-26 13:12:50', 'general'),
-(327, 65, 'Rehearsal Scheduled', 'Good day! This is to inform you that the rehearsal for Kenneth Gilid Pasion \'s Baptism has been scheduled for January 26, 2026 at 10:00 AM. Kindly arrive on time to avoid any delays. We appreciate your cooperation. If you have any questions, feel free to contact or visit the church office. Thank you and God bless!', 'rehearsal_schedule', 0, '2026-01-26 13:14:05', 'general'),
-(328, 65, 'Donation Reminder', 'Thank you for allowing us to serve you through our church. To help cover the costs of the Baptism service, we kindly ask for a donation of at least ₱500. You can make your donation via <a href=\"http://localhost/stkportal_src/src/public/donation_reservation.php\">GCash</a> or at the church office. God bless!', 'donation_reminder', 0, '2026-01-26 13:14:05', 'general');
+(360, 62, 'House Blessing Service Payment', 'Thank you for allowing us to serve you through our church. We kindly ask for a payment of at least ₱2000 for priest\'s service stipend.<br><br>\n        You can make your payment via <a href=\"http://localhost/stkportal_src/src/public/service_payment.php\">GCash</a> or at the church office. God bless!', 'service_payment', 0, '2026-01-28 12:58:57', 'general'),
+(361, 62, 'Celebratory Mass Request Submitted', 'Good day, Victoria! We have received your Celebratory Mass request (Thanksgiving) for Recovery from cancer. Your request is currently under review by the parish office. You will be notified once it has been approved. Thank you and God bless!', 'successful_request', 0, '2026-01-28 12:59:55', 'general'),
+(362, 61, 'House Blessing Request Submitted', 'Good day, Joshua! We have received your House Blessing request scheduled on 2026-03-27 at 08:00 located at 15 Chihuahua St., Kaligayahan, Quezon City, Metro Manila. Your request is currently under review by the parish office. You will be notified once it has been approved. Thank you and God bless!', 'successful_request', 0, '2026-01-28 13:00:56', 'general'),
+(363, 65, 'Baptism Reservation Submitted', 'Good day, Blessica! We’ve received your request for baptism for erlshawn josh rivera, and it’s currently being reviewed. We’ll get back to you soon. Thank you and God bless!', 'successful_request', 0, '2026-01-28 14:45:45', 'general'),
+(364, 65, 'Baptism Request Accepted', 'Good day! We\'re happy to let you know that your baptism request for erlshawn rivera has been accepted. Stay tuned for more details on the baptismal rehearsal schedule.<br><br>If you have any questions or need more info, don’t hesitate to reach out or drop by the church office. We look forward to celebrating this special moment with you! Thank you and God bless!', 'reservation_accepted', 0, '2026-01-28 14:50:58', 'general'),
+(365, 65, 'Rehearsal Scheduled', 'Good day! This is to inform you that the rehearsal for erlshawn josh rivera \'s Baptism has been scheduled for February 06, 2026 at 10:30 AM. Kindly arrive on time to avoid any delays. We appreciate your cooperation. If you have any questions, feel free to contact or visit the church office. Thank you and God bless!', 'rehearsal_schedule', 0, '2026-01-28 15:00:29', 'general'),
+(366, 65, 'Donation Reminder', 'Thank you for allowing us to serve you through our church. To help cover the costs of the Baptism service, we kindly ask for a donation of at least ₱500. You can make your donation via <a href=\"http://localhost/stkportal_src/src/public/donation_reservation.php\">GCash</a> or at the church office. God bless!', 'donation_reminder', 0, '2026-01-28 15:00:29', 'general'),
+(367, 65, 'Certificate Request Submitted', 'Good day, Blessica! We have received your request for a Baptism certificate for Blessica Pasado. Your request is currently under review. You will be notified once it is approved for pickup. Thank you and God bless!', 'successful_request', 0, '2026-01-28 15:06:02', 'general'),
+(368, 65, 'Certificate Request Update', 'Your certificate request for Blessica  Pasado  is now marked as Accepted.', 'certificate_update', 0, '2026-01-28 15:06:21', 'general'),
+(369, 65, 'Certificate Request Update', 'Your certificate request for Blessica  Pasado  is now marked as Accepted.', 'certificate_update', 0, '2026-01-28 15:06:37', 'general'),
+(370, 65, 'Certificate Pick-up Date Set', 'Good day! Your pick up date for <strong>Blessica  Pasado </strong>\'s <strong>Baptism</strong> has been set to <strong>January 30, 2026</strong>. You may visit the parish at that that date for the releasing of the certificate.<br><br>Please submit a payment of ₱50 for the release of the certificate. You may pay via <a href=\"http://localhost/stkportal_src/src/public/certificate_payment.php\">GCash</a> or at the church office. God Bless!', 'certificate_pickup_set', 0, '2026-01-28 15:06:37', 'general'),
+(371, 58, 'Certificate Request Update', 'Your certificate request for Jovie  Magbanua  is now marked as Accepted.', 'certificate_update', 0, '2026-01-28 15:06:53', 'general'),
+(372, 65, 'Certificate Request Update', 'Your certificate request for Blessica  Pasado  is now marked as Cancelled. Reason: Requested certificate is not available in parish records', 'certificate_update', 0, '2026-01-28 15:07:27', 'general'),
+(373, 65, 'Certificate Request Submitted', 'Good day, Blessica! We have received your request for a Baptism certificate for victor z Garlitos. Your request is currently under review. You will be notified once it is approved for pickup. Thank you and God bless!', 'successful_request', 0, '2026-01-28 15:14:37', 'general'),
+(374, 65, 'Certificate Request Update', 'Your certificate request for victor z Garlitos  is now marked as Accepted.', 'certificate_update', 0, '2026-01-28 15:14:48', 'general'),
+(375, 65, 'Certificate Request Update', 'Your certificate request for victor z Garlitos  is now marked as Accepted.', 'certificate_update', 1, '2026-01-28 15:15:03', 'general'),
+(376, 65, 'Certificate Pick-up Date Set', 'Good day! Your pick up date for <strong>victor z Garlitos </strong>\'s <strong>Baptism</strong> has been set to <strong>January 31, 2026</strong>. You may visit the parish at that that date for the releasing of the certificate.<br><br>Please submit a payment of ₱50 for the release of the certificate. You may pay via <a href=\"http://localhost/stkportal_src/src/public/certificate_payment.php\">GCash</a> or at the church office. God Bless!', 'certificate_pickup_set', 1, '2026-01-28 15:15:03', 'general'),
+(377, 65, 'Baptism Reservation Submitted', 'Good day, Blessica! We’ve received your request for baptism for sasas dad asa, and it’s currently being reviewed. We’ll get back to you soon. Thank you and God bless!', 'successful_request', 0, '2026-01-28 15:29:42', 'general'),
+(378, 65, 'Baptism Request Accepted', 'Good day! We\'re happy to let you know that your baptism request for sasas asa has been accepted. Stay tuned for more details on the baptismal rehearsal schedule.<br><br>If you have any questions or need more info, don’t hesitate to reach out or drop by the church office. We look forward to celebrating this special moment with you! Thank you and God bless!', 'reservation_accepted', 0, '2026-01-28 15:30:59', 'general'),
+(379, 65, 'Certificate Request Submitted', 'Good day, Blessica! We have received your request for a Baptism certificate for sasas dad asa. Your request is currently under review. You will be notified once it is approved for pickup. Thank you and God bless!', 'successful_request', 0, '2026-01-28 15:32:06', 'general'),
+(380, 65, 'Certificate Request Update', 'Your certificate request for sasas dad asa  is now marked as Accepted.', 'certificate_update', 0, '2026-01-28 15:32:45', 'general'),
+(381, 65, 'Baptism Reservation Submitted', 'Good day, Blessica! We’ve received your request for baptism for Victor Z Garlitos, and it’s currently being reviewed. We’ll get back to you soon. Thank you and God bless!', 'successful_request', 0, '2026-01-28 15:41:12', 'general'),
+(382, 65, 'Certificate Request Submitted', 'Good day, Blessica! We have received your request for a Baptism certificate for Victor Z Garlitos. Your request is currently under review. You will be notified once it is approved for pickup. Thank you and God bless!', 'successful_request', 0, '2026-01-28 15:42:27', 'general'),
+(383, 65, 'Certificate Request Update', 'Your certificate request for Victor Z Garlitos  is now marked as Accepted.', 'certificate_update', 0, '2026-01-28 15:43:24', 'general'),
+(384, 65, 'Certificate Request Update', 'Your certificate request for Victor Z Garlitos  is now marked as Accepted.', 'certificate_update', 0, '2026-01-28 15:43:30', 'general'),
+(385, 65, 'Certificate Pick-up Date Set', 'Good day! Your pick up date for <strong>Victor Z Garlitos </strong>\'s <strong>Baptism</strong> has been set to <strong>January 29, 2026</strong>. You may visit the parish at that that date for the releasing of the certificate.<br><br>Please submit a payment of ₱50 for the release of the certificate. You may pay via <a href=\"http://localhost/stkportal_src/src/public/certificate_payment.php\">GCash</a> or at the church office. God Bless!', 'certificate_pickup_set', 0, '2026-01-28 15:43:30', 'general'),
+(386, 62, 'Celebratory Mass Request Accepted', 'Good day! Your celebratory mass request for <strong>Thanksgiving</strong> has been accepted.<br><br>If you have questions, feel free to contact or visit the church office. Thank you and God bless!', 'reservation_accepted', 0, '2026-01-28 15:46:12', 'general'),
+(387, 65, 'Celebratory Mass Request Submitted', 'Good day, Blessica! We have received your Celebratory Mass request (Thanksgiving) for wsdsdsdsd. Your request is currently under review by the parish office. You will be notified once it has been approved. Thank you and God bless!', 'successful_request', 0, '2026-01-28 15:56:16', 'general'),
+(388, 65, 'Celebratory Mass Request Accepted', 'Good day! Your celebratory mass request for <strong>Thanksgiving</strong> has been accepted.<br><br>If you have questions, feel free to contact or visit the church office. Thank you and God bless!', 'reservation_accepted', 0, '2026-01-28 15:56:33', 'general'),
+(389, 65, 'Confirmation Reservation Submitted', 'Good day, Blessica! We’ve received your request for confirmation for A A A, and it’s currently being reviewed. We’ll get back to you soon. Thank you and God bless!', 'successful_request', 0, '2026-01-28 16:00:31', 'general'),
+(390, 58, 'First Communion Request Accepted', 'Good day! We\'re happy to let you know that your first communion request for Louisa Magbanua has been accepted. Stay tuned for more details on the first communion rehearsal schedule.<br><br>If you have any questions or need more info, don’t hesitate to reach out or drop by the church office. We look forward to celebrating this special moment with you! Thank you and God bless!', 'reservation_accepted', 0, '2026-01-28 16:01:26', 'general');
 
 -- --------------------------------------------------------
 
@@ -985,17 +1060,43 @@ CREATE TABLE `prayer_requests` (
 --
 
 INSERT INTO `prayer_requests` (`id`, `status`, `name`, `username`, `email`, `request_text`, `shared_public`, `intention`, `anonymous`, `created_at`, `visibility`, `time`, `date`) VALUES
-(5, 'private', NULL, NULL, NULL, 'please help me pass my exams thank you lord', 0, 'special', '1', '2025-11-19 23:24:03', NULL, NULL, NULL),
+(5, 'published', NULL, NULL, NULL, 'please help me pass my exams thank you lord', 1, 'special', '1', '2025-11-19 23:24:03', NULL, NULL, NULL),
 (6, 'private', NULL, NULL, NULL, 'lord please pauwiin mo na aso ko miss ko na sya i hope ligtas sya lord thank you', 0, 'special', '1', '2025-11-19 23:26:29', NULL, NULL, NULL),
-(7, 'private', 'josie', NULL, 'jos@gmail.com', 'please guide me in passing my exams', 0, 'special', '0', '2025-11-19 23:27:10', NULL, NULL, NULL),
-(10, 'private', NULL, NULL, NULL, 'sana bumait na si Shanelle', 0, 'soul', '1', '2025-11-26 23:20:48', NULL, NULL, NULL),
-(12, 'private', 'Jovie Magbanua', NULL, 'joviemb@gmail.com', 'asking for prayer i want to spread the gospel plant seeds and cast out devils in Jesus name thank you God bless you all', 0, 'soul', '0', '2025-12-06 12:34:23', NULL, NULL, NULL),
-(13, 'private', 'Bryan Quiambao', NULL, 'quia_ryan@gmail.com', 'Prayer for Our Family\r\nHeavenly Father, bless my family with love, unity, and good health. Guide our hearts with faith, protect us from harm, and fill our home with peace and understanding always. Amen.', 0, 'special', '0', '2025-12-06 15:34:07', NULL, NULL, NULL),
-(14, 'private', 'Adang Family', NULL, 'adang@gmail.com', 'Family and friends, we humbly ask for your prayers for our beloved sister. She is going through a difficult time, and our hearts are heavy but we believe in a God who heals, strengthens, and comforts.', 1, 'special', '0', '2025-12-06 15:34:59', NULL, NULL, NULL),
+(7, 'published', 'josie', NULL, 'jos@gmail.com', 'please guide me in passing my exams', 1, 'special', '0', '2025-11-19 23:27:10', NULL, NULL, NULL),
+(10, 'private', NULL, NULL, NULL, 'sana bumait na si Shanelle', 1, 'soul', '1', '2025-11-26 23:20:48', NULL, NULL, NULL),
+(12, 'published', 'Jovie Magbanua', NULL, 'joviemb@gmail.com', 'asking for prayer i want to spread the gospel plant seeds and cast out devils in Jesus name thank you God bless you all', 1, 'soul', '0', '2025-12-06 12:34:23', NULL, NULL, NULL),
+(13, 'published', 'Bryan Quiambao', NULL, 'quia_ryan@gmail.com', 'Prayer for Our Family\r\nHeavenly Father, bless my family with love, unity, and good health. Guide our hearts with faith, protect us from harm, and fill our home with peace and understanding always. Amen.', 1, 'special', '0', '2025-12-06 15:34:07', NULL, NULL, NULL),
+(14, 'published', 'Adang Family', NULL, 'adang@gmail.com', 'Family and friends, we humbly ask for your prayers for our beloved sister. She is going through a difficult time, and our hearts are heavy but we believe in a God who heals, strengthens, and comforts.', 1, 'special', '0', '2025-12-06 15:34:59', NULL, NULL, NULL),
 (22, 'published', 'Blessica Pasado', NULL, 'blank_ink@gmail.com', 'Prayer for Our Family Heavenly Father, bless my family with love, unity, and good health. Guide our hearts with faith, protect us from harm, and fill our home with peace and understanding always. Amen.Prayer for Our Family Heavenly Father, bless my family with love, unity, and good health. Guide our hearts with faith, protect us from harm, Prayer for Our Family Heavenly Father, bless my family with love, unity, and good health. Guide our hearts with faith, protect us from harm, and fill our home', 1, 'thanksgiving', '0', '2026-01-10 03:08:11', NULL, NULL, NULL),
-(23, 'private', 'Kristan Pepito', NULL, 'stakrusparish@gmail.com', 'f', 1, 'special', '0', '2026-01-10 03:13:55', NULL, NULL, NULL),
-(24, 'private', 'Blessica Pasado', NULL, 'blank_ink@gmail.com', 'sadasdasad', 1, 'soul', '0', '2026-01-14 13:12:53', NULL, NULL, NULL),
 (25, 'private', 'victor', NULL, 'victorgarlits01@gmail.com', 'Sana Gumaling si paw para ma ka defence sya', 0, 'special', '0', '2026-01-26 01:33:16', NULL, NULL, NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `reschedule_requests`
+--
+
+CREATE TABLE `reschedule_requests` (
+  `id` int(11) NOT NULL,
+  `sacrament` varchar(40) NOT NULL,
+  `reference_id` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `change_type` enum('Service','Rehearsal','Canon Interview','Pre-Cana') NOT NULL,
+  `date_current` date DEFAULT NULL,
+  `time_current` time DEFAULT NULL,
+  `requested_date` date DEFAULT NULL,
+  `requested_time` time DEFAULT NULL,
+  `reason` text NOT NULL,
+  `status` varchar(20) NOT NULL DEFAULT 'Pending',
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `reschedule_requests`
+--
+
+INSERT INTO `reschedule_requests` (`id`, `sacrament`, `reference_id`, `user_id`, `change_type`, `date_current`, `time_current`, `requested_date`, `requested_time`, `reason`, `status`, `created_at`) VALUES
+(1, 'First Communion', 24, 65, 'Service', '2026-02-22', '13:00:00', '2026-01-22', '10:00:00', 'dunno', 'Pending', '2026-01-27 18:45:45');
 
 -- --------------------------------------------------------
 
@@ -1034,34 +1135,36 @@ CREATE TABLE `users` (
   `email` varchar(100) DEFAULT NULL,
   `contact` varchar(20) DEFAULT NULL,
   `birthday` date DEFAULT NULL,
-  `photo` varchar(300) DEFAULT NULL
+  `photo` varchar(300) DEFAULT NULL,
+  `email_verified` tinyint(1) NOT NULL DEFAULT 0,
+  `verify_token_hash` varchar(255) DEFAULT NULL,
+  `verify_token_expires` datetime DEFAULT NULL,
+  `reset_token_hash` varchar(255) DEFAULT NULL,
+  `reset_token_expires` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`user_id`, `user_type`, `created_at`, `username`, `password`, `givenname`, `middlename`, `lastname`, `gender`, `suffix`, `full_name`, `email`, `contact`, `birthday`, `photo`) VALUES
-(39, 'Admin', '2025-12-08 11:01:43', 'stakrusparish', '$2y$10$D1KpMxJFBWP/UCtDIoqF7OKz56oaiOx2PNEabUkRZSGH0tgp.1Hbi', 'Kristan', 'Samson', 'Pepito', 'Male', '', NULL, 'stakrusparish@gmail.com', '09617489918', '2001-12-09', NULL),
-(40, 'Admin', '2025-11-12 05:18:40', 'pauiee', '$2y$10$rTkl4wT.5Tm066MGygLBeug11XCoPbI2YmEqfcmeQT3ZxmXD4XDNa', 'Pauline Jean', 'Garcia', 'Pasion', 'Female', '', 'Pauline Jean Garcia Pasion', 'pauiee@gmail.com', '09621974275', '2001-09-02', 'profilepics/maw.png'),
-(41, 'Admin', '2025-11-12 07:01:06', 'ehrily', '$2y$10$GTcwx5d7Dw4nread/F/eP.mbEf2AbI3x7zH/aQ5bJQm.B.DsO1J4W', 'Ericka', 'Sabile', 'Fenis', 'Female', '', 'Ericka  Fenis', 'ehrily@gmail.com', '09123859933', '2001-04-13', ''),
-(44, 'Admin', '2025-11-19 13:08:23', 'vicGar', '$2y$10$lB8WUQ4uL3PSG0NAxXki6.a5kmcCEawCHTiiV9rLzoJuqTMsIBPPO', 'Victor', 'Zabala', 'Garlitos', 'Male', '', NULL, 'vicGar@gmail.com', '09173846627', '2003-02-21', ''),
-(45, 'Admin', '2025-11-19 13:18:58', 'jerlshaw', '$2y$10$oZsJ7Bi4u0l7q6Ts19Z7HONzn/tupBWnGmBIuvIrKGp5F0DJBuuVC', 'Erlshawn Josh', 'Tandas', 'Rivera', 'Male', '', NULL, 'jerlshaw@gmail.com', '09173628462', '2003-02-12', NULL),
-(55, 'User', '2025-11-26 18:15:18', 'test', '$2y$10$hTHwu8N3.3MUCXoU5Uk4Ee6Xk5w8.c9CNiUUehqox55pKSTFlHAKO', 'Pauline', 'Jean', 'Pasion', 'Female', '', NULL, 'pau@m.com', '09181234567', '2001-09-02', NULL),
-(58, 'User', '2025-12-06 12:31:26', 'joviemb', '$2y$10$VS0xtgnib2YYIrvDZzjXr.B1LsS9F2HarXdoV35iWgaihjWe8pRIG', 'Jovie', 'Banes', 'Magbanua', 'Female', '', NULL, 'joviemb@gmail.com', '09183274283', '1991-11-18', NULL),
-(59, 'User', '2025-12-06 15:32:54', 'quia_ryan', '$2y$10$0UKD7DDRFlPM.k9VW1Iniux8B10fTaSHWlrjuYqThWxS5VeC4T.ZC', 'Bryan', 'Lim', 'Quiambao', 'Male', '', NULL, 'quia_ryan@gmail.com', '09621937285', '1996-07-28', NULL),
-(60, 'User', '2025-12-06 15:56:05', 'serenity', '$2y$10$n4WhsmNsNLDjO8Km8kOREOvA9s7i9KCYP/PobT4pWVeSl6j1cFRNu', 'Serenity', 'Espino', 'Lozano', 'Female', '', NULL, 'serenity@gmail.com', '09186372233', '2001-09-02', NULL),
-(61, 'User', '2025-12-06 16:07:34', 'jragust', '$2y$10$j8g.77nfWwP6I/QKnVu2CeJfCeY8NzzP5EUz2d6ykplcT5BUgtguS', 'Joshua', 'Moreno', 'Agustin', 'Male', 'Jr', NULL, 'jragust@gmail.com', '09185738275', '1989-01-24', NULL),
-(62, 'User', '2025-12-06 16:25:07', 'victoriacara', '$2y$10$hBawgfzjVWiKyw2iwB7I4.vcWYh3Wwkvz6x47NhQcjSA7ygCCFTrm', 'Victoria', 'Cara', 'Enriquez', 'Female', '', NULL, 'victoriacara@gmail.com', '09183726183', '2000-08-22', NULL),
-(63, 'User', '2025-12-06 16:51:23', 'mattmagmal', '$2y$10$MhBTfjlsM0tTaxAsORBDOuYtoI27GRdEohvuYyMp/JJ72PUH81Mq6', 'Matthew', 'Magtuba', 'Mallari', 'Male', '', NULL, 'mattmagmal@gmail.com', '09621734829', '2001-12-07', NULL),
-(65, 'User', '2025-12-08 10:31:58', 'blank_ink', '$2y$10$XLnWMe/jb4pHGr4HapfgkeEqkZfCLB5KL/KEC7fv5QO.w1XaZKGzq', 'Blessica', 'Rosal', 'Pasado', 'Female', '', NULL, 'blank_ink@gmail.com', '09186477722', '1992-12-09', NULL),
-(67, 'User', '2025-12-09 09:21:18', 'erily', '$2y$10$fUl/ve4o3fYnb0f4V1Ha.O7DTJ3NsHK/pkyms8Z1HU1D86ooK2wke', 'ericka', 'sabile', 'fenis', 'Female', '', NULL, 'eicafns@gmail.com', '09453093495', '2024-05-14', NULL),
-(69, 'User', '2026-01-07 06:11:55', 'asa', '$2y$10$qP.BkgjvmDQYNLjUsL0wvOhKE0y/AsI3wE/7nmJrRTZR7cSb13eVW', 'ads', 'sa', 'd', 'Female', '', NULL, 'as@gmailc.om', '09623718492', '2001-02-02', NULL),
-(70, 'User', '2026-01-07 06:13:34', 'd', '$2y$10$2MlpIvHd0TOp.MLFEkx1Ne9VyYqJgmHcwmz2XrgVw5AfBKWqXtCGm', 'ads', 'asd', 'a', 'Female', '', NULL, 'ad@gmailc.om', '09627819382', '2001-02-02', NULL),
-(72, 'User', '2026-01-07 06:25:56', 'meow', '$2y$10$RrBZVoT3L4dEFhqT1cdOpu6ImpsD/oMJ/Nyb9kEpCL7uxkD1H9Uha', 'meowww', 'mewoww', 'meow', 'Female', '', NULL, 'meowww@gmail.com', '09629172635', '2000-03-03', NULL),
-(73, 'User', '2026-01-07 06:31:04', 'as', '$2y$10$l0ibXuaYSyPR26f.tSCjAOAILjTqQTPI.mQADHhdNphrfkCNLPkgy', 'mweo', 'me', 'w', 'Male', '', NULL, 'as@gmail.com', '09617283627', '1992-02-02', NULL),
-(74, 'User', '2026-01-07 06:36:05', 'gggg', '$2y$10$pnck6JJ75C/oma6WSJwYDO60rKyjw3FTKeocug351dMiMXw2VO63.', 'meow', 'meow', 'mew', 'Female', '', NULL, 'gge@a.com', '09621974283', '1990-02-02', NULL),
-(75, 'Priest', '2026-01-07 12:48:44', '', '$2y$10$oeS5tP2kSfkkCRXXIIqSUe33MMuifQutan/m.7cahDAixG8NhK8YK', 'James', '', 'Nitollama', 'Male', '', NULL, 'nitollama.j@gmail.com', '09186283341', '1987-11-25', NULL);
+INSERT INTO `users` (`user_id`, `user_type`, `created_at`, `username`, `password`, `givenname`, `middlename`, `lastname`, `gender`, `suffix`, `full_name`, `email`, `contact`, `birthday`, `photo`, `email_verified`, `verify_token_hash`, `verify_token_expires`, `reset_token_hash`, `reset_token_expires`) VALUES
+(39, 'Admin', '2025-12-08 11:01:43', 'stakrusparish', '$2y$10$D1KpMxJFBWP/UCtDIoqF7OKz56oaiOx2PNEabUkRZSGH0tgp.1Hbi', 'Kristan', 'Samson', 'Pepito', 'Male', '', NULL, 'stakrusparish@gmail.com', '09617489918', '2001-12-09', NULL, 1, NULL, NULL, NULL, NULL),
+(40, 'Admin', '2025-11-12 05:18:40', 'pauiee', '$2y$10$rTkl4wT.5Tm066MGygLBeug11XCoPbI2YmEqfcmeQT3ZxmXD4XDNa', 'Pauline Jean', 'Garcia', 'Pasion', 'Female', '', 'Pauline Jean Garcia Pasion', 'pauiee@gmail.com', '09621974275', '2001-09-02', 'profilepics/maw.png', 1, NULL, NULL, NULL, NULL),
+(41, 'Admin', '2025-11-12 07:01:06', 'ehrily', '$2y$10$GTcwx5d7Dw4nread/F/eP.mbEf2AbI3x7zH/aQ5bJQm.B.DsO1J4W', 'Ericka', 'Sabile', 'Fenis', 'Female', '', 'Ericka  Fenis', 'ehrily@gmail.com', '09123859933', '2001-04-13', '', 1, NULL, NULL, NULL, NULL),
+(44, 'Admin', '2025-11-19 13:08:23', 'vicGar', '$2y$10$lB8WUQ4uL3PSG0NAxXki6.a5kmcCEawCHTiiV9rLzoJuqTMsIBPPO', 'Victor', 'Zabala', 'Garlitos', 'Male', '', NULL, 'vicGar@gmail.com', '09173846627', '2003-02-21', '', 1, NULL, NULL, NULL, NULL),
+(45, 'Admin', '2025-11-19 13:18:58', 'jerlshaw', '$2y$10$oZsJ7Bi4u0l7q6Ts19Z7HONzn/tupBWnGmBIuvIrKGp5F0DJBuuVC', 'Erlshawn Josh', 'Tandas', 'Rivera', 'Male', '', NULL, 'jerlshaw@gmail.com', '09173628462', '2003-02-12', NULL, 1, NULL, NULL, NULL, NULL),
+(55, 'User', '2025-11-26 18:15:18', 'test', '$2y$10$hTHwu8N3.3MUCXoU5Uk4Ee6Xk5w8.c9CNiUUehqox55pKSTFlHAKO', 'Pauline', 'Jean', 'Pasion', 'Female', '', NULL, 'pau@m.com', '09181234567', '2001-09-02', NULL, 1, NULL, NULL, NULL, NULL),
+(58, 'User', '2025-12-06 12:31:26', 'joviemb', '$2y$10$VS0xtgnib2YYIrvDZzjXr.B1LsS9F2HarXdoV35iWgaihjWe8pRIG', 'Jovie', 'Banes', 'Magbanua', 'Female', '', NULL, 'joviemb@gmail.com', '09183274283', '1991-11-18', NULL, 1, NULL, NULL, NULL, NULL),
+(59, 'User', '2025-12-06 15:32:54', 'quia_ryan', '$2y$10$0UKD7DDRFlPM.k9VW1Iniux8B10fTaSHWlrjuYqThWxS5VeC4T.ZC', 'Bryan', 'Lim', 'Quiambao', 'Male', '', NULL, 'quia_ryan@gmail.com', '09621937285', '1996-07-28', NULL, 1, NULL, NULL, NULL, NULL),
+(60, 'User', '2025-12-06 15:56:05', 'serenity', '$2y$10$n4WhsmNsNLDjO8Km8kOREOvA9s7i9KCYP/PobT4pWVeSl6j1cFRNu', 'Serenity', 'Espino', 'Lozano', 'Female', '', NULL, 'serenity@gmail.com', '09186372233', '2001-09-02', NULL, 1, NULL, NULL, NULL, NULL),
+(61, 'User', '2025-12-06 16:07:34', 'jragust', '$2y$10$j8g.77nfWwP6I/QKnVu2CeJfCeY8NzzP5EUz2d6ykplcT5BUgtguS', 'Joshua', 'Moreno', 'Agustin', 'Male', 'Jr', NULL, 'jragust@gmail.com', '09185738275', '1989-01-24', NULL, 1, NULL, NULL, NULL, NULL),
+(62, 'User', '2025-12-06 16:25:07', 'victoriacara', '$2y$10$hBawgfzjVWiKyw2iwB7I4.vcWYh3Wwkvz6x47NhQcjSA7ygCCFTrm', 'Victoria', 'Cara', 'Enriquez', 'Female', '', NULL, 'victoriacara@gmail.com', '09183726183', '2000-08-22', NULL, 1, NULL, NULL, NULL, NULL),
+(63, 'User', '2025-12-06 16:51:23', 'mattmagmal', '$2y$10$MhBTfjlsM0tTaxAsORBDOuYtoI27GRdEohvuYyMp/JJ72PUH81Mq6', 'Matthew', 'Magtuba', 'Mallari', 'Male', '', NULL, 'mattmagmal@gmail.com', '09621734829', '2001-12-07', NULL, 1, NULL, NULL, NULL, NULL),
+(65, 'User', '2025-12-08 10:31:58', 'blank_ink', '$2y$10$XLnWMe/jb4pHGr4HapfgkeEqkZfCLB5KL/KEC7fv5QO.w1XaZKGzq', 'Blessica', 'Rosal', 'Pasado', 'Female', '', NULL, 'blank_ink@gmail.com', '09186477722', '1992-12-09', NULL, 1, NULL, NULL, NULL, NULL),
+(67, 'User', '2025-12-09 09:21:18', 'erily', '$2y$10$fUl/ve4o3fYnb0f4V1Ha.O7DTJ3NsHK/pkyms8Z1HU1D86ooK2wke', 'ericka', 'sabile', 'fenis', 'Female', '', NULL, 'eicafns@gmail.com', '09453093495', '2024-05-14', NULL, 1, NULL, NULL, NULL, NULL),
+(75, 'Priest', '2026-01-07 12:48:44', '', '$2y$10$oeS5tP2kSfkkCRXXIIqSUe33MMuifQutan/m.7cahDAixG8NhK8YK', 'James', '', 'Nitollama', 'Male', '', NULL, 'nitollama.j@gmail.com', '09186283341', '1987-11-25', NULL, 1, NULL, NULL, NULL, NULL),
+(82, 'User', '2026-01-27 15:04:00', NULL, '$2y$10$4ybGaBgPlU0CeVCZHKTFCuQeVnOSMv5wU9ULipL7OH1rjPTMr.un6', 'pau', 'line', 'jean', 'Male', '', NULL, 'jonannamommina@gmail.com', '09621974275', '1999-09-02', NULL, 1, NULL, NULL, NULL, NULL),
+(83, 'User', '2026-01-27 15:10:49', NULL, '$2y$10$tvO3YtqHuJRQiNDVwq2u1OGHvVh0sX4wNRSif8F3A4CE8nc4D5DJW', 'Pauline', 'Jean', 'Garcia', 'Female', '', NULL, 'atsaratom@gmail.com', '09621974275', '2001-04-03', NULL, 1, NULL, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -1299,6 +1402,12 @@ ALTER TABLE `prayer_requests`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `reschedule_requests`
+--
+ALTER TABLE `reschedule_requests`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `submissions`
 --
 ALTER TABLE `submissions`
@@ -1327,67 +1436,67 @@ ALTER TABLE `weddings`
 -- AUTO_INCREMENT for table `admin_notifications`
 --
 ALTER TABLE `admin_notifications`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=60;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=95;
 
 --
 -- AUTO_INCREMENT for table `announcements`
 --
 ALTER TABLE `announcements`
-  MODIFY `ann_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=55;
+  MODIFY `ann_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=58;
 
 --
 -- AUTO_INCREMENT for table `anointing_of_sick_requests`
 --
 ALTER TABLE `anointing_of_sick_requests`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
 
 --
 -- AUTO_INCREMENT for table `as_ninang_tbl`
 --
 ALTER TABLE `as_ninang_tbl`
-  MODIFY `as_ninang_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=95;
+  MODIFY `as_ninang_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=96;
 
 --
 -- AUTO_INCREMENT for table `as_ninong_tbl`
 --
 ALTER TABLE `as_ninong_tbl`
-  MODIFY `as_ninong_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=102;
+  MODIFY `as_ninong_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=103;
 
 --
 -- AUTO_INCREMENT for table `baptisms`
 --
 ALTER TABLE `baptisms`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=111;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=114;
 
 --
 -- AUTO_INCREMENT for table `calendar_control`
 --
 ALTER TABLE `calendar_control`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `celebratory`
 --
 ALTER TABLE `celebratory`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 
 --
 -- AUTO_INCREMENT for table `certificate_request`
 --
 ALTER TABLE `certificate_request`
-  MODIFY `cert_req_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+  MODIFY `cert_req_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
 
 --
 -- AUTO_INCREMENT for table `confirmations`
 --
 ALTER TABLE `confirmations`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=83;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=84;
 
 --
 -- AUTO_INCREMENT for table `donations`
 --
 ALTER TABLE `donations`
-  MODIFY `donate_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=46;
+  MODIFY `donate_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=61;
 
 --
 -- AUTO_INCREMENT for table `events`
@@ -1405,7 +1514,7 @@ ALTER TABLE `files`
 -- AUTO_INCREMENT for table `first_communion`
 --
 ALTER TABLE `first_communion`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 
 --
 -- AUTO_INCREMENT for table `folders`
@@ -1417,19 +1526,19 @@ ALTER TABLE `folders`
 -- AUTO_INCREMENT for table `funerals`
 --
 ALTER TABLE `funerals`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT for table `guardian_tbl`
 --
 ALTER TABLE `guardian_tbl`
-  MODIFY `guardian_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `guardian_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT for table `house_blessings`
 --
 ALTER TABLE `house_blessings`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT for table `live_streams`
@@ -1441,31 +1550,37 @@ ALTER TABLE `live_streams`
 -- AUTO_INCREMENT for table `mass_schedule`
 --
 ALTER TABLE `mass_schedule`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=113;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=136;
 
 --
 -- AUTO_INCREMENT for table `ninang_tbl`
 --
 ALTER TABLE `ninang_tbl`
-  MODIFY `ninang_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=76;
+  MODIFY `ninang_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=81;
 
 --
 -- AUTO_INCREMENT for table `ninong_tbl`
 --
 ALTER TABLE `ninong_tbl`
-  MODIFY `ninong_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=84;
+  MODIFY `ninong_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=89;
 
 --
 -- AUTO_INCREMENT for table `notifications`
 --
 ALTER TABLE `notifications`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=329;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=391;
 
 --
 -- AUTO_INCREMENT for table `prayer_requests`
 --
 ALTER TABLE `prayer_requests`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
+
+--
+-- AUTO_INCREMENT for table `reschedule_requests`
+--
+ALTER TABLE `reschedule_requests`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `submissions`
@@ -1477,7 +1592,7 @@ ALTER TABLE `submissions`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=80;
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=84;
 
 --
 -- AUTO_INCREMENT for table `weddings`
