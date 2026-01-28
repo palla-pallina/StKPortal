@@ -1,0 +1,376 @@
+@import url('https://fonts.googleapis.com/css2?family=Cantata+One&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Goudy+Bookletter+1911&display=swap');
+
+:root {
+    --primary: #481d00; 
+    --yellow: #efad06;
+    --green: #2e7d32;
+    --greenhover: #22a028;
+    --off-white: #faf5ef;
+    --white: #fff;
+    --gray: #6c757d;
+    --dark: #343a40;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Cantata One", serif;
+    font-weight: 400;
+    font-style: normal;
+    background-color: var(--off-white);
+    color: #333;
+    line-height: 1.6;
+}
+
+/* ======= MAIN CONTENT ========*/
+/*==============================*/
+
+.hero-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-top: 58px;
+}
+
+/*------- ANNOUNCEMENT HEADER -------*/
+/*-----------------------------------*/
+
+.announcements-header h2 {
+    background-color: var(--primary);
+    color: white;
+    font-family: "Cantata One", serif;
+    font-size: 30px;
+    padding: 8px 0 8px 40px;
+}
+
+/*-------- READ MORE BUTTON ---------*/
+/*-----------------------------------*/
+
+.read-more {
+    color: var(--green);
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+/* ==============================
+   ANNOUNCEMENT SNEAK PEEK GRID
+================================ */
+.announcements-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* MAX 4 CARDS */
+    gap: 15px;
+    padding: 2rem 7rem 1rem 7rem;
+}
+
+/* Responsive behavior */
+@media (max-width: 1400px) {
+    .announcements-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 900px) {
+    .announcements-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 500px) {
+    .announcements-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ==============================
+   ANNOUNCEMENT CARD
+================================ */
+.announcement-card {
+    display: flex;
+    flex-direction: column;
+    background: #ffffff;
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+}
+
+/* ==============================
+   IMAGE
+================================ */
+.card-image {
+    width: 100%;
+    /*height: 160px;*/
+    overflow: hidden;
+    background: #f0f0f0;
+}
+
+.card-image img {
+    width: 118%;
+    height: 271px;
+    object-fit: cover;
+    display: block;
+}
+
+/* ==============================
+   CARD CONTENT
+================================ */
+.card-content {
+    padding: 14px 16px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.card-content h3 {
+    font-size: 0.95rem;
+    font-weight: 600;
+    line-height: 1.25;
+    color: #1f2937;
+}
+
+.card-content p {
+    font-size: 0.85rem;
+    line-height: 1.45;
+    color: #555;
+    flex-grow: 1;
+}
+
+.card-content .date {
+    font-size: 0.75rem;
+    color: #888;
+}
+
+/*------------ VIEW MORE ------------*/
+/*-----------------------------------*/
+
+.see-more-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 40px;
+}
+
+.see-more {
+    font-family: "Cantata One", serif;
+    font-size: 27px;
+    font-weight: bold;
+    color: black;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.see-more:hover {
+    color: #22a028;
+}
+
+
+/*------- EVENTS CALENDAR --------*/
+/*--------------------------------*/
+
+
+.container{
+  width: min(1100px, 92%);
+  margin: 0 auto;
+}
+
+
+/* ========================= NEW INTERACTIVE CALENDAR ========================= */
+/* Outer wrapper: Calendar + Event Details */
+.events-wrapper {
+    display: grid;
+    grid-template-columns: 380px 1fr;
+    gap: 30px;
+    padding: 40px 0;
+}
+
+/* ====================== CALENDAR CARD ====================== */
+.calendar-card {
+    background: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0px 4px 18px rgba(0,0,0,0.12);
+    overflow: hidden;
+}
+
+/* Calendar header */
+.cal-header {
+    background: #4a260e; /* BROWN like screenshot */
+    color: #ffffff;
+    padding: 18px 22px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.cal-header h2 {
+    margin: 0;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+/* Arrows */
+.cal-btn {
+    background: transparent;
+    border: none;
+    color: #ffffff;
+    font-size: 22px;
+    cursor: pointer;
+    padding: 8px 12px;
+    border-radius: 10px;
+    transition: 0.2s ease;
+}
+.cal-btn:hover {
+    background: rgba(255,255,255,0.2);
+}
+
+/* Weekday row */
+.cal-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    padding: 20px;
+    row-gap: 10px;
+}
+
+.cal-weekday {
+    text-align: center;
+    font-weight: 700;
+    color: #6e6e6e;
+    margin-bottom: 10px;
+}
+
+/* ====================== DAYS GRID ====================== */
+#cal-days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 8px;
+    grid-column: 1 / span 7;  /* <<< THIS FIXES THE ALIGNMENT */
+}
+
+/* Day Cell */
+.cal-day {
+    height: 45px;
+    display: grid;
+    place-items: center;
+    background: #faf7f2;
+    border: 2px solid #f2e9df;
+    border-radius: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.cal-day:hover {
+    background: #fff3d2;
+    border-color: #d3a86e;
+}
+
+/* Empty placeholder cells */
+.cal-day.empty {
+    background: transparent;
+    border: none;
+    cursor: default;
+}
+
+/* Selected day */
+.cal-day.selected {
+    background: #4a260e;
+    color: #ffffff;
+    border-color: #4a260e;
+}
+
+
+.cal-day.has-event {
+    background: #ffe6a3;
+    border: 2px solid #e6a800;
+    font-weight: 600;
+    color: #222;
+}
+
+.cal-day.has-event:hover {
+    background: #ffd966;
+}
+
+
+/* ====================== EVENT DETAILS CARD ====================== */
+.event-details-card {
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0px 4px 18px rgba(0,0,0,0.12);
+    min-height: 260px;
+}
+
+#event-panel-title {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 800;
+}
+
+#event-panel-desc {
+    margin: 8px 0 16px;
+    color: #555;
+    font-size: 15px;
+}
+
+/* Event list items */
+.event-item {
+    background: #faf7f2;
+    border: 2px solid #f2e9df;
+    padding: 12px 14px;
+    margin-bottom: 10px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Delete button */
+.delete-btn {
+    background: #c0392b;
+    border: none;
+    color: #ffffff;
+    padding: 6px 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+}
+.delete-btn:hover {
+    background: #992d22;
+}
+
+/* Add event row */
+.event-add {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.event-add input {
+    flex: 1;
+    padding: 10px;
+    border-radius: 12px;
+    border: 2px solid #e0d7cc;
+    font-size: 14px;
+}
+
+.event-add button {
+    background: #4a260e;
+    color: white;
+    padding: 10px 16px;
+    border-radius: 12px;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+}
+.event-add button:hover {
+    background: #351c0c;
+}
+
+/* ====================== RESPONSIVE ====================== */
+@media (max-width: 900px) {
+    .events-wrapper {
+        grid-template-columns: 1fr;
+    }
+}

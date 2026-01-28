@@ -1,0 +1,157 @@
+
+:root {
+    --bg: #eee;
+    --card: #ffffff;
+    --border: #e5e7eb;
+    --text: #111827;
+    --muted: #6b7280;
+    --muted-hover: #989fac;
+    --primary: #2563eb;
+    --primary-hover: #1e40af;
+    --radius: 12px;
+}
+
+body {
+    background: var(--bg);
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    color: var(--text);
+}
+
+/* Page container */
+.page-wrapper {
+    max-width: 720px;
+    margin: 50px auto;
+    padding: 0 16px;
+}
+
+/* Card */
+.card-modern {
+    background: var(--card);
+    border-radius: var(--radius);
+    border: 1px solid var(--border);
+    padding: 28px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.04);
+}
+
+/* Headings */
+.card-modern h3 {
+    font-weight: 600;
+    color: #333;
+    text-align: center; 
+}
+
+.card-modern h4,
+.card-modern h5 {
+    font-weight: 600;
+    margin-top: 24px;
+}
+
+.subtitle {
+    color: var(--muted);
+    font-size: 0.9rem;
+}
+
+/* Form labels */
+.form-label,
+label {
+    font-weight: 600;
+    color: #444;
+    font-size: 16px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+hr.label-divider {
+    border-top: 2px solid #d27c00;
+    width: 100%;
+    margin-top: -8px;
+}
+
+hr.divider {
+    border-top: 3px dotted #1d1d1d;
+    width: 100%;
+}
+/* Inputs */
+.form-control,
+input,
+textarea {
+    border-radius: 10px;
+    border: 1px solid var(--border);
+    padding: 10px 12px;
+    transition: border-color .2s, box-shadow .2s;
+}
+
+.form-control:focus,
+input:focus,
+textarea:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(37,99,235,.15);
+}
+
+/* Buttons */
+
+.button-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px; /* optional spacing */
+}
+
+.btn-custom {
+    padding: 10px 16px;
+}
+
+.btn-back {
+    padding: 10px 16px;
+}
+
+.btn-sched, .btn-rehearsal, .btn-custom {
+    background: var(--primary);
+    border: none;
+    padding: 10px 16px;
+    border-radius: 10px;
+    font-weight: 500;
+    color: white;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.btn-sched:hover, .btn-rehearsal:hover, .btn-custom:hover {
+    background: var(--primary-hover);
+    color: white;
+}
+
+.btn-back {
+    background: var(--muted);
+    border: none;
+    padding: 10px 16px;
+    border-radius: 10px;
+    font-weight: 500;
+    color: white;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.btn-back:hover {
+    background: var(--muted-hover);
+    color: white;
+}
+
+/* Modal */
+.modal-content {
+    border-radius: 14px;
+    border: none;
+}
+
+.modal-header {
+    border-bottom: 1px solid var(--border);
+}
+
+.modal-footer {
+    border-top: 1px solid var(--border);
+}
+
+/* Small helpers */
+.text-muted {
+    color: var(--muted) !important;
+}

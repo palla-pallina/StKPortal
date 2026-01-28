@@ -1,0 +1,296 @@
+/* ==============================
+   GLOBAL STYLES
+============================== */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: #f2f4f7;
+}
+
+
+/* ==============================
+   MAIN LAYOUT
+============================== */
+
+.layout {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+    align-items: start;
+    margin-top: 10px;
+}
+
+
+/* ==============================
+   CALENDAR & SUMMARY CARDS
+============================== */
+
+#calendar {
+    background: #fff;
+    padding: 14px;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+}
+
+#summary {
+    background: #fff;
+    padding: 16px;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+}
+
+#summary h3 {
+    margin-top: 0;
+    font-size: 16px;
+    font-weight: 700;
+    border-bottom: 1px solid #e5e7eb;
+    padding-bottom: 8px;
+}
+
+
+/* ==============================
+   SUMMARY CONTENT
+============================== */
+
+.summary-item {
+    margin-bottom: 10px;
+    padding: 10px 12px;
+    border-radius: 10px;
+    background: #f7f8fa;
+    border: 1px solid #eef0f3;
+    font-size: 13px;
+}
+
+.no-events {
+    color: #777;
+    font-style: italic;
+    padding: 8px 0;
+}
+
+
+/* ==============================
+   FULLCALENDAR ENHANCEMENTS
+============================== */
+
+
+/* Highlight TODAY */
+
+.fc-day-today {
+    background: rgba(147, 145, 136, 0.777) !important;
+    border-radius: 10px;
+}
+
+
+/* Highlight SELECTED / CLICKED date */
+
+.fc-daygrid-day.selected-date {
+    outline: 3px solid #0059ff;
+    outline-offset: -2px;
+    border-radius: 10px;
+    background: rgba(37, 99, 235, 0.12);
+}
+
+
+/* Event styling polish */
+
+.fc-event {
+    font-size: 11px;
+    font-weight: 600;
+    border-radius: 6px;
+    padding: 2px 4px;
+}
+
+
+/* "See all" link */
+
+.fc-more-link {
+    font-size: 11px;
+    font-weight: 700;
+    text-decoration: underline;
+    color: #2563eb;
+    cursor: pointer;
+}
+
+
+/* Hover effect on calendar day */
+
+.fc-daygrid-day:hover {
+    background: rgba(0, 0, 0, 0.03);
+    cursor: pointer;
+}
+
+
+/* ==============================
+   SACRAMENT NAV BUTTONS
+============================== */
+
+.nav-btn {
+    padding: 6px 12px;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 600;
+    transition: transform 0.15s ease, opacity 0.15s ease;
+    display: inline-block;
+}
+
+.nav-btn:hover {
+    transform: translateY(-1px);
+    opacity: 0.9;
+}
+
+
+/* Sacrament colors */
+
+.nav-btn.anointing {
+    background: #c0392b;
+}
+
+.nav-btn.baptism {
+    background: #2980b9;
+}
+
+.nav-btn.communion {
+    background: #27ae60;
+}
+
+.nav-btn.confirmation {
+    background: #8e44ad;
+}
+
+.nav-btn.wedding {
+    background: #e84393;
+}
+
+.nav-btn.funeral {
+    background: #2d3436;
+}
+
+.nav-btn.celebratory {
+    background: #16a085;
+}
+
+.nav-btn.house {
+    background: #d35400;
+}
+
+.nav-btn.mass {
+    background: #34495e;
+}
+
+
+/* ==============================
+   RESPONSIVE
+============================== */
+
+@media (max-width: 900px) {
+    .layout {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* Popover container */
+
+.fc-popover {
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+
+/* Events inside popover */
+
+.fc-popover .fc-event {
+    color: #fff !important;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+
+/* Make sure background color is respected */
+
+.fc-popover .fc-event-main {
+    color: #fff !important;
+}
+
+
+/* ==============================
+   SCHEDULE SUMMARY – AESTHETIC UI
+============================== */
+
+#summary {
+    background: #ffffff;
+    padding: 18px;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+}
+
+#summary h3 {
+    margin: 0 0 14px 0;
+    font-size: 17px;
+    font-weight: 700;
+    color: #111827;
+    border-bottom: 1px solid #e5e7eb;
+    padding-bottom: 8px;
+}
+
+
+/* Individual schedule card */
+
+.summary-item {
+    background: #f9fafb;
+    border: 1px solid #e5e7eb;
+    border-radius: 14px;
+    padding: 14px 16px;
+    margin-bottom: 12px;
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.summary-item:hover {
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+    transform: translateY(-2px);
+}
+
+
+/* Sacrament label (top) */
+
+.summary-type {
+    display: inline-block;
+    background: #ede9fe;
+    color: #6d28d9;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 999px;
+    margin-bottom: 6px;
+}
+
+
+/* Main text */
+
+.summary-text {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #374151;
+}
+
+
+/* Time emphasis */
+
+.summary-text strong {
+    color: #111827;
+    font-weight: 700;
+}
+
+
+/* No events state */
+
+.no-events {
+    text-align: center;
+    color: #6b7280;
+    font-style: italic;
+    padding: 14px 0;
+}

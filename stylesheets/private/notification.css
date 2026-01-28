@@ -1,0 +1,79 @@
+.admin-container {
+    max-width: 900px;
+    margin: 40px auto;
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+
+.notification-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.notification {
+    display: flex;
+    align-items: center;
+    background: #fff;
+    border-left: 5px solid #ccc;
+    padding: 14px;
+    border-radius: 6px;
+    box-shadow: 0 2px 5px rgba(0,0,0,.08);
+}
+
+.notification.unread {
+    border-color: #d4a017;
+    background: #fffdf3;
+}
+
+.notification.read {
+    opacity: 0.7;
+}
+
+.icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+/* Type Colors */
+.icon.baptism { background: #6bb9f0; }
+.icon.first-communion { background: #f7ca18; }
+.icon.confirmation { background: #eb4d4b; }
+.icon.wedding { background: #f0932b; }
+
+.content h4 {
+    margin: 0 0 4px;
+}
+
+.content p {
+    margin: 0;
+    color: #555;
+}
+
+.content span {
+    font-size: 12px;
+    color: #888;
+}
+
+.actions a {
+    margin-left: auto;
+    padding: 6px 12px;
+    background: #333;
+    color: #fff;
+    border-radius: 4px;
+    text-decoration: none;
+}
+
+.actions a:hover {
+    background: #000;
+}
+
+.empty {
+    text-align: center;
+    color: #777;
+}

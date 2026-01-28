@@ -1,0 +1,147 @@
+/*
+    styling for ADMIN navbar (fonts, header styling, etc)
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Cantata+One&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap'); 
+/* Cantata One for headers, Nunito Sans for general, readable text */
+
+header.custom-header nav.custom-navbar {
+    all: unset;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #481d00;
+    padding: 0 24px;
+    height: 85px;
+    font-family: inherit;
+    font-size: 18px;
+}
+
+/* LEFT */
+header.custom-header .nav-left {
+    display: flex;
+    align-items: center;
+}
+
+header.custom-header .logo {
+    height: 75px;
+    margin-left: -9px;
+}
+
+/* CENTER */
+header.custom-header ul.nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 19px;
+    margin: 0;
+    padding: 0;
+}
+
+header.custom-header ul.nav-center {
+    flex: 1;
+    justify-content: center;
+}
+
+/* LINKS */
+header.custom-header ul.nav-links > li > a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 500;
+    padding: 8px 4px;
+    display: inline-block;
+}
+
+header.custom-header ul.nav-links > li > a:hover,
+header.custom-header ul.nav-links > li > a.active {
+    color: #f1c40f;
+}
+
+header.custom-header .dropdown li a.active {
+    color: #f1c40f;
+}
+
+/* Highlight parent menu item if a dropdown link is active */
+header.custom-header .li-dropdown:has(.dropdown a.active) > a {
+    color: #f1c40f;
+}
+
+/* RIGHT */
+header.custom-header .nav-right {
+    display: flex;
+    align-items: center;
+}
+
+header.custom-header .divider {
+    color: white;
+    margin: 0 10px;
+    margin-right: -10px;
+}
+
+/* NOTIFICATION */
+header.custom-header .nav-notification {
+    position: relative;
+}
+
+header.custom-header .bell {
+    font-size: 2rem;
+    margin-right: -7px;
+}
+
+header.custom-header .badge {
+    position: absolute;
+    left: 19px;
+    background: red;
+    color: white;
+    font-size: 10px;
+    padding: 5px 6px;
+    border-radius: 50%;
+    }
+
+/* DROPDOWN */
+header.custom-header .li-dropdown {
+    position: relative;
+}
+
+header.custom-header .dropdown {
+    display: none;   
+    position: absolute;
+    top: 89%;
+    left: 0;
+    background-color: #481d00;
+    min-width: 200px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+    z-index: 9999;
+}
+
+header.custom-header .dropdown li {
+    width: 100%;
+}
+
+header.custom-header .dropdown li a {
+    color: white;
+    padding: 10px 14px;
+    display: block;
+    text-decoration: none;
+}
+
+header.custom-header .dropdown li a:hover {
+    background-color: #481d00;
+    color: #f1c40f;
+}
+
+header.custom-header .dropdown li a:active {
+    color: #f1c40f;
+}
+
+/* SHOW DROPDOWN */
+header.custom-header .li-dropdown:hover > .dropdown {
+    display: block;
+}
+
+/* BOOTSTRAP SAFETY NET */
+header.custom-header nav.custom-navbar *,
+header.custom-header nav.custom-navbar *::before,
+header.custom-header nav.custom-navbar *::after {
+    box-sizing: border-box;
+}
