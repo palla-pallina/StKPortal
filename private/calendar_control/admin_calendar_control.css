@@ -1,0 +1,444 @@
+
+  :root{
+    --bg: #f6f7fb;
+    --card: #ffffff;
+    --text: #111827;
+    --muted: #6b7280;
+    --line: #e5e7eb;
+
+    --primary: #2563eb;
+    --primaryHover: #1d4ed8;
+
+    --danger: #ef4444;
+    --dangerHover: #dc2626;
+
+    --success: #16a34a;
+    --successHover: #15803d;
+
+    --warningBg: #fef3c7;
+    --warningText: #92400e;
+
+    --shadow: 0 10px 25px rgba(0,0,0,.08);
+    --shadow2: 0 8px 18px rgba(0,0,0,.10);
+    --radius: 14px;
+  }
+
+  *{ box-sizing: border-box; }
+  body{
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  }
+
+  /* Page title */
+  h1{
+    text-align: left;
+    margin: 0 0 14px;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: .2px;
+  }
+
+  /* Card containers */
+  .panel-card{
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 16px;
+  }
+
+  /* Toolbar: filter + month controls */
+  .toolbar{
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 12px;
+    align-items: end;
+    margin-bottom: 14px;
+  }
+
+  .filter-wrap label{
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text);
+    display: block;
+    margin-bottom: 6px;
+  }
+
+  select, input, textarea{
+    padding: 10px 12px;
+    width: 100%;
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    outline: none;
+    background: #fff;
+    font-size: 1.5rem;
+    transition: .15s;
+  }
+  select:focus, input:focus, textarea:focus{
+    border-color: rgba(37,99,235,.55);
+    box-shadow: 0 0 0 4px rgba(37,99,235,.12);
+  }
+
+  /* Month controls */
+  .calendar-header{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: flex-end;
+    margin: 0;
+  }
+
+  .calendar-header button{
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    border: 1px solid var(--line);
+    background: #fff;
+    color: var(--text);
+    cursor: pointer;
+    font-size: 18px;
+    transition: .15s;
+  }
+  .calendar-header button:hover{
+    transform: translateY(-1px);
+    border-color: rgba(37,99,235,.35);
+    box-shadow: 0 8px 16px rgba(0,0,0,.08);
+  }
+
+  #calendarMonth{
+    min-width: 190px;
+    text-align: center;
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: var(--text);
+    padding: 6px 10px;
+    border-radius: 10px;
+    border: 1px solid var(--line);
+    background: #fff;
+  }
+
+  /* Calendar grid */
+  .calendar-grid{
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 10px;
+    margin-top: 12px;
+  }
+
+  .calendar-weekday{
+    text-align: center;
+    padding: 10px 0;
+    background: #f3f4f6;
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    color: var(--muted);
+    font-weight: 700;
+    font-size: 1.4rem;
+    letter-spacing: .2px;
+  }
+
+  .calendar-day{
+    min-height: 72px;
+    padding: 10px 8px;
+    border-radius: 14px;
+    border: 1px solid var(--line);
+    background: #fff;
+    text-align: left;
+    cursor: pointer;
+    transition: .15s;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .calendar-day:hover{
+    transform: translateY(-2px);
+    box-shadow: var(--shadow2);
+    border-color: rgba(37,99,235,.25);
+  }
+
+  /* day number */
+  .calendar-day::before{
+    content: attr(data-day);
+    display: block;
+    font-weight: 800;
+    font-size: .95rem;
+    color: var(--text);
+  }
+
+  /* You currently set cell.textContent = d in JS.
+     Add this tiny improvement: in JS, set cell.dataset.day = d;
+     If you don't want to touch JS, the cell will still look fine. */
+
+  .calendar-day.blocked{
+    background: #f9fafb;
+    color: #9ca3af;
+    cursor: not-allowed;
+    box-shadow: none;
+    transform: none;
+  }
+
+  /* highlight days that have schedule */
+  .has-schedule{
+    background: var(--warningBg) !important;
+    border-color: rgba(245,158,11,.35) !important;
+  }
+
+  .calendar-day.selected{
+    outline: none;
+    border-color: rgba(37,99,235,.75);
+    box-shadow: 0 0 0 4px rgba(37,99,235,.15), var(--shadow2);
+  }
+
+  /* Optional “available” look if your JS adds .available */
+  .calendar-day.available{
+    border-color: rgba(34,197,94,.35);
+  }
+
+  /* Modal overlay */
+  .modal{
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(15, 23, 42, .55);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    padding: 18px;
+  }
+
+  /* Modal box */
+  .modal-content{
+    width: min(800px, 100%);
+    background: var(--card);
+    border-radius: 16px;
+    border: 1px solid var(--line);
+    box-shadow: 0 25px 60px rgba(0,0,0,.25);
+    padding: 16px 16px 14px;
+    max-height: 92vh;
+    overflow: auto;
+  }
+
+  .modal-content h3{
+    margin: 6px 0 14px;
+    text-align: left;
+    font-weight: 800;
+    font-size: 2.4rem;
+  }
+
+  .modal-content h4{
+    /*! margin: 16px 0 10px; */
+    font-weight: 800;
+    font-size: 1.7rem;
+    color: var(--text);
+  }
+
+  /* Form layout inside modal */
+  #scheduleForm label{
+    /*! font-size: -1rem; */
+    font-weight: 700;
+    color: var(--muted);
+    margin-bottom: 6px;
+    display: block;
+  }
+
+  /* tighten spacing, remove <br><br> dependence */
+  #scheduleForm input,
+  #scheduleForm select,
+  #scheduleForm textarea{
+    margin: 0 0 12px 0;
+    font-size: 1.5rem;
+  }
+
+  /* ===== Split Modal Layout ===== */
+.modal-content.modal-split{
+  width: min(980px, 100%);
+  padding: 14px;
+}
+
+.modal-split-header{
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 14px;
+  padding: 10px 10px 14px;
+  border-bottom: 1px solid var(--line, #e5e7eb);
+  margin-bottom: 12px;
+}
+
+.modal-subtitle{
+  margin: 6px 0 0;
+  color: var(--muted, #6b7280);
+  font-size: 1.4rem;
+}
+
+.modal-x{
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  border: 1px solid var(--line, #e5e7eb);
+  background: #fff;
+  font-size: 22px;
+  line-height: 1;
+  cursor: pointer;
+  transition: .15s;
+}
+.modal-x:hover{
+  transform: translateY(-1px);
+  box-shadow: 0 8px 16px rgba(0,0,0,.08);
+  border-color: rgba(37,99,235,.25);
+}
+
+.modal-split-grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.modal-pane{
+  background: #fff;
+  border: 1px solid var(--line, #e5e7eb);
+  border-radius: 16px;
+  padding: 14px;
+  min-height: 340px;
+}
+
+.pane-title{
+  font-weight: 800;
+  font-size: 1.15rem;
+  margin: 0 0 12px;
+}
+
+.pane-head{
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.pane-hint{
+  color: var(--muted, #6b7280);
+  font-size: .95rem;
+}
+
+/* Form actions row */
+.modal-actions{
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+/* Existing schedules list on the right */
+.existing-schedules{
+  border-top: 1px solid var(--line, #e5e7eb);
+  padding-top: 10px;
+  max-height: 55vh;
+  overflow: auto;
+}
+
+/* Make schedule items clickable-looking (optional) */
+.schedule-item{
+  cursor: pointer;
+}
+
+/* Responsive: stack columns */
+@media (max-width: 860px){
+  .modal-split-grid{
+    grid-template-columns: 1fr;
+  }
+  .existing-schedules{
+    max-height: 40vh;
+  }
+}
+
+  /* Buttons */
+  .modal-content form button{
+    padding: 10px 12px;
+    border: 0;
+    border-radius: 12px;
+    cursor: pointer;
+    font-weight: 800;
+    font-size: 1.2rem;
+    transition: .15s;
+  }
+
+  .modal-content form button[type="submit"]{
+    background: var(--primary);
+    color: #fff;
+  }
+  .modal-content form button[type="submit"]:hover{
+    background: var(--primaryHover);
+    transform: translateY(-1px);
+  }
+
+  .modal-content form button[type="button"]{
+    background: #f3f4f6;
+    color: var(--text);
+    border: 1px solid var(--line);
+  }
+  .modal-content form button[type="button"]:hover{
+    background: #e5e7eb;
+    transform: translateY(-1px);
+  }
+
+  /* Existing schedules list */
+  #existingSchedules{
+    margin-top: 10px;
+    border-top: 1px solid var(--line);
+    padding-top: 10px;
+    max-height: 220px;
+    overflow: auto;
+  }
+
+  .schedule-item{
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 10px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 8px;
+  }
+
+  .schedule-item span{
+    font-size: 1rem;
+    color: var(--text);
+  }
+
+  .schedule-item button{
+    background: var(--danger);
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    padding: 6px 10px;
+    font-size: 1rem;
+    font-weight: 800;
+    cursor: pointer;
+  }
+  .schedule-item button:hover{
+    background: var(--dangerHover);
+  }
+
+  /* Responsive: stack toolbar */
+  @media (max-width: 720px){
+    .toolbar{
+      grid-template-columns: 1fr;
+    }
+    .calendar-header{
+      justify-content: space-between;
+    }
+    #calendarMonth{
+      min-width: 0;
+      flex: 1;
+    }
+    .calendar-grid{
+      gap: 8px;
+    }
+    .calendar-day{
+      min-height: 64px;
+    }
+  }
