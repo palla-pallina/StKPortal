@@ -12,23 +12,23 @@ PRIEST CREDENTIALS
 ---
 
 **PAU** 
-Use Case 1 - Browse Website 
-Use Case 2 - Make Donation
+1. Use Case 1 - Browse Website 
+2. Use Case 2 - Make Donation
 
 **VIC**
-Use Case 5 - Reserve Baptism
-Use Case 6 - Request Wedding Certificate
-Use Case 7 - User Reservation and Parish Services Status
+3. Use Case 3 - Reserve Baptism
+4. Use Case 4 - Request Wedding Certificate
+5. Use Case 5 - User Reservation and Parish Services Status
 
 **ERICKA** 
-Use Case 8 - Browse Admin Dashboard 
-Use Case 9 - Publish Announcement 
-Use Case 10 - Update Mass Livestream 
+6. Use Case 6 - Browse Admin Dashboard 
+7. Use Case 7 - Publish Announcement 
+8. Use Case 8 - Update Mass Livestream 
 
 **ERLSHAWN** 
-Use Case 11 - Update Mass Schedule 
-Use Case 12 - Update Sacrament Calendar 
-Use Case 13 - Browse Priest Dashboard
+9. Use Case 9 - Update Mass Schedule 
+10. Use Case 10 - Update Sacrament Calendar 
+11. Use Case 11 - Browse Priest Dashboard
 
 --- 
 
@@ -39,12 +39,9 @@ PAGE/S:
 1. Homepage
 2. History
 3. News & Events
-4. Announcements
-5. Sacraments Info
-6. Baptism Info
-7. Reconciliation Info
-8. Submit Prayer Request
-9. Submit Inquiry
+4. Sacraments Info
+5. Prayer Request
+6. Contact Page
 
 NOTE:
 - mabilis lang to ha
