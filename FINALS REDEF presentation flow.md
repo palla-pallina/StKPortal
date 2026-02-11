@@ -18,23 +18,23 @@ PRIEST CREDENTIALS
 ---
 
 **VIC**
-3. Use Case 3 - Reserve Baptism
-4. Use Case 4 - Request Wedding Certificate
-5. Use Case 5 - User Reservation and Parish Services Status
+1. Use Case 3 - Reserve Baptism
+2. Use Case 4 - Request Wedding Certificate
+3. Use Case 5 - User Reservation and Parish Services Status
 
 ---
 
 **ERICKA** 
-6. Use Case 6 - Browse Admin Dashboard 
-7. Use Case 7 - Publish Announcement 
-8. Use Case 8 - Update Mass Livestream 
+1. Use Case 6 - Browse Admin Dashboard 
+2. Use Case 7 - Publish Announcement 
+3. Use Case 8 - Update Mass Livestream 
 
 ---
 
 **ERLSHAWN** 
-9. Use Case 9 - Update Mass Schedule 
-10. Use Case 10 - Update Sacrament Calendar 
-11. Use Case 11 - Browse Priest Dashboard
+1. Use Case 9 - Update Mass Schedule 
+2. Use Case 10 - Update Sacrament Calendar 
+3. Use Case 11 - Browse Priest Dashboard
 
 --- 
 
