@@ -36,16 +36,16 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             $mail->isSMTP();
             $mail->Host       = 'smtp.gmail.com';
             $mail->SMTPAuth   = true;
-            $mail->Username   = 'atsaratom@gmail.com';     // ✅ YOUR EMAIL
-            $mail->Password   = 'gcrp redk guor brwo';   // ✅ APP PASSWORD
+            $mail->Username   = ' ';     // EMAIL
+            $mail->Password   = ' ';   // PASSWORD
             $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
             $mail->Port       = 587;
 
             // ------------------------------
             // EMAIL HEADERS
             // ------------------------------
-            $mail->setFrom('atsaratom@gmail.com', 'StKPortal');
-            $mail->addAddress('atsaratom@gmail.com');        // ✅ RECEIVER
+            $mail->setFrom(' ', 'StKPortal');
+            $mail->addAddress(' '); 
             $mail->addReplyTo($email, $name);
 
             // ------------------------------
